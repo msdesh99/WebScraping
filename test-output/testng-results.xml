@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-13T11:31:02 GMT-05:00" name="Default suite" finished-at="2023-12-13T11:31:19 GMT-05:00" duration-ms="17093">
+    <groups>
+    </groups>
+    <test started-at="2023-12-13T11:31:02 GMT-05:00" name="Default test" finished-at="2023-12-13T11:31:19 GMT-05:00" duration-ms="17093">
+      <class name="com.TarlaDalal.allRecipes.SearchAlpha">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@49e53c76]" started-at="2023-12-13T11:31:02 GMT-05:00" name="setUp" finished-at="2023-12-13T11:31:14 GMT-05:00" duration-ms="12133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@49e53c76]" started-at="2023-12-13T11:31:14 GMT-05:00" name="setUpBeforeClass" finished-at="2023-12-13T11:31:14 GMT-05:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method signature="test()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@49e53c76]" started-at="2023-12-13T11:31:14 GMT-05:00" name="test" finished-at="2023-12-13T11:31:19 GMT-05:00" duration-ms="4899" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@49e53c76]" started-at="2023-12-13T11:31:19 GMT-05:00" name="tearDownAfterClass" finished-at="2023-12-13T11:31:19 GMT-05:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAfterClass -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@49e53c76]" started-at="2023-12-13T11:31:19 GMT-05:00" name="tearDown" finished-at="2023-12-13T11:31:19 GMT-05:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.TarlaDalal.allRecipes.SearchAlpha -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
