@@ -7,7 +7,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -20,6 +22,8 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.TarlaDalal.model.Recipes;
 
 public class XLUtility {
 		InputStream fi;
@@ -38,20 +42,74 @@ public class XLUtility {
 	public XLUtility(String path, String sheet) throws IOException {
 			super();
 			this.path = path;
-			//this.path = System.getProperty("user.dir")+"/src/test/resources/TestData/currencyData.xlsx";
-			 this.dataFile = new File(path);
+			//this.path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
+            //this.path = "/src/test/resources/TestData/currencyData.xlsx";
+			 this.dataFile = new File(this.path);
 			 this.sheet1 = sheet;
 		}
 
-public void WriteIntoFile() throws IOException{
+public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
+	System.out.println("data: "+this.dataFile);
 	 wkb = new XSSFWorkbook();
-	 sh = wkb.createSheet(sheet1);
-	 String[] cellName = new String []{"Recipe Name","Recipe Category","Food Category","Ingredients",
+	 sh = wkb.createSheet(this.sheet1);
+	 CellStyle cs = wkb.createCellStyle();
+	 cs.setWrapText(true);
+	// cs.setVerticalAlignment(CellStyle.VERTICAL_TOP);
+	 Row r1;
+	 int rowCount =0;
+	 String[] cellName = new String []{"Recipe ID", "Recipe Name","Recipe Category","Food Category","Ingredients",
 			 "Preparation Time","Cooking Time","Preparation method","Nutrient values","Morbid condition"};
-	 Row r1 = sh.createRow(0);
-	 for(int i=0;i<cellName.length;i++)
-	    r1.createCell(i).setCellValue(cellName[i]);
-	
+	 r1 = sh.createRow(rowCount);
+	 rowCount++;
+	 for(int i=0;i<cellName.length;i++) {
+		  Cell cell = r1.createCell(i);
+		 // cell.setCellStyle(cs);
+		  cell.setCellValue(cellName[i]);
+		 //r1.createCell(i).setCellValue(cellName[i])
+	 }
+	 for(Recipes recipe1: detailArr) {
+		 int cellCount=0;
+     	System.out.println("name: "+recipe1.getRecipeName());
+     	System.out.println("id: "+recipe1.getRecipeID());  
+		  r1 = sh.createRow(rowCount);
+		  rowCount++;
+		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeID());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeName());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategory());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategory());
+		  cellCount++;
+		  
+		  Cell cell =r1.createCell(cellCount);
+		  cell.setCellValue(recipe1.getIngredients());
+		  cell.setCellStyle(cs);
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getPrepTime());
+		  cellCount++;
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getCookTime());
+		  cellCount++;
+
+		  Cell cellMethod = r1.createCell(cellCount);
+          cellMethod.setCellValue(recipe1.getMethod());
+		  cellMethod.setCellStyle(cs);
+
+		  cellCount++;
+		  
+		  Cell cellNutrient = r1.createCell(cellCount);
+		  cellNutrient.setCellValue(recipe1.getNutrient());
+		  cellNutrient.setCellStyle(cs);
+
+		  cellCount++;
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getMorbid());
+	     }
 		try {
 			 fout = new FileOutputStream(this.dataFile);
 		     wkb.write(fout);	
@@ -241,11 +299,12 @@ public void FillGreenColor(String sheetName, int row, int cell) throws IOExcepti
     public static void main(String[] args) throws IOException {
 		String path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
 		//String path = "/src/test/resources/Lists/ListOfRecipes.xlsx";
+		//File newFile = new File(path);	
 
         String sheet1 = "EliminatedIngredients";
-      System.out.println("path: "+ path);
+        System.out.println("path: "+ path);
     	XLUtility xlUtility = new XLUtility(path, sheet1);
-    	xlUtility.WriteIntoFile();    	
+    	//xlUtility.WriteIntoFile();    	
     	
    /* 	xlUtility.CreateNewCell(sheet1, 3, "New");
 

@@ -2,6 +2,7 @@ package com.TarlaDalal.allRecipes;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
@@ -58,7 +59,7 @@ public class SearchAlpha {
 	}
 
 	@Test
-	public void test() throws InterruptedException {
+	public void test() throws InterruptedException, IOException {
 		homePage = PageFactory.initElements(driver, HomePage.class);		
 		homePage.getRecipe();
 	}

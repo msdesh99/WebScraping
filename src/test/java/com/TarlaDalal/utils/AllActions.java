@@ -4,7 +4,11 @@
 
 package com.TarlaDalal.utils;
 
+import static com.TarlaDalal.utils.AllActions.scrapedRecipeList;
+
+import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -21,12 +25,18 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.TarlaDalal.model.Recipes;
+
 public class AllActions {
 	static JavascriptExecutor js;
 	static Actions action;
 	static Alert alert;
 	static String path;
-	
+	static Recipes recipes;
+    static List<Recipes> scrapedRecipeList = new ArrayList<Recipes>();
+
+    static XLUtility xlUtility;
+
 	public static void SendKeysElement(WebDriver driver, WebElement element, String inputString) {
 		action = new Actions(driver);
 		action.sendKeys(element, inputString).build().perform();
@@ -234,15 +244,58 @@ public class AllActions {
 			   }
 			   return list;
 	    }
-		public String[] GetHyperText(List<WebElement> recipeList) {
-	    	String[]  list = new String[recipeList.size()];
-	    	//System.out.println("action list count: "+list.length);
+		public String[][] GetHyperText(List<WebElement> recipeList) {
+	    	String[][]  list = new String[recipeList.size()][ConfigReader.getcellNames().length];
+	    	System.out.println("cell leng: "+ ConfigReader.getcellNames().length);
+            String rawId="";
 			int count=0;
 			   for(WebElement menu: recipeList) {
+				    rawId = menu.getAttribute("href").toString();
+					list[count][0] = menu.getText();
+					list[count][1] = rawId.substring(rawId.lastIndexOf('-')+1,rawId.length()-1);
+
+					count++;
+			   }
+			    return list;
+		}
+		public String[]  GetRecipeID(List<WebElement> recipesID) {
+	    	String[]  list = new String[recipesID.size()];
+	    	//System.out.println("action list count: "+list.length);
+			int count=0;
+			   for(WebElement menu: recipesID) {
+				    System.out.println("int recipe id: "+ Integer.valueOf(menu.getText()));
 					list[count] = menu.getText();
 					count++;
 			   }
 			   return list;
-	
 		}
- }
+      public static void AddInRecipesObject(String[] recipe) throws IOException {
+
+			recipes = new Recipes();
+			recipes.setRecipeName(recipe[0]);
+			recipes.setRecipeID(recipe[1]);
+			recipes.setRecipeCategory(recipe[2]);
+			recipes.setFoodCategory(recipe[3]);
+			recipes.setIngredients(recipe[4]);
+			recipes.setPrepTime(recipe[5]);
+			recipes.setCookTime(recipe[6]);
+			recipes.setMethod(recipe[7]);
+			recipes.setNutrient(recipe[8]);
+
+			recipes.setMorbid(recipe[1]);
+
+			scrapedRecipeList.add(recipes);		
+		   // System.out.println("count: "+scrapedRecipeList.size());
+           // for(Recipes recipe1: scrapedRecipeList) {
+            	//System.out.println("name: "+recipe1.getRecipeName());
+            	//System.out.println("id: "+recipe1.getRecipeID());             
+            //}  	
+		}
+
+      public static void AddInRecipesXLS() throws IOException {
+    	  System.out.println("scr: "+scrapedRecipeList.size());
+    	 	String path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
+    	    xlUtility = new XLUtility(path, "DiabetesEliminated");
+    	    xlUtility.WriteIntoFile(scrapedRecipeList);
+  	}
+  }

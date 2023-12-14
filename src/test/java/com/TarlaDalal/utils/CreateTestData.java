@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.List;
 
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CellType;
@@ -15,6 +16,8 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.TarlaDalal.model.Recipes;
 
 
 public class CreateTestData extends XLUtility{
@@ -46,7 +49,7 @@ public class CreateTestData extends XLUtility{
 	}
 
 	@Override
-	public void WriteIntoFile() throws IOException{
+	public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 		//inp = getClass().getResourceAsStream("TutorialNinjaData.xls");		
 		 wkb = new XSSFWorkbook();
 		 sh = wkb.createSheet(sheet1);
