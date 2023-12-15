@@ -9,9 +9,12 @@ import static com.TarlaDalal.utils.AllActions.scrapedRecipeList;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -34,23 +37,21 @@ public class AllActions {
 	static String path;
 	static Recipes recipes;
     static List<Recipes> scrapedRecipeList = new ArrayList<Recipes>();
+    static List<Recipes> filteredRecipeList = new ArrayList<Recipes>();
+
 
     static XLUtility xlUtility;
 
-	public static void SendKeysElement(WebDriver driver, WebElement element, String inputString) {
-		action = new Actions(driver);
-		action.sendKeys(element, inputString).build().perform();
-	}
-	public static void ClickArrElement(WebDriver driver, WebElement[] element) {
-		js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();arguments[1].click();", element[0], element[1]);
-	}
-	public static void ClickRegisterArrElement(WebDriver driver, WebElement[] element) {
-		js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();arguments[1].click();arguments[2].click();", element[0], element[1],element[2]);
+	// 2 neeeded
+	public static WebElement DriverWaitForElement(WebDriver driver, WebElement element) {		
+		WebElement ele =  new WebDriverWait(driver, Duration.ofSeconds(6))
+				.until(ExpectedConditions.visibilityOf(element));
+		return ele;
 	}
 	public static boolean ClickElement(WebElement element, WebDriver driver) {
-		WebElement ele;
+		js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", element);
+	/*	WebElement ele;
 		try {
 		ele =  DriverWaitForElement(driver, element);
 		if(ele.isDisplayed()) {
@@ -71,7 +72,8 @@ public class AllActions {
 	  } catch (Exception e) {
 		e.printStackTrace();
 		return false;
-	  }
+	  } */
+		return true;
 	}
 /*	public void Quit_Driver(WebDriver driver) {
 		driver.quit();
@@ -82,13 +84,14 @@ public class AllActions {
     public static void DriverExplicitWait(WebDriver driver, Duration timeInSec) {
         new WebDriverWait(driver, timeInSec);
     }
+    
 	public static void DriverWaitForLocatorOrUrl(WebDriver driver, By locator, String url) {
 	new WebDriverWait(driver,Duration.ofSeconds(6))
 	  .until(ExpectedConditions.or(
 			  ExpectedConditions.visibilityOfElementLocated(locator),
 			  ExpectedConditions.urlContains(url))) ;
 }
-	
+	/*
 	public static WebElement FindElementWithLocator(WebDriver driver, By locator) {
 		return new WebDriverWait(driver, Duration.ofSeconds(7))
 				.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -105,148 +108,25 @@ public class AllActions {
 	public static void DriverWaitForClickable(WebDriver driver, By locator) {
 		new WebDriverWait(driver, Duration.ofSeconds(6))
 		.until(ExpectedConditions.elementToBeClickable(locator));
-	}
+	} */
+	//needed
 	public static WebElement CallDriverWait(WebDriver driver, By locator) {
 		return new WebDriverWait(driver, Duration.ofSeconds(6))
 				.until(ExpectedConditions.visibilityOfElementLocated(locator));
 }
-	public static void DriverWaitForTextAndVisible(WebDriver driver, WebElement element, String text) {		
-	new WebDriverWait(driver, Duration.ofSeconds(6))
-		.until(ExpectedConditions.and(
-		ExpectedConditions.textToBePresentInElement(element, text),
-		ExpectedConditions.visibilityOf(element)));
-}
-	public static String WaitAndClickAlert(WebDriver driver) {
-			try {
-				alert = new WebDriverWait(driver,Duration.ofSeconds(4)).until(ExpectedConditions.alertIsPresent());
-				String alertText = alert.getText();
-				System.out.println(alertText);
-				alert.accept();			
-				return alertText;
-			} catch (Exception e) {
-				new Exception("Alert element Not Found: "+e);
-				return null;
-			}		
-	}
 	
-	public static void ScrollToElementjs(WebDriver driver, WebElement element) {
-		js.executeScript("arguments[0].scrollIntoView(true);", element);
-
-	}
-	public static void TextIndentation(WebDriver driver, WebElement pythonElement, int row, int space,boolean flag) {
-		 action = new Actions(driver);
-	       // Keys cmdCtrl = Platform.getCurrent().is(Platform.MAC) ? Keys.COMMAND : Keys.CONTROL;
-		for(int i=1;i<=row;i++) {
-		      action.sendKeys(Keys.ARROW_UP).keyUp(Keys.SHIFT).perform();
-		       for(int j=1;j<=space;j++) {
-	            if(i==1 && flag) action.sendKeys(Keys.BACK_SPACE).perform();
-	            else action.sendKeys(Keys.DELETE).perform();
-			   }
-		}  
-	}	
-	public static void TextIndentationForPractice(WebDriver driver, WebElement pythonElement) {
-		 action = new Actions(driver);
-		      action.keyDown(Keys.CONTROL).sendKeys(Keys.chord("a")).keyUp(Keys.CONTROL).perform();
-		      //action.sendKeys(Keys.chord(Keys.CONTROL, "a")).perform();
-		      action.sendKeys(Keys.DELETE).perform();		      
-	}	
-	public static String DriverWaitForElementOrAlert(WebDriver driver, WebElement pythonResult) {
-		    String output=null;
-	         try {
-	           alert = new WebDriverWait(driver, Duration.ofSeconds(4))
-	            		.until(ExpectedConditions.alertIsPresent());  
-	            		     try {
-	            		    	 output = driver.switchTo().alert().getText();
-
-							} catch (Exception e) {
-	         	            	DriverWaitForElement(driver, pythonResult);
-							}
-	 	         	        alert.accept();		 
-	         } catch (Exception e) {
-			 }
-	         return output;
-	    }
-		
+	
+	
+	//needed
     public static void ScreenScrollDown(WebDriver driver) {
     	js = (JavascriptExecutor) driver;
     	js.executeScript("window.scrollBy(0,1850)", "");
     }	
-    public static void GoToParentWindowHandle(WebDriver driver, String parentWindowHandler) {
-		Set<String> s = driver.getWindowHandles();
-	
-		// Now iterate using Iterator
-		Iterator<String> I1 = s.iterator();
-		while (I1.hasNext()) {
-		String child_window = I1.next();
-		System.out.println("itr parent han: "+parentWindowHandler);
-		System.out.println("itr child han: "+child_window);
+ 
 
-		if (parentWindowHandler.equals(child_window)) {
-		    driver.switchTo().window(parentWindowHandler);
-			//return FindElementWithLocator(driver,locator);
-		   // element1.click() 
-		    break;
-		}
-	   }
-}
-	public static WebElement GetCurrentWindowHandle(WebDriver driver, By locator) {
-		String parent = driver.getWindowHandle();
-		System.out.println("parent han: "+parent);
-		//FindElementWithLocator(driver,locator);
-		//driver.findElement(By.xpath("//*[@id='answer_form']//*[contains(@class,'CodeMirror')]//textarea")).click();
-		Set<String> s = driver.getWindowHandles();
-	
-		// Now iterate using Iterator
-		Iterator<String> I1 = s.iterator();
-		while (I1.hasNext()) {
-		String child_window = I1.next();
-		System.out.println("itr parent han: "+parent);
-		System.out.println("itr child han: "+child_window);
-
-		if (!parent.equals(child_window)) {
-		    driver.switchTo().window(child_window);
-			return FindElementWithLocator(driver,locator);
-		   // element1.click() 
-		}
-	   }
-		return null;	
-}
-	 public String[] GetUrlString(List<WebElement> menuList) {
-	    	String[]  list = new String[menuList.size()];
-	    	System.out.println("action list count: "+list.length);
-			int count=0;
-			String subMenu1="";
-			String menuText="";
-			   for(WebElement menu: menuList) {
-				   menuText = menu.getText();
-				   if(menuText.contains("'")) 						   
-					   menuText= menuText.substring(0, menuText.indexOf("'"));
-
-				   String[] subMenu = menuText.split(" ");
-				   
-				   for(int j=0;j<subMenu.length;j++) {
-							  if(j==0)
-						         subMenu1 = subMenu[j].charAt(0)+subMenu[j].substring(1).toLowerCase();
-							  else {
-								  if(subMenu[j].contentEquals("AND")|| subMenu[j].contentEquals("FOR")
-										  || subMenu[j].contentEquals("DE") || subMenu[j].contentEquals("OF")
-										  || subMenu[j].contentEquals("TO")) 
-							            subMenu1 = subMenu1+" "+ subMenu[j].toLowerCase();
-								  else
-						             subMenu1 = subMenu1+" "+ subMenu[j].charAt(0)+subMenu[j].substring(1).toLowerCase(); 
-							  }   
-						 
-				   }
-					list[count] = subMenu1;
-					count++;
-					subMenu1="";
-				   	
-			   }
-			   return list;
-	    }
 		public String[][] GetHyperText(List<WebElement> recipeList) {
 	    	String[][]  list = new String[recipeList.size()][ConfigReader.getcellNames().length];
-	    	System.out.println("cell leng: "+ ConfigReader.getcellNames().length);
+	    //	System.out.println("cell leng: "+ ConfigReader.getcellNames().length);
             String rawId="";
 			int count=0;
 			   for(WebElement menu: recipeList) {
@@ -258,17 +138,18 @@ public class AllActions {
 			   }
 			    return list;
 		}
-		public String[]  GetRecipeID(List<WebElement> recipesID) {
-	    	String[]  list = new String[recipesID.size()];
-	    	//System.out.println("action list count: "+list.length);
-			int count=0;
-			   for(WebElement menu: recipesID) {
-				    System.out.println("int recipe id: "+ Integer.valueOf(menu.getText()));
-					list[count] = menu.getText();
-					count++;
-			   }
-			   return list;
+		public String[] GetPageText(List<WebElement> pages) {
+			 String[] pageArr = new String[pages.size()];
+			 int count=0;
+			 for(WebElement page: pages) {
+					   pageArr[count] = page.getText();
+				  // System.out.println("pagetext: "+page.getText());
+				   count++;
+				   }
+			 return pageArr;
 		}
+
+		
       public static void AddInRecipesObject(String[] recipe) throws IOException {
 
 			recipes = new Recipes();
@@ -282,20 +163,119 @@ public class AllActions {
 			recipes.setMethod(recipe[7]);
 			recipes.setNutrient(recipe[8]);
 
-			recipes.setMorbid(recipe[1]);
+			recipes.setMorbid(recipe[9]);
+			recipes.setUrl(recipe[10]);
+			recipes.setFlag(recipe[11]);
 
 			scrapedRecipeList.add(recipes);		
-		   // System.out.println("count: "+scrapedRecipeList.size());
+	
+			// System.out.println("count: "+scrapedRecipeList.size());
            // for(Recipes recipe1: scrapedRecipeList) {
             	//System.out.println("name: "+recipe1.getRecipeName());
             	//System.out.println("id: "+recipe1.getRecipeID());             
             //}  	
 		}
 
+      public static void AddFlagInRecipe() throws IOException {
+      	  //System.out.println("scr: "+scrapedRecipeList.size());
+      for(int i=0; i<scrapedRecipeList.size();i++) {	      	  
+           String[] ingredientsText = scrapedRecipeList.get(i).getIngredients().split(",");
+    	    CheckDiabetesEliminate(ingredientsText,scrapedRecipeList.get(i));
+    	   
+    	    CheckHypothyroidismEliminate(ingredientsText,scrapedRecipeList.get(i));
+    	    
+    	    CheckHypertensionEliminate(ingredientsText,scrapedRecipeList.get(i));
+    	    
+    	    CheckPCOSEliminate(ingredientsText,scrapedRecipeList.get(i));
+    	    
+    	    Checkallergies(ingredientsText,scrapedRecipeList.get(i));
+      }
+      }      
       public static void AddInRecipesXLS() throws IOException {
-    	  System.out.println("scr: "+scrapedRecipeList.size());
+			AddFlagInRecipe();
     	 	String path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
     	    xlUtility = new XLUtility(path, "DiabetesEliminated");
     	    xlUtility.WriteIntoFile(scrapedRecipeList);
   	}
+  	public  static void CheckDiabetesEliminate(String[] ingredientsText, Recipes recipe) {
+		List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminateDiebetes());
+	    SetFlag(ingredientsText,eliminateArr,"Diabetes Eliminated",recipe);
+	}
+  	public static void CheckDiabetesAdd(String[] ingredientsText, Recipes recipe) {
+		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getAddDiabetes());
+	    SetFlag(ingredientsText,diabetesAddArr,"Diabetes Add",recipe);
+	}
+	public  static void CheckHypothyroidismEliminate(String[] ingredientsText, Recipes recipe) {
+		List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminateHypothyroidism());
+	    SetFlag(ingredientsText,eliminateArr,"Hypothyroidism Eliminated",recipe);
+	}
+ 	public static void CheckHypothyroidismAdd(String[] ingredientsText, Recipes recipe) {
+		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getAddHypothyroidism());
+	    SetFlag(ingredientsText,diabetesAddArr,"Hypothyroidism Add",recipe);
+	}
+	public  static void CheckHypertensionEliminate(String[] ingredientsText, Recipes recipe) {
+		List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminateHypertension());
+	    SetFlag(ingredientsText,eliminateArr,"Hypertension Eliminated",recipe);
+	}
+ 	public static void CheckHypertensionAdd(String[] ingredientsText, Recipes recipe) {
+		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getAddHypertension());
+	    SetFlag(ingredientsText,diabetesAddArr,"Hypertension Add",recipe);
+	}
+	public  static void CheckPCOSEliminate(String[] ingredientsText, Recipes recipe) {
+		List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminatePCOS());
+	    SetFlag(ingredientsText,eliminateArr,"PCOS Eliminated",recipe);
+	}
+ 	public static void CheckPCOSAdd(String[] ingredientsText, Recipes recipe) {
+		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getAddPCOS());
+	    SetFlag(ingredientsText,diabetesAddArr,"PCOS Add",recipe);
+	}
+	public static void Checkallergies(String[] ingredientsText, Recipes recipe) {
+		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getallergies());
+	    SetFlag(ingredientsText,diabetesAddArr,"allergies Add",recipe);
+	}
+
+	public static void SetFlag(String[] ingredientsText,List<String> eliminateArr, String flagText, Recipes recipe) {
+		String addIngred ="";
+		List<String> ingredText = Arrays.asList(ingredientsText);
+		//System.out.println("elimin text +1: "+flagText.substring(flagText.indexOf(' ')+1).contentEquals("Eliminated"));
+		//System.out.println("Add text: "+flagText.substring(flagText.indexOf(' ')).contentEquals("Add"));
+
+		List <String> result = ingredText.stream().filter(
+    			s -> eliminateArr.stream().anyMatch(s1 -> s.contains(s1))
+    			).collect(Collectors.toList());  	
+    	  for (String s1 : result) {
+    	        System.out.println(flagText+" : "+ s1); 
+    	        if(addIngred=="") addIngred = s1;
+    	        else addIngred = addIngred+","+s1;
+    	        }
+    			if((result.size()==0 && flagText.substring(flagText.indexOf(' ')+1).contentEquals("Eliminated"))||
+    			  (result.size()!=0 && flagText.substring(flagText.indexOf(' ')+1).contentEquals("Add")))
+    			{		
+        	       // System.out.println(flagText+" adding"); 
+
+    		    	  if(recipe.getFlag()==null)	
+    		    		  recipe.setFlag(flagText+"  "+ addIngred);
+    		    	  else 
+    		    		  recipe.setFlag(recipe.getFlag()+"," +flagText+"  "+ addIngred);
+    		    	  if(recipe.getMorbid()==null)
+    		  		     recipe.setMorbid(flagText.substring(0, flagText.indexOf(' ')));
+    		    	  else
+     		  		     recipe.setMorbid(recipe.getMorbid()+", "+flagText.substring(0, flagText.indexOf(' ')));
+
+    		  		if(flagText.contentEquals("Diabetes Eliminated"))
+    		  			CheckDiabetesAdd(ingredientsText,recipe);
+     		  		if(flagText.contentEquals("Hypothyroidism Eliminated"))
+    		  			CheckHypothyroidismAdd(ingredientsText,recipe);
+     		  		if(flagText.contentEquals("Hypertension Eliminated"))
+    		  			CheckHypertensionAdd(ingredientsText,recipe);
+     		  		if(flagText.contentEquals("PCOS Eliminated"))
+    		  			CheckPCOSAdd(ingredientsText,recipe);
+    			}
+    			addIngred="";
+    			
+    	/*for (String s1 : filteredResult1)
+            System.out.println(s1); */
+	
   }
+	   	  
+}

@@ -12,7 +12,8 @@ public class Recipes {
     String method;
     String nutrient;
     String morbid;
-
+    String url;
+    String flag;
 	//Recipe ID,Recipe Name,Recipe Category,Food Category,Ingredients,Preparation Time,Cooking Time,
 		//Preparation method,Nutrient values,Morbid condition
 		
@@ -78,6 +79,18 @@ public class Recipes {
 	}
 	public void setMorbid(String morbid) {
 		this.morbid = morbid;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	public String getFlag() {
+		return flag;
+	}
+	public void setFlag(String flag) {
+		this.flag = flag;
 	}
 	
 }

@@ -17,8 +17,10 @@ import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.VerticalAlignment;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -49,16 +51,26 @@ public class XLUtility {
 		}
 
 public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
-	System.out.println("data: "+this.dataFile);
+	//System.out.println("data: "+this.dataFile);
+	
 	 wkb = new XSSFWorkbook();
 	 sh = wkb.createSheet(this.sheet1);
+	 
 	 CellStyle cs = wkb.createCellStyle();
 	 cs.setWrapText(true);
-	// cs.setVerticalAlignment(CellStyle.VERTICAL_TOP);
+	 cs.setVerticalAlignment(VerticalAlignment.CENTER);
+
+	 /*HSSFCellStyle verStyle = wkb.createCellStyle();
+     verStyle.setVerticalAlignment(HSSFCellStyle.VERTICAL_TOP);
+
+     XSSFCellStyle style = wkb.createCellStyle();
+	 cs.setVerticalAlignment(XSSFCellStyle.VERTICAL_TOP);*/
+	 
 	 Row r1;
 	 int rowCount =0;
-	 String[] cellName = new String []{"Recipe ID", "Recipe Name","Recipe Category","Food Category","Ingredients",
-			 "Preparation Time","Cooking Time","Preparation method","Nutrient values","Morbid condition"};
+	 //String[] cellName = new String []{"Recipe ID", "Recipe Name","Recipe Category","Food Category","Ingredients",
+     //			 "Preparation Time","Cooking Time","Preparation method","Nutrient values","Morbid condition"};
+	 String[] cellName = ConfigReader.getcellNames();
 	 r1 = sh.createRow(rowCount);
 	 rowCount++;
 	 for(int i=0;i<cellName.length;i++) {
@@ -69,8 +81,8 @@ public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 	 }
 	 for(Recipes recipe1: detailArr) {
 		 int cellCount=0;
-     	System.out.println("name: "+recipe1.getRecipeName());
-     	System.out.println("id: "+recipe1.getRecipeID());  
+     	//System.out.println("name: "+recipe1.getRecipeName());
+     	//System.out.println("id: "+recipe1.getRecipeID());  
 		  r1 = sh.createRow(rowCount);
 		  rowCount++;
 		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeID());
@@ -87,7 +99,7 @@ public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 		  
 		  Cell cell =r1.createCell(cellCount);
 		  cell.setCellValue(recipe1.getIngredients());
-		  cell.setCellStyle(cs);
+		 // cell.setCellStyle(cs);
 		  cellCount++;
 		  
 		  r1.createCell(cellCount).setCellValue(recipe1.getPrepTime());
@@ -98,17 +110,24 @@ public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 
 		  Cell cellMethod = r1.createCell(cellCount);
           cellMethod.setCellValue(recipe1.getMethod());
-		  cellMethod.setCellStyle(cs);
+		  //cellMethod.setCellStyle(cs);
 
 		  cellCount++;
 		  
 		  Cell cellNutrient = r1.createCell(cellCount);
 		  cellNutrient.setCellValue(recipe1.getNutrient());
-		  cellNutrient.setCellStyle(cs);
+		 // cellNutrient.setCellStyle(cs);
 
 		  cellCount++;
 
 		  r1.createCell(cellCount).setCellValue(recipe1.getMorbid());
+		  cellCount++;
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getUrl());
+		  cellCount++;
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getFlag());
+
 	     }
 		try {
 			 fout = new FileOutputStream(this.dataFile);

@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-14T10:53:09 GMT-05:00" name="Default suite" finished-at="2023-12-14T10:54:04 GMT-05:00" duration-ms="54820">
+  <suite started-at="2023-12-15T14:20:50 GMT-05:00" name="Default suite" finished-at="2023-12-15T14:47:50 GMT-05:00" duration-ms="1619712">
     <groups>
     </groups>
-    <test started-at="2023-12-14T10:53:09 GMT-05:00" name="Default test" finished-at="2023-12-14T10:54:04 GMT-05:00" duration-ms="54820">
+    <test started-at="2023-12-15T14:20:50 GMT-05:00" name="Default test" finished-at="2023-12-15T14:47:50 GMT-05:00" duration-ms="1619712">
       <class name="com.TarlaDalal.allRecipes.SearchAlpha">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@692f203f]" started-at="2023-12-14T10:53:09 GMT-05:00" name="setUp" finished-at="2023-12-14T10:53:40 GMT-05:00" duration-ms="30764" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@692f203f]" started-at="2023-12-15T14:20:50 GMT-05:00" name="setUp" finished-at="2023-12-15T14:21:47 GMT-05:00" duration-ms="57269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@692f203f]" started-at="2023-12-14T10:53:40 GMT-05:00" name="setUpBeforeClass" finished-at="2023-12-14T10:53:40 GMT-05:00" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@692f203f]" started-at="2023-12-15T14:21:47 GMT-05:00" name="setUpBeforeClass" finished-at="2023-12-15T14:21:47 GMT-05:00" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="test()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@692f203f]" started-at="2023-12-14T10:53:40 GMT-05:00" name="test" finished-at="2023-12-14T10:54:04 GMT-05:00" duration-ms="23966" status="PASS">
+        <test-method signature="test()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@692f203f]" started-at="2023-12-15T14:21:47 GMT-05:00" name="test" finished-at="2023-12-15T14:47:50 GMT-05:00" duration-ms="1562389" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@692f203f]" started-at="2023-12-14T10:54:04 GMT-05:00" name="tearDownAfterClass" finished-at="2023-12-14T10:54:04 GMT-05:00" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@692f203f]" started-at="2023-12-15T14:47:50 GMT-05:00" name="tearDownAfterClass" finished-at="2023-12-15T14:47:50 GMT-05:00" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@692f203f]" started-at="2023-12-14T10:54:04 GMT-05:00" name="tearDown" finished-at="2023-12-14T10:54:04 GMT-05:00" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@692f203f]" started-at="2023-12-15T14:47:50 GMT-05:00" name="tearDown" finished-at="2023-12-15T14:47:50 GMT-05:00" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

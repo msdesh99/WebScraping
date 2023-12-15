@@ -34,10 +34,35 @@ public class ConfigReader {
     public static String[] getcellNames() {
     	return prop.getProperty("cellNames").split(",");		
 	}
-/*	public static Object getModuleUrl() {
-		return prop.getProperty("moduleUrl");
+	public static String[] geteliminateDiebetes() {
+		return prop.getProperty("eliminateDiebetes").split(",");
 	}
-	public static Object getDropDown() {
+	public static String[] getAddDiabetes() {
+		return prop.getProperty("addDiabetes").split(",");
+	}
+	public static String[] geteliminateHypothyroidism() {
+		return prop.getProperty("eliminateHypothyroidism").split(",");
+	}
+	public static String[] getAddHypothyroidism() {
+		return prop.getProperty("addHypothyroidism").split(",");
+	}
+	public static String[] geteliminateHypertension() {
+		return prop.getProperty("eliminateHypertension").split(",");
+	}
+	public static String[] getAddHypertension() {
+		return prop.getProperty("addHypertension").split(",");
+	}
+	public static String[] geteliminatePCOS() {
+		return prop.getProperty("eliminatePCOS").split(",");
+	}
+	public static String[] getAddPCOS() {
+		return prop.getProperty("addPCOS").split(",");
+	}
+	public static String[] getallergies() {
+		return prop.getProperty("allergies").split(",");
+	}
+	
+/*	public static Object getDropDown() {
 		return prop.getProperty("dropdown");
 	}
 	public static void setProperties() {		

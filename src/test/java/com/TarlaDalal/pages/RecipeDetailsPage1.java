@@ -2,7 +2,11 @@ package com.TarlaDalal.pages;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.swing.text.Document;
 
@@ -15,17 +19,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.TarlaDalal.model.Recipes;
 import com.TarlaDalal.utils.AllActions;
 import com.TarlaDalal.utils.ConfigReader;
-
-
-
-public class RecipeDetails extends AllActions{
+public class RecipeDetailsPage1 extends AllActions{
 	
 	WebDriver driver;
 	By locator;
 	
-	public RecipeDetails(WebDriver driver) {
+	public RecipeDetailsPage1(WebDriver driver) {
 		super();
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -34,20 +36,25 @@ public class RecipeDetails extends AllActions{
 	List<WebElement> ingredients;
 	
  //Recipe ID,Recipe Name,Recipe Category,Food Category,Ingredients,Preparation Time,Cooking Time,
-	//Preparation method,Nutrient values,Morbid condition
+	//Preparation method,Nutrient values,Morbid condition,Url,Flag
 	
 	public void GetRecipeDetails(String[] recipe, String url) throws InterruptedException, IOException {
 		PageFactory.initElements(driver, this);
-		org.jsoup.nodes.Document document = Jsoup.connect(url).userAgent("chrome").get();
-		
+		//org.jsoup.nodes.Document document = Jsoup.connect(url.toLowerCase()).userAgent("chrome").timeout(10 * 1000).get();
+		org.jsoup.nodes.Document document = Jsoup.connect(url.toLowerCase()).timeout(0).get();
+		//Jsoup.connect("link").userAgent("Opera").get();
+
 		GetIngredients(document, recipe);
 	    GetMethod(document,recipe);
 	    GetTime(document,recipe);
 	    GetCategory(document,recipe);
 	    GetNutrientValues(document,recipe);
-	    System.out.println("final recipe: "+recipe);
+	    System.out.println("final url: "+url);
+    	 recipe[10]= url;
+
 		AddInRecipesObject(recipe);
-		AddInRecipesXLS();
+		
+		//AddInRecipesXLS();
 
 	}
 	public static void GetNutrientValues(org.jsoup.nodes.Document document, String[] recipe) {
@@ -56,11 +63,11 @@ public class RecipeDetails extends AllActions{
 		    for(Element nutrient : nutrientTbl) {
                    //System.out.println("Nutrient: "+ nutrient.text());
                    if(recipe[8]!=null)	
-       		    	recipe[8] = recipe[8]+"\n "+nutrient.text();
+       		    	recipe[8] = recipe[8]+", "+nutrient.text();
        		       else 
        		    	   recipe[8]= nutrient.text();
 		    }
-	    	System.out.println("nutrientRec[8]: "+ recipe[8]);
+	    	//System.out.println("nutrientRec[8]: "+ recipe[8]);
 	
 }
 
@@ -69,31 +76,22 @@ public class RecipeDetails extends AllActions{
 	  	   recipe[2]= recipeCategory;
 		//String foodCategory = document.select("[itemprop=recipeCategory] span").first() .text();
 	  	   recipe[3]= "";
-		    System.out.println("recipeCategory[2]: "+recipe[2]);
+		    //System.out.println("recipeCategory[2]: "+recipe[2]);
 	}
 
 
 
 	public static void GetTime(org.jsoup.nodes.Document document, String[] recipe) {
-		   int prepTime;
-		    int cookTime1;
 		    String preTime="";
 		    String cookTime="";
-		    try {
-		     prepTime = Integer.parseInt(document.select("[itemprop=prepTime]").first().text().replaceAll("[^\\d]", "").strip());
-		     cookTime1 = Integer.parseInt(document.select("[itemprop=cookTime]").first().text().replaceAll("[^\\d]", "").strip());
+		     //prepTime = Integer.parseInt(document.select("[itemprop=prepTime]").first().text().replaceAll("[^\\d]", "").strip());
+		
 		    preTime = document.select("[itemprop=prepTime]").first().text();
 		    cookTime = document.select("[itemprop=cookTime]").first().text();
-
-			    // cookTime = Integer.parseInt(document.select("[itemprop=cookTime]").first().text().replaceAll("[^\\d]", "").strip());
-			
-		    } catch (Exception e) {
-		     prepTime = 0;
-		     cookTime1 = 0;
-		    }
-	  	   recipe[5]= preTime;
-	  	   recipe[6]= cookTime;
-		    System.out.println("cook time: "+recipe[6]+" pre "+recipe[5]);
+	  	 
+		    recipe[5]= preTime;
+	  	    recipe[6]= cookTime;
+		 //   System.out.println("cook time: "+recipe[6]+" pre "+recipe[5]);
 		
 	}
 
@@ -106,19 +104,18 @@ public class RecipeDetails extends AllActions{
 		Element methodDiv = document.select("div#recipe_small_steps>span>[itemprop=recipeInstructions]").first();
 		  Elements methodText = methodDiv.select("[itemprop=itemListElement] span");
 		    for(Element method : methodText) {
-                   //  System.out.println("method: "+ method.text());
                      if(recipe[7]!=null)	
-         		    	recipe[7] = recipe[7]+"\n "+method.text();
+         		    	recipe[7] = recipe[7]+", "+method.text();
          		       else 
          		    	   recipe[7]= method.text();
 		    }
-	    	System.out.println("ingr[7]: "+ recipe[7]);
+	    	//System.out.println("ingr[7]: "+ recipe[7]);
 
 	}
 
 
 
-	public  static void GetIngredients(org.jsoup.nodes.Document document, String[] recipe) {		
+	public static void GetIngredients(org.jsoup.nodes.Document document, String[] recipe) {		
 	     Element ingredients_div = document.select("div#rcpinglist").first();
 		    //  Element ingredients_div = document.select("div#rcpinglist>span#ingsection1").first();
 		    //  Element ingredients_div = document.select("div#rcpinglist>div>span").first();
@@ -127,25 +124,31 @@ public class RecipeDetails extends AllActions{
 		     // System.out.println("inte: "+ingredients_div);
 		    Elements ingredients_links = ingredients_div.select("a");
 		    //Elements span = ingredients_div.select("spani#ingsection1");
+	    	//System.out.println("links: "+ingredients_links.size());
 
-		/*    for(Element sp : span) {
-		    	//System.out.println("ingr: "+ sp.getElementsByAttribute("id"));
-	    	System.out.println("ingr: "+ sp.id());
-		    } */
+	    	//List<String> ingredientsText = new ArrayList<String>();
+           //  String[] ingredientsText = new String[ingredients_links.size()];
+             //int count=0;
 		    for(Element ingeText : ingredients_links) {
-		    	//System.out.println("ingr: "+ ingeText.text());
-		       if(recipe[4]!=null)	
-		    	recipe[4] = recipe[4]+", \n"+ingeText.text();
+		    	//ingredientsText.add(ingeText.text());
+		    	
+		    	  // ingredientsText[count]= ingeText.text();
+		    	   //count++;
+
+		        if(recipe[4]!=null)	
+		    	recipe[4] = recipe[4]+" , "+ingeText.text();
 		       else 
-		    	   recipe[4]= ingeText.text();
-		       
-	    	 //System.out.println("ingr: "+ s.getElementsByAttribute()));
+		    	   recipe[4]= ingeText.text();		      	
 		    }
-	    	System.out.println("ingr[4]: "+ recipe[4]);
+		
+		            
+		    //System.out.println("ingr[4]: "+ recipe[4]);
+	    	//System.out.println("ingr[4]: "+ ingredientsText);
+
 
 	}
-	
 
+	
 	
      
 }

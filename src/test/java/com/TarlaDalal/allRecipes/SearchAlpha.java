@@ -19,6 +19,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.TarlaDalal.pages.HomePage;
+import com.TarlaDalal.pages.PageNumberPage;
 import com.TarlaDalal.utils.ConfigReader;
 
 
@@ -28,7 +29,7 @@ public class SearchAlpha {
 	Properties prop;
 	ConfigReader configReader;
 	HomePage homePage;
-
+    PageNumberPage pageNumberPage;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -59,9 +60,9 @@ public class SearchAlpha {
 	}
 
 	@Test
-	public void test() throws InterruptedException, IOException {
-		homePage = PageFactory.initElements(driver, HomePage.class);		
-		homePage.getRecipe();
+	public void test() throws InterruptedException, IOException {		
+		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
+		pageNumberPage.GetPage();
 	}
 
 }
