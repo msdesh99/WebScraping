@@ -61,6 +61,9 @@ public class ConfigReader {
 	public static String[] getallergies() {
 		return prop.getProperty("allergies").split(",");
 	}
+	public static String[] getSheetNames() {
+		return prop.getProperty("sheets").split(",");
+	}
 	
 /*	public static Object getDropDown() {
 		return prop.getProperty("dropdown");

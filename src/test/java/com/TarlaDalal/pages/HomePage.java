@@ -17,9 +17,7 @@ import com.TarlaDalal.utils.ConfigReader;
 
 public class HomePage extends AllActions{
 	WebDriver driver;
-   // String handle;
     By locator;
-    String subMenu;
     RecipeDetailsPage recipeDetails;
     byte count;
     Recipes recipes;
@@ -30,12 +28,8 @@ public class HomePage extends AllActions{
 		PageFactory.initElements(driver, this);
 	}
 	
-  //*[@class="rcc_recipename"]//*   //a-z
-    //@FindBy(xpath="//*[@class='rcc_recipename']//*")  //a-z
-
-	@FindBy(xpath="//*[@id='maincontent']//*[@class='rcc_rcpcore']//*/a[@itemprop='url']") //dia  
+ 	@FindBy(xpath="//*[@id='maincontent']//*[@class='rcc_rcpcore']//*/a[@itemprop='url']") //dia  
 	List<WebElement> recipeList;
-	//*[@class='rcc_rcpcore']//*/a[@itemprop="url" and text()='Cabbage Jowar Muthias']
 
 	public void GetRecipe(String url) throws InterruptedException, IOException {
 		  
@@ -44,10 +38,7 @@ public class HomePage extends AllActions{
 		   count =0;
      
 		   for(String[] recipe: list) {	   
-			  // System.out.println("subhome: "+recipe[0]);
-			  // System.out.println("subid: "+recipe[1]);
-
-				if (count <= 2) {
+				//if (count <= 2) {
 				ScreenScrollDown(driver);
 					locator = By.xpath("//*[@class='rcc_rcpcore']//*/a[@itemprop='url' "
 							+ "and text()='" + recipe[0] + "']");
@@ -56,14 +47,12 @@ public class HomePage extends AllActions{
 					recipeDetails = PageFactory.initElements(driver,RecipeDetailsPage.class);
 					recipeDetails.GetRecipeDetails(recipe,driver.getCurrentUrl());
 
-					//driver.get(ConfigReader.getDiabetesUrl());
 				     driver.get(url);
 					ScreenScrollDown(driver);
 					count++;
 						//break;
-				}
+				//}
 		}
-			//driver.get(ConfigReader.getDiabetesUrl());
 		     driver.get(url);
 	}
   }

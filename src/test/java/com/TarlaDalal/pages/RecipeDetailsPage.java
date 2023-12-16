@@ -57,7 +57,7 @@ public class RecipeDetailsPage extends AllActions{
 	    GetTime(recipe);
 	    GetCategory(recipe);
 	    GetNutrientValues(recipe); 
-	    System.out.println("final url: "+url);
+	   // System.out.println("final url: "+url);
     	 recipe[10]= url;
 
 		AddInRecipesObject(recipe);

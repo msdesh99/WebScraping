@@ -4,27 +4,19 @@
 
 package com.TarlaDalal.utils;
 
-import static com.TarlaDalal.utils.AllActions.scrapedRecipeList;
-
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -91,24 +83,7 @@ public class AllActions {
 			  ExpectedConditions.visibilityOfElementLocated(locator),
 			  ExpectedConditions.urlContains(url))) ;
 }
-	/*
-	public static WebElement FindElementWithLocator(WebDriver driver, By locator) {
-		return new WebDriverWait(driver, Duration.ofSeconds(7))
-				.until(ExpectedConditions.presenceOfElementLocated(locator));
-	}
-	public static void DriverWaitForUrl(WebDriver driver, String url) {
-		new WebDriverWait(driver, Duration.ofSeconds(6))
-		    .until(ExpectedConditions.urlMatches(url));
-	}
-	public static WebElement DriverWaitForElement(WebDriver driver, WebElement element) {		
-		WebElement ele =  new WebDriverWait(driver, Duration.ofSeconds(6))
-				.until(ExpectedConditions.visibilityOf(element));
-		return ele;
-	}
-	public static void DriverWaitForClickable(WebDriver driver, By locator) {
-		new WebDriverWait(driver, Duration.ofSeconds(6))
-		.until(ExpectedConditions.elementToBeClickable(locator));
-	} */
+	
 	//needed
 	public static WebElement CallDriverWait(WebDriver driver, By locator) {
 		return new WebDriverWait(driver, Duration.ofSeconds(6))
@@ -165,7 +140,6 @@ public class AllActions {
 
 			recipes.setMorbid(recipe[9]);
 			recipes.setUrl(recipe[10]);
-			recipes.setFlag(recipe[11]);
 
 			scrapedRecipeList.add(recipes);		
 	
@@ -193,45 +167,51 @@ public class AllActions {
       }      
       public static void AddInRecipesXLS() throws IOException {
 			AddFlagInRecipe();
-    	 	String path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
-    	    xlUtility = new XLUtility(path, "DiabetesEliminated");
+			String path;
+    	 	path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipesAll.xlsx";
+    	    xlUtility = new XLUtility(path, "AllModules");
     	    xlUtility.WriteIntoFile(scrapedRecipeList);
+    	 	
+    	  /*  path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
+    	    xlUtility = new XLUtility(path, "All");
+    	    xlUtility.WriteAllSheetsIntoFile(scrapedRecipeList); */
+    	    
   	}
-  	public  static void CheckDiabetesEliminate(String[] ingredientsText, Recipes recipe) {
+  	public static void CheckDiabetesEliminate(String[] ingredientsText, Recipes recipe) {
 		List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminateDiebetes());
-	    SetFlag(ingredientsText,eliminateArr,"Diabetes Eliminated",recipe);
+	    SetFlag(ingredientsText,eliminateArr,"Diabetes_Eliminated",recipe);
 	}
   	public static void CheckDiabetesAdd(String[] ingredientsText, Recipes recipe) {
 		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getAddDiabetes());
-	    SetFlag(ingredientsText,diabetesAddArr,"Diabetes Add",recipe);
+		SetFlag(ingredientsText,diabetesAddArr,"Diabetes_Add",recipe);		
 	}
 	public  static void CheckHypothyroidismEliminate(String[] ingredientsText, Recipes recipe) {
 		List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminateHypothyroidism());
-	    SetFlag(ingredientsText,eliminateArr,"Hypothyroidism Eliminated",recipe);
+	    SetFlag(ingredientsText,eliminateArr,"Hypothyroidism_Eliminated",recipe);
 	}
  	public static void CheckHypothyroidismAdd(String[] ingredientsText, Recipes recipe) {
 		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getAddHypothyroidism());
-	    SetFlag(ingredientsText,diabetesAddArr,"Hypothyroidism Add",recipe);
+	    SetFlag(ingredientsText,diabetesAddArr,"Hypothyroidism_Add",recipe);
 	}
 	public  static void CheckHypertensionEliminate(String[] ingredientsText, Recipes recipe) {
 		List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminateHypertension());
-	    SetFlag(ingredientsText,eliminateArr,"Hypertension Eliminated",recipe);
+	    SetFlag(ingredientsText,eliminateArr,"Hypertension_Eliminated",recipe);
 	}
  	public static void CheckHypertensionAdd(String[] ingredientsText, Recipes recipe) {
 		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getAddHypertension());
-	    SetFlag(ingredientsText,diabetesAddArr,"Hypertension Add",recipe);
+	    SetFlag(ingredientsText,diabetesAddArr,"Hypertension_Add",recipe);
 	}
 	public  static void CheckPCOSEliminate(String[] ingredientsText, Recipes recipe) {
 		List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminatePCOS());
-	    SetFlag(ingredientsText,eliminateArr,"PCOS Eliminated",recipe);
+	    SetFlag(ingredientsText,eliminateArr,"PCOS_Eliminated",recipe);
 	}
  	public static void CheckPCOSAdd(String[] ingredientsText, Recipes recipe) {
 		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getAddPCOS());
-	    SetFlag(ingredientsText,diabetesAddArr,"PCOS Add",recipe);
+	    SetFlag(ingredientsText,diabetesAddArr,"PCOS_Add",recipe);
 	}
 	public static void Checkallergies(String[] ingredientsText, Recipes recipe) {
 		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getallergies());
-	    SetFlag(ingredientsText,diabetesAddArr,"allergies Add",recipe);
+	    SetFlag(ingredientsText,diabetesAddArr,"Allergies_Add",recipe);
 	}
 
 	public static void SetFlag(String[] ingredientsText,List<String> eliminateArr, String flagText, Recipes recipe) {
@@ -240,36 +220,54 @@ public class AllActions {
 		//System.out.println("elimin text +1: "+flagText.substring(flagText.indexOf(' ')+1).contentEquals("Eliminated"));
 		//System.out.println("Add text: "+flagText.substring(flagText.indexOf(' ')).contentEquals("Add"));
 
-		List <String> result = ingredText.stream().filter(
+		List<String> result = ingredText.stream().filter(
     			s -> eliminateArr.stream().anyMatch(s1 -> s.contains(s1))
     			).collect(Collectors.toList());  	
     	  for (String s1 : result) {
     	        System.out.println(flagText+" : "+ s1); 
     	        if(addIngred=="") addIngred = s1;
-    	        else addIngred = addIngred+","+s1;
+    	        else addIngred = addIngred+"-"+s1;
     	        }
-    			if((result.size()==0 && flagText.substring(flagText.indexOf(' ')+1).contentEquals("Eliminated"))||
-    			  (result.size()!=0 && flagText.substring(flagText.indexOf(' ')+1).contentEquals("Add")))
+    			if((result.size()==0 && flagText.substring(flagText.indexOf('_')+1) .contentEquals("Eliminated"))||
+    			  (result.size()!=0 && flagText.substring(flagText.indexOf('_')+1).contentEquals("Add")))
     			{		
         	       // System.out.println(flagText+" adding"); 
-
-    		    	  if(recipe.getFlag()==null)	
-    		    		  recipe.setFlag(flagText+"  "+ addIngred);
-    		    	  else 
-    		    		  recipe.setFlag(recipe.getFlag()+"," +flagText+"  "+ addIngred);
+                       
     		    	  if(recipe.getMorbid()==null)
-    		  		     recipe.setMorbid(flagText.substring(0, flagText.indexOf(' ')));
+    		  		     recipe.setMorbid(flagText.substring(0, flagText.indexOf('_')));
     		    	  else
-     		  		     recipe.setMorbid(recipe.getMorbid()+", "+flagText.substring(0, flagText.indexOf(' ')));
+     		  		     recipe.setMorbid(recipe.getMorbid()+","+flagText.substring(0, flagText.indexOf('_')));
 
-    		  		if(flagText.contentEquals("Diabetes Eliminated"))
+    		  		if(flagText.contentEquals("Diabetes_Eliminated")) {
+    		  			recipe.setDiabetes_Eliminated("Yes");
     		  			CheckDiabetesAdd(ingredientsText,recipe);
-     		  		if(flagText.contentEquals("Hypothyroidism Eliminated"))
+    		  		}
+    		  		if(flagText.contentEquals("Diabetes_Add"))
+    		  		    recipe.setDiabetes_Add("Yes: "+addIngred);	
+     		  		if(flagText.contentEquals("Hypothyroidism_Eliminated")) {  		  			
+    		  			recipe.setHypothyroidism_Eliminated("Yes");
     		  			CheckHypothyroidismAdd(ingredientsText,recipe);
-     		  		if(flagText.contentEquals("Hypertension Eliminated"))
+     		  		}	
+     		  		if(flagText.contentEquals("Hypothyroidism_Add")) 		  			
+    		  		    recipe.setHypothyroidism_Add("Yes: "+addIngred);	
+     		  		
+     		  		if(flagText.contentEquals("Hypertension_Eliminated")) {
+     		  			recipe.setHypertension_Eliminated("Yes");
     		  			CheckHypertensionAdd(ingredientsText,recipe);
-     		  		if(flagText.contentEquals("PCOS Eliminated"))
-    		  			CheckPCOSAdd(ingredientsText,recipe);
+     		  		}
+     		  		if(flagText.contentEquals("Hypertension_Add")) 
+    		  		    recipe.setHypertension_Add("Yes: "+addIngred);	
+     		  		
+     		  		if(flagText.contentEquals("PCOS_Eliminated")) {
+    		  			recipe.setPCOS_Eliminated("Yes");
+     		  			CheckPCOSAdd(ingredientsText,recipe);
+     		  		}
+     		  		if(flagText.contentEquals("PCOS_Add"))
+     		  			recipe.setPCOS_Add("Yes: "+addIngred);
+    		  		
+     		  		if(flagText.contentEquals("Allergies_Add")) 
+     		  			recipe.setAllergies("Yes: "+ addIngred);
+    		  		
     			}
     			addIngred="";
     			

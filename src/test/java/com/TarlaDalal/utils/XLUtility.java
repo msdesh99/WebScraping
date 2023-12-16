@@ -68,8 +68,6 @@ public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 	 
 	 Row r1;
 	 int rowCount =0;
-	 //String[] cellName = new String []{"Recipe ID", "Recipe Name","Recipe Category","Food Category","Ingredients",
-     //			 "Preparation Time","Cooking Time","Preparation method","Nutrient values","Morbid condition"};
 	 String[] cellName = ConfigReader.getcellNames();
 	 r1 = sh.createRow(rowCount);
 	 rowCount++;
@@ -125,10 +123,129 @@ public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 
 		  r1.createCell(cellCount).setCellValue(recipe1.getUrl());
 		  cellCount++;
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getFlag());
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getDiabetes_Eliminated());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getDiabetes_Add());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getHypothyroidism_Eliminated());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getHypothyroidism_Add());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getHypertension_Eliminated());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getHypertension_Add());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getPCOS_Eliminated());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getPCOS_Add());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getAllergies());
+	
+		  
 
 	     }
+		try {
+			 fout = new FileOutputStream(this.dataFile);
+		     wkb.write(fout);	
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		finally {
+			wkb.close();
+			fout.close();
+		} 
+	
+		//need to override method to write data. in CreateTestData file
+}   
+public void WriteAllSheetsIntoFile(List<Recipes> detailArr) throws IOException{
+	
+	 wkb = new XSSFWorkbook();
+	 CellStyle cs = wkb.createCellStyle();
+	 cs.setWrapText(true);
+	 cs.setVerticalAlignment(VerticalAlignment.TOP);
+	 Row r1;
+	 int rowCount =0;
+
+	 String[] allSheets = ConfigReader.getSheetNames();
+	for(String sheet1: allSheets) {
+	  sh = wkb.createSheet(sheet1);
+	 rowCount =0;
+	 String[] cellName = ConfigReader.getcellNames();
+	 r1 = sh.createRow(rowCount);
+	 rowCount++;
+	 for(int i=0;i<cellName.length;i++) {
+		  Cell cell = r1.createCell(i);
+		 // cell.setCellStyle(cs);
+		  cell.setCellValue(cellName[i]);
+	 }
+	}
+	 for(Recipes recipe1: detailArr) {
+         
+		// String[] flag = recipe1.getFlag().split(",");
+		 rowCount=1;
+		 String sheetName="";
+		 //for(String sheetName: flag) {
+			 System.out.println("sheetName: "+ sheetName.substring(0, sheetName.indexOf(" ", sheetName.indexOf(" ")+1)));
+			sh = wkb.getSheet(sheetName.substring(0, sheetName.indexOf(" ", sheetName.indexOf(" ")+1)));
+		  //rowCount = GetLastRow(sheetName.substring(0, sheetName.indexOf(" ", sheetName.indexOf(" ")+1)))+1;
+		  int cellCount=0;
+		  r1 = sh.createRow(rowCount);
+		  rowCount++;
+		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeID());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeName());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategory());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategory());
+		  cellCount++;
+		  
+		  Cell cell =r1.createCell(cellCount);
+		  cell.setCellValue(recipe1.getIngredients());
+		 // cell.setCellStyle(cs);
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getPrepTime());
+		  cellCount++;
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getCookTime());
+		  cellCount++;
+
+		  Cell cellMethod = r1.createCell(cellCount);
+          cellMethod.setCellValue(recipe1.getMethod());
+		  //cellMethod.setCellStyle(cs);
+
+		  cellCount++;
+		  
+		  Cell cellNutrient = r1.createCell(cellCount);
+		  cellNutrient.setCellValue(recipe1.getNutrient());
+		 // cellNutrient.setCellStyle(cs);
+
+		  cellCount++;
+
+		  //r1.createCell(cellCount).setCellValue(recipe1.getMorbid());
+		  r1.createCell(cellCount).setCellValue(sheetName.substring(0, sheetName.indexOf(" ")));
+		  cellCount++;
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getUrl());
+		  cellCount++;
+
+
+	   //  }
+		 rowCount++;
+	 }	 
 		try {
 			 fout = new FileOutputStream(this.dataFile);
 		     wkb.write(fout);	

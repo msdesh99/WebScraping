@@ -1,16 +1,11 @@
 package com.TarlaDalal.allRecipes;
 
-import static org.junit.Assert.*;
-
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
@@ -60,9 +55,9 @@ public class SearchAlpha {
 	}
 
 	@Test
-	public void test() throws InterruptedException, IOException {		
+	public void testA1() throws InterruptedException, IOException {		
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetPage();
 	}
-
+	
 }
