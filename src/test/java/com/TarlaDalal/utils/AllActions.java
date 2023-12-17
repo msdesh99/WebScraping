@@ -28,7 +28,7 @@ public class AllActions {
 	static Alert alert;
 	static String path;
 	static Recipes recipes;
-    static List<Recipes> scrapedRecipeList = new ArrayList<Recipes>();
+    static ArrayList<Recipes> scrapedRecipeList = new ArrayList<Recipes>();
     static List<Recipes> filteredRecipeList = new ArrayList<Recipes>();
 
 
@@ -89,22 +89,16 @@ public class AllActions {
 		return new WebDriverWait(driver, Duration.ofSeconds(6))
 				.until(ExpectedConditions.visibilityOfElementLocated(locator));
 }
-	
-	
-	
 	//needed
     public static void ScreenScrollDown(WebDriver driver) {
     	js = (JavascriptExecutor) driver;
     	js.executeScript("window.scrollBy(0,1850)", "");
     }	
- 
-
-		public String[][] GetHyperText(List<WebElement> recipeList) {
+ 		public String[][] GetHyperText(List<WebElement> recipeList) {
 	    	String[][]  list = new String[recipeList.size()][ConfigReader.getcellNames().length];
-	    //	System.out.println("cell leng: "+ ConfigReader.getcellNames().length);
             String rawId="";
 			int count=0;
-			   for(WebElement menu: recipeList) {
+			   for(WebElement menu: recipeList) {			   
 				    rawId = menu.getAttribute("href").toString();
 					list[count][0] = menu.getText();
 					list[count][1] = rawId.substring(rawId.lastIndexOf('-')+1,rawId.length()-1);
@@ -118,7 +112,15 @@ public class AllActions {
 			 int count=0;
 			 for(WebElement page: pages) {
 					   pageArr[count] = page.getText();
-				  // System.out.println("pagetext: "+page.getText());
+				   count++;
+				   }
+			 return pageArr;
+		}
+		public String[] GetHyperLink(List<WebElement> pages) {
+			 String[] pageArr = new String[pages.size()];
+			 int count=0;
+			 for(WebElement page: pages) {
+					   pageArr[count] = page.getAttribute("href");
 				   count++;
 				   }
 			 return pageArr;
@@ -126,21 +128,25 @@ public class AllActions {
 
 		
       public static void AddInRecipesObject(String[] recipe) throws IOException {
-
 			recipes = new Recipes();
 			recipes.setRecipeName(recipe[0]);
 			recipes.setRecipeID(recipe[1]);
-			recipes.setRecipeCategory(recipe[2]);
-			recipes.setFoodCategory(recipe[3]);
+		    recipes.setRecipeCategoryBySearch(recipe[2]);
+            recipes.setFoodCategoryBySearch(recipe[3]);
+
+			//recipes.setFoodCategory(recipe[3]);
 			recipes.setIngredients(recipe[4]);
 			recipes.setPrepTime(recipe[5]);
 			recipes.setCookTime(recipe[6]);
 			recipes.setMethod(recipe[7]);
 			recipes.setNutrient(recipe[8]);
 
-			recipes.setMorbid(recipe[9]);
+			//recipes.setMorbid(recipe[10]);
 			recipes.setUrl(recipe[10]);
+			recipes.setRecipeCategory(recipe[11]);
 
+			
+        
 			scrapedRecipeList.add(recipes);		
 	
 			// System.out.println("count: "+scrapedRecipeList.size());
@@ -152,6 +158,8 @@ public class AllActions {
 
       public static void AddFlagInRecipe() throws IOException {
       	  //System.out.println("scr: "+scrapedRecipeList.size());
+		    System.out.println("Filtering All Recipes Is In Progress.... ");	
+
       for(int i=0; i<scrapedRecipeList.size();i++) {	      	  
            String[] ingredientsText = scrapedRecipeList.get(i).getIngredients().split(",");
     	    CheckDiabetesEliminate(ingredientsText,scrapedRecipeList.get(i));
@@ -168,13 +176,20 @@ public class AllActions {
       public static void AddInRecipesXLS() throws IOException {
 			AddFlagInRecipe();
 			String path;
-    	 	path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipesAll.xlsx";
+    	 /*	path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipesAll.xlsx";
+    	  //  xlUtility = new XLUtility(path, "AllModules");
+    	   // xlUtility.WriteIntoFile(scrapedRecipeList);
+    	    
+    	 	path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipesAll.xlsx"; 
     	    xlUtility = new XLUtility(path, "AllModules");
-    	    xlUtility.WriteIntoFile(scrapedRecipeList);
-    	 	
-    	  /*  path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
+    	    xlUtility.FillGreenColor("AllModules",0, 9); */
+      	 	
+			//System.out.println("Writing All Recipes to excel");
+		    System.out.println("Writing All Recipes to excel.....");	
+
+    	    path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
     	    xlUtility = new XLUtility(path, "All");
-    	    xlUtility.WriteAllSheetsIntoFile(scrapedRecipeList); */
+    	    xlUtility.WriteAllSheetsIntoFile(scrapedRecipeList); 
     	    
   	}
   	public static void CheckDiabetesEliminate(String[] ingredientsText, Recipes recipe) {
@@ -224,7 +239,7 @@ public class AllActions {
     			s -> eliminateArr.stream().anyMatch(s1 -> s.contains(s1))
     			).collect(Collectors.toList());  	
     	  for (String s1 : result) {
-    	        System.out.println(flagText+" : "+ s1); 
+    	       // System.out.println(flagText+" : "+ s1); 
     	        if(addIngred=="") addIngred = s1;
     	        else addIngred = addIngred+"-"+s1;
     	        }
@@ -236,44 +251,52 @@ public class AllActions {
     		    	  if(recipe.getMorbid()==null)
     		  		     recipe.setMorbid(flagText.substring(0, flagText.indexOf('_')));
     		    	  else
-     		  		     recipe.setMorbid(recipe.getMorbid()+","+flagText.substring(0, flagText.indexOf('_')));
+     		  		     recipe.setMorbid(recipe.getMorbid()+",\n"+flagText.substring(0, flagText.indexOf('_')));
 
     		  		if(flagText.contentEquals("Diabetes_Eliminated")) {
     		  			recipe.setDiabetes_Eliminated("Yes");
     		  			CheckDiabetesAdd(ingredientsText,recipe);
     		  		}
-    		  		if(flagText.contentEquals("Diabetes_Add"))
-    		  		    recipe.setDiabetes_Add("Yes: "+addIngred);	
+    		  		if(flagText.contentEquals("Diabetes_Add")) {
+    		  		    recipe.setDiabetes_Add("Yes: "+addIngred);
+    		  		     recipe.setFlag("Add");
+    		  		}
      		  		if(flagText.contentEquals("Hypothyroidism_Eliminated")) {  		  			
     		  			recipe.setHypothyroidism_Eliminated("Yes");
     		  			CheckHypothyroidismAdd(ingredientsText,recipe);
      		  		}	
-     		  		if(flagText.contentEquals("Hypothyroidism_Add")) 		  			
-    		  		    recipe.setHypothyroidism_Add("Yes: "+addIngred);	
+     		  		if(flagText.contentEquals("Hypothyroidism_Add")) { 		  			
+    		  		    recipe.setHypothyroidism_Add("Yes: "+addIngred);
+   		  		        recipe.setFlag("Add");
+     		  		} 
      		  		
      		  		if(flagText.contentEquals("Hypertension_Eliminated")) {
      		  			recipe.setHypertension_Eliminated("Yes");
     		  			CheckHypertensionAdd(ingredientsText,recipe);
      		  		}
-     		  		if(flagText.contentEquals("Hypertension_Add")) 
-    		  		    recipe.setHypertension_Add("Yes: "+addIngred);	
+     		  		if(flagText.contentEquals("Hypertension_Add")) {
+    		  		    recipe.setHypertension_Add("Yes: "+addIngred);
+   		  		        recipe.setFlag("Add");
+     		  		}
      		  		
      		  		if(flagText.contentEquals("PCOS_Eliminated")) {
     		  			recipe.setPCOS_Eliminated("Yes");
      		  			CheckPCOSAdd(ingredientsText,recipe);
      		  		}
-     		  		if(flagText.contentEquals("PCOS_Add"))
+     		  		if(flagText.contentEquals("PCOS_Add")) {
      		  			recipe.setPCOS_Add("Yes: "+addIngred);
+   		  		        recipe.setFlag("Add");
+     		  		} 
     		  		
-     		  		if(flagText.contentEquals("Allergies_Add")) 
+     		  		if(flagText.contentEquals("Allergies_Add")) {
      		  			recipe.setAllergies("Yes: "+ addIngred);
+   		  		        recipe.setFlag("Allergies");
+     		  		}   
     		  		
     			}
     			addIngred="";
     			
-    	/*for (String s1 : filteredResult1)
-            System.out.println(s1); */
-	
+ 	
   }
 	   	  
 }

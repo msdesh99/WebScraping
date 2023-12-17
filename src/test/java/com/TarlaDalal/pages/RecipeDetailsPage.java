@@ -1,27 +1,15 @@
 package com.TarlaDalal.pages;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import javax.swing.text.Document;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.TarlaDalal.model.Recipes;
 import com.TarlaDalal.utils.AllActions;
-import com.TarlaDalal.utils.ConfigReader;
 public class RecipeDetailsPage extends AllActions{
 	
 	WebDriver driver;
@@ -45,12 +33,17 @@ public class RecipeDetailsPage extends AllActions{
 	@FindBy(css="[itemprop=prepTime]")
 	WebElement prepTime;
 	
-	@FindBy(css="[itemprop=cookTime]")
+	@FindBy(css="[itemprop=cookTime]")   
 	WebElement cookTime;
 	
 	@FindBy(css="div#recipe_small_steps>span>[itemprop=recipeInstructions] [itemprop=itemListElement] span")
 	List<WebElement> methodList;
  	
+//	Recipe ID,Recipe Name,RecipeCategory,FoodCategory,Ingredients,Preparation Time,
+//	Cooking Time,Preparation method,Nutrient values,Targeted Morbid condition,Recipe Url,Recipe Type,
+//	Flag,Diabetes_Eliminated,Diabetes_Add,Hypothyroidism_Eliminated,Hypothyroidism_Add,Hypertension_Eliminated,Hypertension_Add,PCOS_Eliminated,PCOS_Add,Allergies
+
+	
 	public void GetRecipeDetails(String[] recipe, String url) throws InterruptedException, IOException {
 		GetIngredients(recipe);
 	    GetMethod(recipe);
@@ -60,6 +53,7 @@ public class RecipeDetailsPage extends AllActions{
 	   // System.out.println("final url: "+url);
     	 recipe[10]= url;
 
+       if(recipe[4]!=null)
 		AddInRecipesObject(recipe);
 		
 		//AddInRecipesXLS();
@@ -70,7 +64,7 @@ public class RecipeDetailsPage extends AllActions{
 
 		    for(String ingeText : ingredients_links) {
 		        if(recipe[4]!=null)	
-		    	recipe[4] = recipe[4]+" , "+ingeText;
+		    	recipe[4] = recipe[4]+" ,\n "+ingeText;
 		       else 
 		    	   recipe[4]= ingeText;		      	
 		    }
@@ -80,10 +74,18 @@ public class RecipeDetailsPage extends AllActions{
 	
 	public void GetNutrientValues(String[] recipe) {
 		  String[] nutrientTbl = GetPageText(nutrient);
+		  int i=0;
 		    for(String nutrients : nutrientTbl) {
+		    	
                    //System.out.println("Nutrient: "+ nutrient.text());
-                   if(recipe[8]!=null)	
-       		    	recipe[8] = recipe[8]+", "+nutrients;
+                   if(recipe[8]!=null) {	
+                	  if(i==0) {
+        		    	  recipe[8] = recipe[8]+": "+nutrients;
+        		    	  i++;}
+                	  else {
+       		    	     recipe[8] = recipe[8]+",\n "+nutrients;
+       		    	     i=0;}
+                   }
        		       else 
        		    	   recipe[8]= nutrients;
 		    }
@@ -94,11 +96,11 @@ public class RecipeDetailsPage extends AllActions{
 	public void GetCategory(String[] recipe) {
 		  String[] categoryName = GetPageText(categories);
 		  for(String category: categoryName) {
-			  if(recipe[2]!=null) {
-     		    	recipe[2] = recipe[2]+", "+category;
-		  	       recipe[3]= category;}
+			  if(recipe[11]!=null) 
+     		    	recipe[11] = recipe[11]+",\n "+category;
+		  	       
   		       else 
-	  	            recipe[2]= category;
+	  	            recipe[11]= category;
 		  }
 		   // System.out.println("recipeCategory[2]: "+recipe[2]);
 		    //System.out.println("foodCategory[2]: "+recipe[3]);
@@ -107,9 +109,14 @@ public class RecipeDetailsPage extends AllActions{
 
 
 
-	public void GetTime(String[] recipe) {	  	 
+	public void GetTime(String[] recipe) {	  	
+		try {
 		    recipe[5]= prepTime.getText();
 	  	    recipe[6]= cookTime.getText();
+		}catch(Exception e) {
+			recipe[5]="NA";
+			recipe[6]="NA";
+		}    
 		    //System.out.println("cook time: "+recipe[6]+" pre "+recipe[5]);		
 	}
 
@@ -119,7 +126,7 @@ public class RecipeDetailsPage extends AllActions{
 		  String[] methodText = GetPageText(methodList);
 		    for(String method : methodText) {
                      if(recipe[7]!=null)	
-         		    	recipe[7] = recipe[7]+", "+method;
+         		    	recipe[7] = recipe[7]+",\n"+method;
          		       else 
          		    	   recipe[7]= method;
 		    }

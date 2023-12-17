@@ -31,6 +31,13 @@ public class ConfigReader {
     public static String getDiabetesUrl() {
 		return prop.getProperty("diabetesUrl");   	
     }
+    public static String getDinnerUrl() {
+		return prop.getProperty("dinnerUrl");   	
+    }
+    public static String geteggUrl() {
+		return prop.getProperty("eggUrl");   	
+    }
+    
     public static String[] getcellNames() {
     	return prop.getProperty("cellNames").split(",");		
 	}
@@ -64,6 +71,13 @@ public class ConfigReader {
 	public static String[] getSheetNames() {
 		return prop.getProperty("sheets").split(",");
 	}
+	public static String[] getAllSheets() {
+		return prop.getProperty("allsheets").split(",");
+	}
+	public static String getAllRecipeUrl() {
+		return prop.getProperty("allRecipeUrl");   	
+	}
+	
 	
 /*	public static Object getDropDown() {
 		return prop.getProperty("dropdown");

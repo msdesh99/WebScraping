@@ -7,9 +7,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -18,9 +18,7 @@ import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.VerticalAlignment;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -50,9 +48,10 @@ public class XLUtility {
 			 this.sheet1 = sheet;
 		}
 
-public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
+	/*
+public void WriteIntoFile(ArrayList<Recipes> detailArr) throws IOException{
 	//System.out.println("data: "+this.dataFile);
-	
+	// List<Recipes> filteredArr = null;
 	 wkb = new XSSFWorkbook();
 	 sh = wkb.createSheet(this.sheet1);
 	 
@@ -60,12 +59,7 @@ public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 	 cs.setWrapText(true);
 	 cs.setVerticalAlignment(VerticalAlignment.CENTER);
 
-	 /*HSSFCellStyle verStyle = wkb.createCellStyle();
-     verStyle.setVerticalAlignment(HSSFCellStyle.VERTICAL_TOP);
 
-     XSSFCellStyle style = wkb.createCellStyle();
-	 cs.setVerticalAlignment(XSSFCellStyle.VERTICAL_TOP);*/
-	 
 	 Row r1;
 	 int rowCount =0;
 	 String[] cellName = ConfigReader.getcellNames();
@@ -77,7 +71,7 @@ public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 		  cell.setCellValue(cellName[i]);
 		 //r1.createCell(i).setCellValue(cellName[i])
 	 }
-	 for(Recipes recipe1: detailArr) {
+	for(Recipes recipe1: detailArr) {
 		 int cellCount=0;
      	//System.out.println("name: "+recipe1.getRecipeName());
      	//System.out.println("id: "+recipe1.getRecipeID());  
@@ -123,7 +117,17 @@ public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 
 		  r1.createCell(cellCount).setCellValue(recipe1.getUrl());
 		  cellCount++;
-		  
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategoryBySearch());
+		  cellCount++;
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategoryBySearch());
+		  cellCount++;
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getFlag());
+		  cellCount++;
+
+
 		  r1.createCell(cellCount).setCellValue(recipe1.getDiabetes_Eliminated());
 		  cellCount++;
 		  
@@ -149,10 +153,8 @@ public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 		  cellCount++;
 		  
 		  r1.createCell(cellCount).setCellValue(recipe1.getAllergies());
-	
-		  
-
 	     }
+	 
 		try {
 			 fout = new FileOutputStream(this.dataFile);
 		     wkb.write(fout);	
@@ -165,9 +167,9 @@ public void WriteIntoFile(List<Recipes> detailArr) throws IOException{
 		} 
 	
 		//need to override method to write data. in CreateTestData file
-}   
+}    */
 public void WriteAllSheetsIntoFile(List<Recipes> detailArr) throws IOException{
-	
+	 List<Recipes> filteredArr = null;
 	 wkb = new XSSFWorkbook();
 	 CellStyle cs = wkb.createCellStyle();
 	 cs.setWrapText(true);
@@ -175,7 +177,9 @@ public void WriteAllSheetsIntoFile(List<Recipes> detailArr) throws IOException{
 	 Row r1;
 	 int rowCount =0;
 
-	 String[] allSheets = ConfigReader.getSheetNames();
+	// String[] allSheets = ConfigReader.getSheetNames();
+	 String[] allSheets = ConfigReader.getAllSheets();
+
 	for(String sheet1: allSheets) {
 	  sh = wkb.createSheet(sheet1);
 	 rowCount =0;
@@ -187,16 +191,32 @@ public void WriteAllSheetsIntoFile(List<Recipes> detailArr) throws IOException{
 		 // cell.setCellStyle(cs);
 		  cell.setCellValue(cellName[i]);
 	 }
-	}
-	 for(Recipes recipe1: detailArr) {
-         
-		// String[] flag = recipe1.getFlag().split(",");
-		 rowCount=1;
-		 String sheetName="";
-		 //for(String sheetName: flag) {
-			 System.out.println("sheetName: "+ sheetName.substring(0, sheetName.indexOf(" ", sheetName.indexOf(" ")+1)));
-			sh = wkb.getSheet(sheetName.substring(0, sheetName.indexOf(" ", sheetName.indexOf(" ")+1)));
-		  //rowCount = GetLastRow(sheetName.substring(0, sheetName.indexOf(" ", sheetName.indexOf(" ")+1)))+1;
+	//} 
+	 if(sheet1.contentEquals("OnlyAdd")) {
+		 filteredArr = detailArr.stream()
+				  .filter(a -> a.getFlag()== "Add")
+				  .collect(Collectors.toList());
+	 }
+	 if(sheet1.contentEquals("Allergies")) {
+		 filteredArr = detailArr.stream()
+				  .filter(a -> a.getFlag()== "Allergies")
+				  .collect(Collectors.toList());
+	 }
+	 if(sheet1.contentEquals("Eliminated")) {
+		 filteredArr = detailArr.stream()
+			       .filter(a -> a.getDiabetes_Eliminated()== "Yes"
+			                 || a.getHypertension_Eliminated()== "Yes"
+			                 || a.getHypothyroidism_Eliminated() == "Yes")
+				  .collect(Collectors.toList());
+	 }
+	 if(sheet1.contentEquals("All")) {
+		 filteredArr = detailArr.stream()
+				  .collect(Collectors.toList());
+	 }
+if(filteredArr!= null) {
+	// for(Recipes recipe1: detailArr) {   
+     for(Recipes recipe1: filteredArr) {        	 
+		// rowCount=1;
 		  int cellCount=0;
 		  r1 = sh.createRow(rowCount);
 		  rowCount++;
@@ -205,12 +225,16 @@ public void WriteAllSheetsIntoFile(List<Recipes> detailArr) throws IOException{
 		  
 		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeName());
 		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategory());
+	
+		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategoryBySearch());
 		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategory());
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategoryBySearch());
 		  cellCount++;
+
+		  
+	//	  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategory());
+	//	  cellCount++;
 		  
 		  Cell cell =r1.createCell(cellCount);
 		  cell.setCellValue(recipe1.getIngredients());
@@ -235,17 +259,50 @@ public void WriteAllSheetsIntoFile(List<Recipes> detailArr) throws IOException{
 
 		  cellCount++;
 
-		  //r1.createCell(cellCount).setCellValue(recipe1.getMorbid());
-		  r1.createCell(cellCount).setCellValue(sheetName.substring(0, sheetName.indexOf(" ")));
+		  r1.createCell(cellCount).setCellValue(recipe1.getMorbid());
+		 // r1.createCell(cellCount).setCellValue(sheetName.substring(0, sheetName.indexOf(" ")));
 		  cellCount++;
 
 		  r1.createCell(cellCount).setCellValue(recipe1.getUrl());
 		  cellCount++;
+		 
+		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategory());
+		  cellCount++;
+	
+		  r1.createCell(cellCount).setCellValue(recipe1.getFlag());
+		  cellCount++;
 
+
+		  r1.createCell(cellCount).setCellValue(recipe1.getDiabetes_Eliminated());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getDiabetes_Add());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getHypothyroidism_Eliminated());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getHypothyroidism_Add());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getHypertension_Eliminated());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getHypertension_Add());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getPCOS_Eliminated());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getPCOS_Add());
+		  cellCount++;
+		  
+		  r1.createCell(cellCount).setCellValue(recipe1.getAllergies());
 
 	   //  }
-		 rowCount++;
-	 }	 
+	 }
+}
+	}
 		try {
 			 fout = new FileOutputStream(this.dataFile);
 		     wkb.write(fout);	
@@ -379,7 +436,6 @@ public void FillGreenColor(String sheetName, int row, int cell) throws IOExcepti
 			  
 			  Row rw = sh.getRow(row);
 			  Cell ce = rw.getCell(cell);
-			  
 			  style = wkb.createCellStyle();
 			  style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
 			  style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
@@ -395,9 +451,8 @@ public void FillGreenColor(String sheetName, int row, int cell) throws IOExcepti
 			wkb.close();
 			fi.close();
 		}
-			
-	
 }
+
  public void ReadFile(String sheetName) throws IOException {
 	try {
             fi  = new FileInputStream(this.dataFile);
