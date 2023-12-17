@@ -5,7 +5,7 @@ public class Recipes {
 	String recipeID;
 	String recipeName;
 	String recipeCategory;
-	//String foodCategory;
+	String foodCategory;
 	String ingredients;
 	String prepTime;
 	String cookTime;
@@ -23,8 +23,6 @@ public class Recipes {
 	String PCOS_Add;
 	String Allergies;
 	String Flag;
-	String RecipeCategoryBySearch;
-	String FoodCategoryBySearch;
 
 	public String getRecipeID() {
 		return recipeID;
@@ -62,13 +60,13 @@ public class Recipes {
 		this.recipeCategory = recipeCategory;
 	}
 
-	/*public String getFoodCategory() {
+	public String getFoodCategory() {
 		return foodCategory;
 	}
 
 	public void setFoodCategory(String foodCategory) {
 		this.foodCategory = foodCategory;
-	}*/
+	}
 
 	public String getPrepTime() {
 		return prepTime;
@@ -148,22 +146,6 @@ public class Recipes {
 
 	public void setHypothyroidism_Eliminated(String hypothyroidism_Eliminated) {
 		Hypothyroidism_Eliminated = hypothyroidism_Eliminated;
-	}
-
-	public String getRecipeCategoryBySearch() {
-		return RecipeCategoryBySearch;
-	}
-
-	public void setRecipeCategoryBySearch(String recipeCategoryBySearch) {
-		RecipeCategoryBySearch = recipeCategoryBySearch;
-	}
-
-	public String getFoodCategoryBySearch() {
-		return FoodCategoryBySearch;
-	}
-
-	public void setFoodCategoryBySearch(String foodCategoryBySearch) {
-		FoodCategoryBySearch = foodCategoryBySearch;
 	}
 
 	public String getHypothyroidism_Add() {

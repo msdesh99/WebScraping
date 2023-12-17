@@ -78,15 +78,12 @@ public class ConfigReader {
 		return prop.getProperty("allRecipeUrl");   	
 	}
 	
+	public static String[] getFoodCategory() {
+		return prop.getProperty("foodcategory").split(",");
+	}
+	public static String[] getRecipeCategory() {
+		return prop.getProperty("recipecategory").split(",");
+	}
 	
-/*	public static Object getDropDown() {
-		return prop.getProperty("dropdown");
-	}
-	public static void setProperties() {		
-	}
-	public static String getJsonFile() {
-		return prop.getProperty("jsonpythonfile");		
-	}
-*/	
 }
 

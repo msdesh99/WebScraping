@@ -168,6 +168,7 @@ public void WriteIntoFile(ArrayList<Recipes> detailArr) throws IOException{
 	
 		//need to override method to write data. in CreateTestData file
 }    */
+	
 public void WriteAllSheetsIntoFile(List<Recipes> detailArr) throws IOException{
 	 List<Recipes> filteredArr = null;
 	 wkb = new XSSFWorkbook();
@@ -191,7 +192,7 @@ public void WriteAllSheetsIntoFile(List<Recipes> detailArr) throws IOException{
 		 // cell.setCellStyle(cs);
 		  cell.setCellValue(cellName[i]);
 	 }
-	//} 
+
 	 if(sheet1.contentEquals("OnlyAdd")) {
 		 filteredArr = detailArr.stream()
 				  .filter(a -> a.getFlag()== "Add")
@@ -216,7 +217,6 @@ public void WriteAllSheetsIntoFile(List<Recipes> detailArr) throws IOException{
 if(filteredArr!= null) {
 	// for(Recipes recipe1: detailArr) {   
      for(Recipes recipe1: filteredArr) {        	 
-		// rowCount=1;
 		  int cellCount=0;
 		  r1 = sh.createRow(rowCount);
 		  rowCount++;
@@ -226,15 +226,11 @@ if(filteredArr!= null) {
 		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeName());
 		  cellCount++;
 	
-		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategoryBySearch());
+		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategory());
 		  cellCount++;
 
-		  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategoryBySearch());
+		  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategory() );
 		  cellCount++;
-
-		  
-	//	  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategory());
-	//	  cellCount++;
 		  
 		  Cell cell =r1.createCell(cellCount);
 		  cell.setCellValue(recipe1.getIngredients());
@@ -260,14 +256,11 @@ if(filteredArr!= null) {
 		  cellCount++;
 
 		  r1.createCell(cellCount).setCellValue(recipe1.getMorbid());
-		 // r1.createCell(cellCount).setCellValue(sheetName.substring(0, sheetName.indexOf(" ")));
 		  cellCount++;
 
 		  r1.createCell(cellCount).setCellValue(recipe1.getUrl());
 		  cellCount++;
 		 
-		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategory());
-		  cellCount++;
 	
 		  r1.createCell(cellCount).setCellValue(recipe1.getFlag());
 		  cellCount++;
@@ -299,7 +292,6 @@ if(filteredArr!= null) {
 		  
 		  r1.createCell(cellCount).setCellValue(recipe1.getAllergies());
 
-	   //  }
 	 }
 }
 	}
@@ -314,179 +306,8 @@ if(filteredArr!= null) {
 			fout.close();
 		} 
 	
-		//need to override method to write data. in CreateTestData file
 }   
 
-public void CreateNewCell(String sheetName, int rowNumber, String cellValue) throws IOException{
-	try {
-		fi = new FileInputStream(this.dataFile);
-		wkb = new XSSFWorkbook(fi);	
-		sh = wkb.getSheet(sheetName);
-		
-		Row row = sh.getRow(rowNumber);
-		int lastCell = row.getLastCellNum();
-		Cell cell = row.createCell(lastCell);
-		cell.setCellValue(cellValue);    
-		
-		fout = new FileOutputStream(this.dataFile);
-		wkb.write(fout);
-		
-	} catch (IOException e) {
-		e.printStackTrace();
-	}
-	finally {
-		wkb.close();
-		fout.close();
-		fi.close();
-	}
-
-}	
-public int GetLastRow(String sheetName) throws IOException {
-	int lastRow=0;
-    try {
-		fi  = new FileInputStream(this.dataFile);
-		wkb = new XSSFWorkbook(fi);
-		sh = wkb.getSheet(sheetName);
-		lastRow = sh.getLastRowNum();
-		
-	} catch (FileNotFoundException e) {
-		e.printStackTrace();
-	}
-	finally {
-		wkb.close();
-		fi.close();
-	}
-	return lastRow;
-
-}
-public int GetLastCell(String sheetName, int row) throws IOException {
-	   int lastCell=0;
-	   try {
-			fi  = new FileInputStream(this.dataFile);
-			wkb = new XSSFWorkbook(fi);
-			sh = wkb.getSheet(sheetName);
-			Row rw = sh.getRow(row);
-			lastCell = rw.getLastCellNum();	
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		finally {
-			wkb.close();
-			fi.close();
-		}
-		return lastCell;
-	
-}
-
-public void UpdateCellData(String sheetName, int row, int col, String cellValue) throws IOException{
-	try {
-		fi = new FileInputStream(this.dataFile);
-		wkb = new XSSFWorkbook(fi);
-		sh = wkb.getSheet(sheetName);
-		Row rw = sh.getRow(row);
-
-		if(rw.getCell(col) != null) {
-		Cell cell = rw.getCell(col);  
-		cell.setCellValue(cellValue);
-		}
-		else CreateNewCell(sheetName, row, "Failed-upd-Cre");
-		
-		fout = new FileOutputStream(this.dataFile); // 2 Variables are needed to close the output and input stream
-		wkb.write(fout);
-		//wkb.getSheet(sheetName).getRow(Row).getCell(col).setCellValue(cellValue);
-		
-	} catch (FileNotFoundException e) {
-		e.printStackTrace();
-	}
-	finally {
-		wkb.close();
-		fout.close();
-		fi.close();
-	}
-}	
-
-public String GetCellData(String sheetName, int row, int col) throws IOException{	   
-	//System.out.println("GEtCell: "+wkb.getSheet(sheetName).getRow(row).getCell(col).getStringCellValue());
-	    try {
-			fi = new FileInputStream(this.dataFile);
-			wkb = new XSSFWorkbook(fi);
-			sh = wkb.getSheet(sheetName);
-		    Row rw = sh.getRow(row);
-			formatter = new DataFormatter();
-			if(rw.getCell(col) != null) {
-				Cell ce = rw.getCell(col);
-				return formatter.formatCellValue(ce); 
-			}
-			else  return null; //CreateCell("sheet1", row,"Failed-upd-Cre");
-
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-			return null;
-		}
-	    finally {
-			wkb.close();
-			fi.close();
-		}
-	}	
-public void FillGreenColor(String sheetName, int row, int cell) throws IOException{
-		try {
-			  fi = new FileInputStream(this.dataFile);
-			  wkb = new XSSFWorkbook(fi);
-			  sh = wkb.getSheet(sheetName);
-			  
-			  Row rw = sh.getRow(row);
-			  Cell ce = rw.getCell(cell);
-			  style = wkb.createCellStyle();
-			  style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
-			  style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-			  
-			  ce.setCellStyle(style);
-			  fout = new FileOutputStream(this.dataFile);
-			  wkb.write(fout);
-		} catch (FileNotFoundException e) {
-					e.printStackTrace();
-		}
-		finally {
-			fout.close();
-			wkb.close();
-			fi.close();
-		}
-}
-
- public void ReadFile(String sheetName) throws IOException {
-	try {
-            fi  = new FileInputStream(this.dataFile);
-			wkb = new XSSFWorkbook(fi);
-			sh = wkb.getSheet(sheetName);
-		Iterator<Row> rw1 = sh.rowIterator();
-		while(rw1.hasNext()) {
-		     Row row1 = rw1.next();
-		     Iterator<Cell> cell1 = row1.cellIterator();
-		     System.out.println();
-		     while(cell1.hasNext()) {
-		    	 Cell cell2 = cell1.next();
-		    	//System.out.println(cell2);
-		    	System.out.printf("%s ",cell2);
-		     }
-		}
-		/*
-		Iterator<Row> rw = sh.rowIterator(); 
-		while (rw.hasNext()) {
-			Row row = rw.next();
-			Iterator<Cell> cell = row.cellIterator();	
-			while(cell.hasNext()) {
-				System.out.printf("%s  \n",cell.next()); // ".getStringCellValue());
-			}
-		}*/		
-
-	} catch (FileNotFoundException e) {
-		e.printStackTrace();
-	}
-    finally {
-		wkb.close();
-		fi.close();
-	}
-}	 
     public static void main(String[] args) throws IOException {
 		String path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
 		//String path = "/src/test/resources/Lists/ListOfRecipes.xlsx";
@@ -497,22 +318,7 @@ public void FillGreenColor(String sheetName, int row, int cell) throws IOExcepti
     	XLUtility xlUtility = new XLUtility(path, sheet1);
     	//xlUtility.WriteIntoFile();    	
     	
-   /* 	xlUtility.CreateNewCell(sheet1, 3, "New");
-
-    	int totalRows =xlUtility.GetLastRow(sheet1);
-    	System.out.println("get totalrows: "+totalRows);
-    		
-    	int totalCells = xlUtility.GetLastCell(sheet1, 1);
-    	System.out.println("get totalcell : "+totalCells);
-  	
-    	xlUtility.UpdateCellData(sheet1, 3, 3, "updated");
-		
-   
-		System.out.println(xlUtility.GetCellData("sheet1", 1, 0));
-    	
-		xlUtility.FillGreenColor(sheet1, 3, 5);
-		xlUtility.ReadFile(sheet1); */
-
+ 
     }
     
 }

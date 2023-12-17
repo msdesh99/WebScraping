@@ -57,7 +57,7 @@ public class SearchAlpha extends AllActions {
 		pageNumberPage.GetPage();
 	} 
 
-/*	@Test
+	@Test
 	public void testA2() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getBaseUrl());
 		recipeCategoryPage = PageFactory.initElements(driver, RecipeCategoryPage.class);
@@ -79,13 +79,13 @@ public class SearchAlpha extends AllActions {
 	public void testA5() throws InterruptedException, IOException {
 		  driver.get(ConfigReader.getDinnerUrl());
 	      homePage = PageFactory.initElements(driver,HomePage.class);
-	      homePage.GetRecipe(driver.getCurrentUrl(),"Dinner","Veg");
+	      homePage.GetRecipe(driver.getCurrentUrl());
 	} 
 	@Test
 	public void testA6() throws InterruptedException, IOException {
 		  driver.get(ConfigReader.geteggUrl());
 	      homePage = PageFactory.initElements(driver,HomePage.class);
-	      homePage.GetRecipe(driver.getCurrentUrl(),"snack","Egg");
+	      homePage.GetRecipe(driver.getCurrentUrl());
 	} 
 	
 	@Test
@@ -96,7 +96,7 @@ public class SearchAlpha extends AllActions {
 		pageNumberPage.GetAllRecipePage();
 	}
 	
-*/
+
 	/*
 	@Test
 	public void testA7() throws InterruptedException, IOException {
@@ -111,6 +111,7 @@ public class SearchAlpha extends AllActions {
 	@Test
 	public void testC9999() throws InterruptedException, IOException {
 		AddInRecipesXLS();
+		//Quit_Driver(driver);
       
 	}
 

@@ -1,7 +1,10 @@
 package com.TarlaDalal.pages;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.TarlaDalal.utils.AllActions;
+import com.TarlaDalal.utils.ConfigReader;
 public class RecipeDetailsPage extends AllActions{
 	
 	WebDriver driver;
@@ -39,19 +43,14 @@ public class RecipeDetailsPage extends AllActions{
 	@FindBy(css="div#recipe_small_steps>span>[itemprop=recipeInstructions] [itemprop=itemListElement] span")
 	List<WebElement> methodList;
  	
-//	Recipe ID,Recipe Name,RecipeCategory,FoodCategory,Ingredients,Preparation Time,
-//	Cooking Time,Preparation method,Nutrient values,Targeted Morbid condition,Recipe Url,Recipe Type,
-//	Flag,Diabetes_Eliminated,Diabetes_Add,Hypothyroidism_Eliminated,Hypothyroidism_Add,Hypertension_Eliminated,Hypertension_Add,PCOS_Eliminated,PCOS_Add,Allergies
-
-	
 	public void GetRecipeDetails(String[] recipe, String url) throws InterruptedException, IOException {
 		GetIngredients(recipe);
 	    GetMethod(recipe);
 	    GetTime(recipe);
 	    GetCategory(recipe);
 	    GetNutrientValues(recipe); 
-	   // System.out.println("final url: "+url);
-    	 recipe[10]= url;
+
+	    recipe[10]= url;
 
        if(recipe[4]!=null)
 		AddInRecipesObject(recipe);
@@ -77,7 +76,6 @@ public class RecipeDetailsPage extends AllActions{
 		  int i=0;
 		    for(String nutrients : nutrientTbl) {
 		    	
-                   //System.out.println("Nutrient: "+ nutrient.text());
                    if(recipe[8]!=null) {	
                 	  if(i==0) {
         		    	  recipe[8] = recipe[8]+": "+nutrients;
@@ -93,19 +91,39 @@ public class RecipeDetailsPage extends AllActions{
 	
 }
 
-	public void GetCategory(String[] recipe) {
-		  String[] categoryName = GetPageText(categories);
-		  for(String category: categoryName) {
-			  if(recipe[11]!=null) 
-     		    	recipe[11] = recipe[11]+",\n "+category;
-		  	       
-  		       else 
-	  	            recipe[11]= category;
-		  }
-		   // System.out.println("recipeCategory[2]: "+recipe[2]);
+	public void GetCategory(String[] recipe) {		
+         //String[] categoryName = GetCategoryText(categories);
+          String[] categoryName  =  GetCategoryText(categories);
+  	      List<String> category = Arrays.asList(categoryName);
+		  List<String> categoryArr = Arrays.asList(ConfigReader.getRecipeCategory());
+		  List<String> foodArr = Arrays.asList(ConfigReader.getFoodCategory());
+		  List<String> matchCategory = Arrays.asList();
+
+		  matchCategory = category.stream().filter(
+	    	                   s -> categoryArr.stream().anyMatch(s1 -> s.contains(s1))
+	    	                   ).collect(Collectors.toList());
+
+	    	  for (String result : matchCategory) {
+	    	       //System.out.println(category+" : "+ result); 
+                   recipe[2] = result;
+          	   } 
+	    	  if (recipe[2]== null) recipe[2] ="Snack/Lunch"; 
+		    	  matchCategory = category.stream().filter(
+		    			s -> foodArr.stream().anyMatch(s1 -> s.contains(s1))
+		    			).collect(Collectors.toList());  	
+		    	  for (String result : matchCategory) {
+		    	     //  System.out.println(category+" : "+ result); 
+		                recipe[3] = result;
+		    	  }
+		    	  if (recipe[3] == null) recipe[3] ="Veg";
+		    	  if (recipe[3].equalsIgnoreCase("egg") || recipe[3].equalsIgnoreCase("Egg") ) 
+		    		  recipe[3] ="Eggitarian";
+		  
+		    //System.out.println("recipeCategory[2]: "+recipe[2]);
 		    //System.out.println("foodCategory[2]: "+recipe[3]);
 
 	}
+
 
 
 

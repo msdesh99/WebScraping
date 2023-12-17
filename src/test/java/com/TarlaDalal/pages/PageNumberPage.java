@@ -44,7 +44,7 @@ public class PageNumberPage extends AllActions{
 				ClickElement(CallDriverWait(driver, locator), driver);
 			}				
 			homePage = PageFactory.initElements(driver,HomePage.class);
-			homePage.GetRecipe(driver.getCurrentUrl(),"Healthy","Diabetes");
+			homePage.GetRecipe(driver.getCurrentUrl());
 			count++;
 			}
 			else break;

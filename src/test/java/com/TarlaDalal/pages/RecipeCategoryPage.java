@@ -38,8 +38,6 @@ public class RecipeCategoryPage extends AllActions{
 		  searchCategory.sendKeys(category);
 		  search.click();
 		 
-		//li[@class='rcpsrch_suggest']/a[contains(text(),'Vegan') or contains(text(),'Veg') or contains(text(),'Jain')  or contains(text(),'non vegetarian')]
-		 // driver.findElement(By.xpath("//li[@class='rcpsrch_suggest']/a[contains(text(),'Jain Breakfast')]")).click();
 	
 		  List<WebElement> foodList = driver.findElements(By.xpath("//li[@class='rcpsrch_suggest']/a[contains(text(),'Vegan') or contains(text(),'Veg') or contains(text(),'Jain')]"));
 		  System.out.println("Bre List: "+ foodList.size());
@@ -52,20 +50,9 @@ public class RecipeCategoryPage extends AllActions{
 
 				if(count<2) {
 				//System.out.println("link: "+ link);
-				
-			  if(link.contains("-veg-")) { System.out.println(" Veg found link: "+link);
-			    foodCategory = "Veg";
-			  }
-			  if(link.contains("-vegan-")) { System.out.println(" Vegan found link: "+link);
-			    foodCategory = "Vegan";
-			  }
-			  if(link.contains("-jain-")) { System.out.println(" jain found link: "+link);
-			    foodCategory = "Jain";
-			  }
-			  
 				driver.get(link);				
 				homePage = PageFactory.initElements(driver,HomePage.class);
-				homePage.GetRecipe(driver.getCurrentUrl(),category,foodCategory);
+				homePage.GetRecipe(driver.getCurrentUrl());
 				count++;
 			}	
 				else break;

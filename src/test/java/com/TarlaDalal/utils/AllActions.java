@@ -43,47 +43,12 @@ public class AllActions {
 	public static boolean ClickElement(WebElement element, WebDriver driver) {
 		js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", element);
-	/*	WebElement ele;
-		try {
-		ele =  DriverWaitForElement(driver, element);
-		if(ele.isDisplayed()) {
-			if(ele.isEnabled()) {			 
-				try {
-					action = new Actions(driver);
-					action.moveToElement(ele).click().build().perform();	
-					return true;
-				} catch (Exception e) {
-					js = (JavascriptExecutor) driver;
-					js.executeScript("arguments[0].click()", element);
-					return true;					
-				}
-	
-			}else  throw new Exception("Element not enabled"); 				
-		}else throw new Exception("Element is not displayed");
-			
-	  } catch (Exception e) {
-		e.printStackTrace();
-		return false;
-	  } */
 		return true;
 	}
-/*	public void Quit_Driver(WebDriver driver) {
+	public void Quit_Driver(WebDriver driver) {
 		driver.quit();
-	}*/
-    public static void DriverImpliciteWait(WebDriver driver) {
-    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-    }
-    public static void DriverExplicitWait(WebDriver driver, Duration timeInSec) {
-        new WebDriverWait(driver, timeInSec);
-    }
-    
-	public static void DriverWaitForLocatorOrUrl(WebDriver driver, By locator, String url) {
-	new WebDriverWait(driver,Duration.ofSeconds(6))
-	  .until(ExpectedConditions.or(
-			  ExpectedConditions.visibilityOfElementLocated(locator),
-			  ExpectedConditions.urlContains(url))) ;
-}
-	
+	}
+ 	
 	//needed
 	public static WebElement CallDriverWait(WebDriver driver, By locator) {
 		return new WebDriverWait(driver, Duration.ofSeconds(6))
@@ -116,6 +81,14 @@ public class AllActions {
 				   }
 			 return pageArr;
 		}
+		public String[] GetCategoryText(List<WebElement> categories) {
+              String[] arr = null;
+			 for(WebElement textArr: categories) {
+				   arr = textArr.getText().split(" ");				   
+			 }
+			 
+			return arr;
+		}
 		public String[] GetHyperLink(List<WebElement> pages) {
 			 String[] pageArr = new String[pages.size()];
 			 int count=0;
@@ -131,33 +104,24 @@ public class AllActions {
 			recipes = new Recipes();
 			recipes.setRecipeName(recipe[0]);
 			recipes.setRecipeID(recipe[1]);
-		    recipes.setRecipeCategoryBySearch(recipe[2]);
-            recipes.setFoodCategoryBySearch(recipe[3]);
+		    recipes.setRecipeCategory(recipe[2]);
+            recipes.setFoodCategory(recipe[3]);
 
-			//recipes.setFoodCategory(recipe[3]);
 			recipes.setIngredients(recipe[4]);
 			recipes.setPrepTime(recipe[5]);
 			recipes.setCookTime(recipe[6]);
 			recipes.setMethod(recipe[7]);
 			recipes.setNutrient(recipe[8]);
 
-			//recipes.setMorbid(recipe[10]);
 			recipes.setUrl(recipe[10]);
-			recipes.setRecipeCategory(recipe[11]);
 
 			
         
 			scrapedRecipeList.add(recipes);		
 	
-			// System.out.println("count: "+scrapedRecipeList.size());
-           // for(Recipes recipe1: scrapedRecipeList) {
-            	//System.out.println("name: "+recipe1.getRecipeName());
-            	//System.out.println("id: "+recipe1.getRecipeID());             
-            //}  	
 		}
 
       public static void AddFlagInRecipe() throws IOException {
-      	  //System.out.println("scr: "+scrapedRecipeList.size());
 		    System.out.println("Filtering All Recipes Is In Progress.... ");	
 
       for(int i=0; i<scrapedRecipeList.size();i++) {	      	  
@@ -177,14 +141,13 @@ public class AllActions {
 			AddFlagInRecipe();
 			String path;
     	 /*	path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipesAll.xlsx";
-    	  //  xlUtility = new XLUtility(path, "AllModules");
-    	   // xlUtility.WriteIntoFile(scrapedRecipeList);
+    	    xlUtility = new XLUtility(path, "AllModules");
+    	     xlUtility.WriteIntoFile(scrapedRecipeList);
     	    
     	 	path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipesAll.xlsx"; 
     	    xlUtility = new XLUtility(path, "AllModules");
     	    xlUtility.FillGreenColor("AllModules",0, 9); */
       	 	
-			//System.out.println("Writing All Recipes to excel");
 		    System.out.println("Writing All Recipes to excel.....");	
 
     	    path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
@@ -232,8 +195,6 @@ public class AllActions {
 	public static void SetFlag(String[] ingredientsText,List<String> eliminateArr, String flagText, Recipes recipe) {
 		String addIngred ="";
 		List<String> ingredText = Arrays.asList(ingredientsText);
-		//System.out.println("elimin text +1: "+flagText.substring(flagText.indexOf(' ')+1).contentEquals("Eliminated"));
-		//System.out.println("Add text: "+flagText.substring(flagText.indexOf(' ')).contentEquals("Add"));
 
 		List<String> result = ingredText.stream().filter(
     			s -> eliminateArr.stream().anyMatch(s1 -> s.contains(s1))
@@ -246,7 +207,6 @@ public class AllActions {
     			if((result.size()==0 && flagText.substring(flagText.indexOf('_')+1) .contentEquals("Eliminated"))||
     			  (result.size()!=0 && flagText.substring(flagText.indexOf('_')+1).contentEquals("Add")))
     			{		
-        	       // System.out.println(flagText+" adding"); 
                        
     		    	  if(recipe.getMorbid()==null)
     		  		     recipe.setMorbid(flagText.substring(0, flagText.indexOf('_')));
