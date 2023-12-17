@@ -27,7 +27,9 @@ public class ConfigReader {
     public static String getBaseUrl() {
 		return prop.getProperty("baseUrl");   	
     }
-    
+    public static String getAllRecipeUrl() {
+		return prop.getProperty("allRecipeUrl");   	
+    }
     public static String getDiabetesUrl() {
 		return prop.getProperty("diabetesUrl");   	
     }

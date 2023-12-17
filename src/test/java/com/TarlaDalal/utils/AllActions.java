@@ -152,8 +152,11 @@ public class AllActions {
 
       public static void AddFlagInRecipe() throws IOException {
       	  //System.out.println("scr: "+scrapedRecipeList.size());
-      for(int i=0; i<scrapedRecipeList.size();i++) {	      	  
-           String[] ingredientsText = scrapedRecipeList.get(i).getIngredients().split(",");
+      for(int i=0; i<scrapedRecipeList.size();i++) {
+    	  String[] ingredientsText= {};
+    	  if(scrapedRecipeList.get(i).getIngredients()!=null) {
+           ingredientsText = scrapedRecipeList.get(i).getIngredients().split(",");
+    	  }
     	    CheckDiabetesEliminate(ingredientsText,scrapedRecipeList.get(i));
     	   
     	    CheckHypothyroidismEliminate(ingredientsText,scrapedRecipeList.get(i));
@@ -165,10 +168,10 @@ public class AllActions {
     	    Checkallergies(ingredientsText,scrapedRecipeList.get(i));
       }
       }      
-      public static void AddInRecipesXLS() throws IOException {
+      public static void AddInRecipesXLS(String fileName) throws IOException {
 			AddFlagInRecipe();
 			String path;
-    	 	path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipesAll.xlsx";
+    	 	path = System.getProperty("user.dir")+"/src/test/resources/Lists/"+fileName;
     	    xlUtility = new XLUtility(path, "AllModules");
     	    xlUtility.WriteIntoFile(scrapedRecipeList);
     	 	

@@ -1,27 +1,15 @@
 package com.TarlaDalal.pages;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import javax.swing.text.Document;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.TarlaDalal.model.Recipes;
 import com.TarlaDalal.utils.AllActions;
-import com.TarlaDalal.utils.ConfigReader;
 public class RecipeDetailsPage extends AllActions{
 	
 	WebDriver driver;
@@ -107,9 +95,13 @@ public class RecipeDetailsPage extends AllActions{
 
 
 
-	public void GetTime(String[] recipe) {	  	 
+	public void GetTime(String[] recipe) {	 
+		try {
 		    recipe[5]= prepTime.getText();
 	  	    recipe[6]= cookTime.getText();
+		} catch (Exception e) {
+			recipe[5]= "Nil";
+		}
 		    //System.out.println("cook time: "+recipe[6]+" pre "+recipe[5]);		
 	}
 

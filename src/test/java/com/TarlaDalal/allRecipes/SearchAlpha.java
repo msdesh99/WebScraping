@@ -20,7 +20,7 @@ import com.TarlaDalal.utils.ConfigReader;
 
 
 public class SearchAlpha {
-	WebDriver driver;
+	protected WebDriver driver;
 	Properties prop;
 	ConfigReader configReader;
 	HomePage homePage;
@@ -42,22 +42,27 @@ public class SearchAlpha {
 		//driver = new FirefoxDriver();
 		configReader = new ConfigReader();
 		prop = configReader.initializeProperties();	
-		//driver.get(ConfigReader.getBaseUrl());
-		driver.get(ConfigReader.getDiabetesUrl());
-		
+		//driver.get(ConfigReader.getBaseUrl());		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 		driver.manage().window().maximize();
-		
 	}
 
 	@AfterTest
 	public void tearDown() throws Exception {
 	}
 
-	@Test
-	public void testA1() throws InterruptedException, IOException {		
+	//@Test
+	public void testDiabetes() throws InterruptedException, IOException {
+		driver.get(ConfigReader.getDiabetesUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetPage();
+	}
+	
+	@Test
+	public void testHypoThyroidism() throws InterruptedException, IOException {
+		driver.get(ConfigReader.getAllRecipeUrl());
+		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
+		pageNumberPage.GetAllRecipePage();
 	}
 	
 }

@@ -1,10 +1,10 @@
 package com.TarlaDalal.pages;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -52,7 +52,29 @@ public class PageNumberPage extends AllActions{
  //break;
 			driver.get(ConfigReader.getDiabetesUrl()); 
 	    }
-		AddInRecipesXLS();
+		AddInRecipesXLS("ListOfRecipesAll.xlsx");
 
   }
+	
+	public void GetAllRecipePage() throws InterruptedException, IOException {
+		int page = 1;
+		boolean pageExists = true;
+		while (pageExists){
+			System.out.println("Processing page : " + page);
+			locator = By.xpath("(//div//a[(@class='respglink' or @class='rescurrpg') and text()='" + page + "'])");
+			try {
+				ClickElement(CallDriverWait(driver, locator), driver);			
+				homePage = PageFactory.initElements(driver, HomePage.class);
+				homePage.GetAllRecipe(driver.getCurrentUrl());
+			}
+			catch(TimeoutException e) {
+				pageExists = false;
+				System.out.println("End of pages. Page "+page+" Does not exist.");
+			}
+			page++;
+		}
+		System.out.println("Writing A to Z recipies to excel");
+		AddInRecipesXLS("AtoZRecipes.xlsx");
+
+	}
 }

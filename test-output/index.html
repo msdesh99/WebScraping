@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,7 +21,8 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
@@ -50,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\mdesh\AppData\Local\Temp\testng-eclipse--1209249137\testng-customsuite.xml</span>
+                    <span>C:\Users\Dumbledore\AppData\Local\Temp\testng-eclipse--1166614277\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.TarlaDalal.allRecipes.SearchAlpha" class="method navigator-link" hash-for-method="testA1">testA1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.TarlaDalal.allRecipes.SearchAlpha" class="method navigator-link" hash-for-method="testHypoThyroidism">testHypoThyroidism</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,9 +127,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testA1">
-                  </a> <!-- testA1 -->
-                  <span class="method-name">testA1</span>
+                  <a name="testHypoThyroidism">
+                  </a> <!-- testHypoThyroidism -->
+                  <span class="method-name">testHypoThyroidism</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\mdesh\AppData\Local\Temp\testng-eclipse--1209249137\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Dumbledore\AppData\Local\Temp\testng-eclipse--1166614277\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +146,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.TarlaDalal.allRecipes.SearchAlpha&quot;/&gt;
+      &lt;class name=&quot;com.TarlaDalal.allRecipes.SearchAlpha&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testHypoThyroidism&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.TarlaDalal.allRecipes.SearchAlpha --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -187,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testA1')
+data.setCell(0, 1, 'testHypoThyroidism')
 data.setCell(0, 2, 'com.TarlaDalal.allRecipes.SearchAlpha')
-data.setCell(0, 3, 1297375);
+data.setCell(0, 3, 3684035);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 minutes</span>
+              <span class="suite-total-time">Total running time: 1 hours</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -227,19 +232,19 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpBeforeClass</span>
-                <span class="method-start">15202 ms</span>
+                <span class="method-start">3498 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">testA1</span>
-                <span class="method-start">15250 ms</span>
+                <span class="method-name">testHypoThyroidism</span>
+                <span class="method-start">3513 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownAfterClass</span>
-                <span class="method-start">1312636 ms</span>
+                <span class="method-start">3687562 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1312640 ms</span>
+                <span class="method-start">3687565 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
