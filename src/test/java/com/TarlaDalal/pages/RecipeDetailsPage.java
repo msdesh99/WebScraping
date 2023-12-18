@@ -14,6 +14,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -107,8 +108,17 @@ public class RecipeDetailsPage extends AllActions{
 
 
 
-	public void GetTime(String[] recipe) {	  	 
-		    recipe[5]= prepTime.getText();
+	public void GetTime(String[] recipe) {	 
+		try {
+		if(prepTime!=null) {
+		    recipe[5]= prepTime.getText();}
+		else {
+			throw new NoSuchElementException("Element not found");
+		}
+		}catch (NoSuchElementException e) {
+			System.out.println("prep time is not available");
+			recipe[5] = "N/A"; 
+		}
 	  	    recipe[6]= cookTime.getText();
 		    //System.out.println("cook time: "+recipe[6]+" pre "+recipe[5]);		
 	}

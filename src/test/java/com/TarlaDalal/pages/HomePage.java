@@ -30,6 +30,7 @@ public class HomePage extends AllActions{
 	
  	@FindBy(xpath="//*[@id='maincontent']//*[@class='rcc_rcpcore']//*/a[@itemprop='url']") //dia  
 	List<WebElement> recipeList;
+ 
 
 	public void GetRecipe(String url) throws InterruptedException, IOException {
 		  
@@ -40,8 +41,9 @@ public class HomePage extends AllActions{
 		   for(String[] recipe: list) {	   
 				//if (count <= 2) {
 				ScreenScrollDown(driver);
-					locator = By.xpath("//*[@class='rcc_rcpcore']//*/a[@itemprop='url' "
-							+ "and text()='" + recipe[0] + "']");
+					
+				 locator = By.xpath("//*[@class='rcc_rcpcore']//*/a[@itemprop='url' and contains(text(), \"" + recipe[0] + "\")]");
+
 					ClickElement(CallDriverWait(driver, locator), driver);
                      
 					recipeDetails = PageFactory.initElements(driver,RecipeDetailsPage.class);
@@ -55,5 +57,5 @@ public class HomePage extends AllActions{
 		}
 		     driver.get(url);
 	}
-  }
 
+  }

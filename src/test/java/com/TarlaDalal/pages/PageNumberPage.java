@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,9 +34,8 @@ public class PageNumberPage extends AllActions{
 		//scrapedRecipeList = new ArrayList<Recipes>();
 	}
 
-	//@FindBy(xpath="//*[@id='maincontent']//*[@class='respglink' or @class='rescurrpg']")//for a-z
-	@FindBy(xpath="//*[@id='cardholder']//*[@class='respglink' or @class='rescurrpg']") //diebetic	  
-    List<WebElement> pages;
+	@FindBy(xpath="//*[@id='maincontent']//*[@class='respglink' or @class='rescurrpg']")
+   List<WebElement> pages;
 
 	public void GetPage() throws InterruptedException, IOException {
 		  String[] pageArr = GetPageText(pages);		  
@@ -43,7 +44,8 @@ public class PageNumberPage extends AllActions{
 		//  for(int i=0;i<pageArr.length;i++) {
 			System.out.println("pagenu: "+pageNo);
 			if(Integer.valueOf(pageNo)>1) {
-				locator = By.xpath("//*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')"
+			
+				locator = By.xpath("//*[@id='maincontent']//*[(@class='respglink' or @class='rescurrpg')"
 						+ "and text()='"+pageNo+"']");
 				ClickElement(CallDriverWait(driver, locator), driver);
 			}				
@@ -55,4 +57,5 @@ public class PageNumberPage extends AllActions{
 		AddInRecipesXLS();
 
   }
+	
 }
