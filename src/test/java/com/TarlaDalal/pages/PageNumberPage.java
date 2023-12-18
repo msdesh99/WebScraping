@@ -52,7 +52,7 @@ public class PageNumberPage extends AllActions{
 			homePage = PageFactory.initElements(driver,HomePage.class);
 			homePage.GetRecipe(driver.getCurrentUrl());
  //break;
-			driver.get(ConfigReader.getDiabetesUrl()); 
+			driver.get(ConfigReader.getHypertensionUrl()); 
 	    }
 		AddInRecipesXLS();
 
