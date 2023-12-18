@@ -16,28 +16,54 @@ import com.TarlaDalal.utils.AllActions;
 import com.TarlaDalal.utils.ConfigReader;
 
 
-public class PageNumberPage extends AllActions{
+public class PCOSPage extends AllActions{
 	WebDriver driver;
     By locator;
     HomePage homePage; 
     byte count;
     Recipes recipes;
+    int size;
+    String ingd,targetmorbidcondition,RecURL,labels;
     
-	public PageNumberPage(WebDriver driver) {
+	public PCOSPage(WebDriver driver) {
 		super();
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		//scrapedRecipeList = new ArrayList<Recipes>();
 	}
 
+	
 	@FindBy(xpath="//*[@id='cardholder']//*[@class='respglink' or @class='rescurrpg']") //diebetic	  
     List<WebElement> pages;
 
-	public void GetPage() throws InterruptedException, IOException {
+	public void GetPCOSPage(WebDriver driver) throws InterruptedException, IOException {
+		System.out.println("inPCOS");
+	    WebElement recipies = driver.findElement(By.xpath("//div[contains(text(),'RECIPES')]"));
+	    recipies.click();
+	    WebElement PCOSrecipes = driver.findElement(By.xpath("//a[@id='ctl00_cntleftpanel_ttlhealthtree_tvTtlHealtht335']"));
+	    PCOSrecipes.click();
+	
+	     int pageCount=driver.findElements(By.xpath("//div[@id='pagination']/a")).size();
+	System.out.println("Page count:"+pageCount);
+	size= driver.findElements(By.xpath("//span[@class='rcc_recipename']")).size();
+	System.out.println("recipe size"+size);
+	
+	targetmorbidcondition= driver.findElement(By.xpath("//span[@id='ctl00_cntleftpanel_lblSearchTerm']//span//h1")).getText();
+	System.out.println("Target Morbid Condition :"+targetmorbidcondition);
+	for(int i=1; i<pageCount; i++) {
+	 if(i<2){
+	
+		System.out.println("Processing Page: "+i);
+		System.out.println("Processing Page: "+driver.getCurrentUrl());
+
+	homePage = PageFactory.initElements(driver,HomePage.class);
+	homePage.GetRecipe(driver.getCurrentUrl()); 
+	 }
+	else break;
+	}
+		/*
 		  String[] pageArr = GetPageText(pages);		  
 		  count=0;
 		for(String pageNo: pageArr) {
-			System.out.println("Processing Page: "+pageNo);
 			if(count<2) {
 			if(Integer.valueOf(pageNo)>1) {
 				locator = By.xpath("//*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')"
@@ -72,5 +98,6 @@ public class PageNumberPage extends AllActions{
 			}	
 		}
   
-	
+	*/
+}
 }

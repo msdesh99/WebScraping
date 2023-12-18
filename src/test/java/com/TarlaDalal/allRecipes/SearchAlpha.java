@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.TarlaDalal.pages.HomePage;
+import com.TarlaDalal.pages.PCOSPage;
 import com.TarlaDalal.pages.PageNumberPage;
 import com.TarlaDalal.pages.RecipeCategoryPage;
 import com.TarlaDalal.utils.AllActions;
@@ -27,6 +28,7 @@ public class SearchAlpha extends AllActions {
 	PageNumberPage pageNumberPage;
 	RecipeCategoryPage recipeCategoryPage;
     AllRecipes allRecipes;
+    PCOSPage pcosPage;
     
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -50,7 +52,7 @@ public class SearchAlpha extends AllActions {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+/*	@Test
 	public void testA1() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getDiabetesUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);
@@ -95,8 +97,14 @@ public class SearchAlpha extends AllActions {
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetAllRecipePage();
 	}
-	
-
+	*/
+	@Test
+	public void testA9() throws InterruptedException, IOException {	
+		driver.get(ConfigReader.getBaseUrl());
+		pcosPage = PageFactory.initElements(driver, PCOSPage.class);		
+		pcosPage.GetPCOSPage(driver);
+		
+	}		
 	/*
 	@Test
 	public void testA7() throws InterruptedException, IOException {

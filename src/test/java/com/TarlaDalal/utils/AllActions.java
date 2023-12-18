@@ -179,9 +179,12 @@ public class AllActions {
 		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getAddHypertension());
 	    SetFlag(ingredientsText,diabetesAddArr,"Hypertension_Add",recipe);
 	}
-	public  static void CheckPCOSEliminate(String[] ingredientsText, Recipes recipe) {
-		List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminatePCOS());
-	    SetFlag(ingredientsText,eliminateArr,"PCOS_Eliminated",recipe);
+	public  static void CheckPCOSEliminate(String[] ingredientsText, Recipes recipe) throws IOException {
+		//List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminatePCOS());
+		List<String> eliminateArr = Elimination_Recipe_Details.checkElimination();
+         //System.out.println("elimi: "+eliminateArr.size());
+        // for(String testPC: eliminateArr) System.out.println("elmarr: "+ testPC);
+		SetFlag(ingredientsText,eliminateArr,"PCOS_Eliminated",recipe);
 	}
  	public static void CheckPCOSAdd(String[] ingredientsText, Recipes recipe) {
 		List<String> diabetesAddArr = Arrays.asList(ConfigReader.getAddPCOS());
@@ -200,19 +203,19 @@ public class AllActions {
     			s -> eliminateArr.stream().anyMatch(s1 -> s.contains(s1))
     			).collect(Collectors.toList());  	
     	  for (String s1 : result) {
-    	       // System.out.println(flagText+" : "+ s1); 
+    	        System.out.println(flagText+" : "+ s1); 
     	        if(addIngred=="") addIngred = s1;
     	        else addIngred = addIngred+"-"+s1;
     	        }
-    			if((result.size()==0 && flagText.substring(flagText.indexOf('_')+1) .contentEquals("Eliminated"))||
+    			if((result.size()==0 && flagText.substring(flagText.indexOf('_')+1).contentEquals("Eliminated"))||
     			  (result.size()!=0 && flagText.substring(flagText.indexOf('_')+1).contentEquals("Add")))
     			{		
-                       
+                    if(flagText!="Allergies_Add")  { 
     		    	  if(recipe.getMorbid()==null)
     		  		     recipe.setMorbid(flagText.substring(0, flagText.indexOf('_')));
     		    	  else
      		  		     recipe.setMorbid(recipe.getMorbid()+",\n"+flagText.substring(0, flagText.indexOf('_')));
-
+                    }
     		  		if(flagText.contentEquals("Diabetes_Eliminated")) {
     		  			recipe.setDiabetes_Eliminated("Yes");
     		  			CheckDiabetesAdd(ingredientsText,recipe);
@@ -253,6 +256,12 @@ public class AllActions {
    		  		        recipe.setFlag("Allergies");
      		  		}   
     		  		
+    			}
+    			else {
+    			/*	System.out.println("***************************************************************************");
+    				System.out.println("Eliminated ingredient found/This "+ recipe.getRecipeID() +" recipe not suitable");
+    				System.out.println("***************************************************************************");
+    			*/
     			}
     			addIngred="";
     			

@@ -5,10 +5,9 @@
     <classes>
       <class name="com.TarlaDalal.allRecipes.SearchAlpha">
         <methods>
+          <include name="testA9"/>
           <include name="tearDownAfterClass"/>
           <include name="tearDown"/>
-          <include name="testA1"/>
-          <include name="testC9999"/>
           <include name="setUpBeforeClass"/>
           <include name="setUp"/>
         </methods>

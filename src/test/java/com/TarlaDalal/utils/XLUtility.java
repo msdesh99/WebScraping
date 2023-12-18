@@ -47,7 +47,37 @@ public class XLUtility {
 			 this.dataFile = new File(this.path);
 			 this.sheet1 = sheet;
 		}
-
+	 public int getRowCount(String sheetName) throws IOException
+	 {
+	  fi = new FileInputStream(path);
+	  wkb = new XSSFWorkbook(fi);
+	  sh = wkb.getSheet(sheetName);
+	  int rowcount=sh.getLastRowNum();
+	  wkb.close();
+	  fi.close();
+	  return rowcount;
+	 }
+	  public String getCellData(String sheetName,int rownum,int colnum) throws IOException
+	   {
+	    fi = new FileInputStream(path);
+	    wkb = new XSSFWorkbook(fi);
+	    sh = wkb.getSheet(sheetName);
+	    row= sh.getRow(rownum);
+	    cell=row.getCell(colnum);
+	    
+	    DataFormatter formatter=new DataFormatter();
+	    String data;
+	    try {
+	    data=formatter.formatCellValue(cell);//Returns the formatted value of regardless of the cell type
+	   }
+	    catch(Exception e)
+	    {
+	     data="";
+	    }
+	    wkb.close();
+	    fi.close();
+	    return data;
+	   }
 	/*
 public void WriteIntoFile(ArrayList<Recipes> detailArr) throws IOException{
 	//System.out.println("data: "+this.dataFile);

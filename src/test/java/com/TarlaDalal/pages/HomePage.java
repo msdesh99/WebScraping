@@ -33,6 +33,9 @@ public class HomePage extends AllActions{
  	@FindBy(xpath="//span[@class='rcc_recipename']//a[not(contains(@href,'flower-arrangements'))]")
 	List<WebElement> allRecipeList;
  	
+ 	@FindBy(xpath="//*[@class='rcc_rcpcore']//a[@itemprop='url']")
+ 	List<WebElement> hypertensionList;
+ 	
 	public void GetRecipe(String url) throws InterruptedException, IOException {
 		  
 		  String[][] list = GetHyperText(recipeList);
@@ -81,5 +84,24 @@ public class HomePage extends AllActions{
 		}
 		driver.get(url);
 	}
+/*	public void GetHyperTensionRecipes() throws InterruptedException, IOException {
+		  
+		  String[][] list = GetHyperText(hypertensionList);
+		   count =0;
+          
+		  // for(String[] recipe: list) {
+			for (int i = 0; i < list.length; i++) {
+
+			  // System.out.println("count: "+ recipe.length);
+			 if (count < 2) {
+				 GetAllRecipe(list[i]);
+				
+							count++;
+				}
+			 else break;
+
+		}
+		     driver.get(url);
+	} */
   }
 
