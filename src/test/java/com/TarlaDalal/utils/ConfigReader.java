@@ -28,8 +28,8 @@ public class ConfigReader {
 		return prop.getProperty("baseUrl");   	
     }
     
-    public static String getDiabetesUrl() {
-		return prop.getProperty("diabetesUrl");   	
+    public static String getHypertensionUrl() {
+		return prop.getProperty("hypertensionUrl");   	
     }
     public static String[] getcellNames() {
     	return prop.getProperty("cellNames").split(",");		
