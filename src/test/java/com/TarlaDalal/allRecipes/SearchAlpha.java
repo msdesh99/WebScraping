@@ -49,7 +49,7 @@ public class SearchAlpha {
 		configReader = new ConfigReader();
 		prop = configReader.initializeProperties();	
 		
-		driver.get(ConfigReader.getDiabetesUrl());
+		driver.get(ConfigReader.getHypertensionUrl());
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 		driver.manage().window().maximize();
