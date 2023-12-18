@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
@@ -37,12 +38,17 @@ public class SearchAlpha {
 
 	@BeforeTest
 	public void setUp() throws Exception {
-		driver = new ChromeDriver();
-		//driver = new EdgeDriver();
-		//driver = new FirefoxDriver();
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		 options.addArguments("--disable-gpu");
+		 options.addArguments("--blink-settings=imagesEnabled=false");
+		 
+		driver = new ChromeDriver(options);
+		
 		configReader = new ConfigReader();
 		prop = configReader.initializeProperties();	
-		//driver.get(ConfigReader.getBaseUrl());
+		
 		driver.get(ConfigReader.getDiabetesUrl());
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
