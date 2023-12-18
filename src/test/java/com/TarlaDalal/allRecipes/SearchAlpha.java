@@ -52,14 +52,14 @@ public class SearchAlpha extends AllActions {
 	public void tearDown() throws Exception {
 	}
 
-/*	@Test
+	@Test
 	public void testA1() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getDiabetesUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);
 		pageNumberPage.GetPage();
 	} 
 
-	@Test
+/*	@Test
 	public void testA2() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getBaseUrl());
 		recipeCategoryPage = PageFactory.initElements(driver, RecipeCategoryPage.class);
@@ -101,8 +101,12 @@ public class SearchAlpha extends AllActions {
 	@Test
 	public void testA9() throws InterruptedException, IOException {	
 		driver.get(ConfigReader.getBaseUrl());
-		pcosPage = PageFactory.initElements(driver, PCOSPage.class);		
-		pcosPage.GetPCOSPage(driver);
+		//driver.get(ConfigReader.getPCOSUrl());
+		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
+		pageNumberPage.GetPCOSPage(driver);
+	;
+	//	pcosPage = PageFactory.initElements(driver, PCOSPage.class);		
+		//pcosPage.GetPCOSPage(driver);
 		
 	}		
 	/*

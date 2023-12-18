@@ -84,6 +84,10 @@ public class ConfigReader {
 	public static String[] getRecipeCategory() {
 		return prop.getProperty("recipecategory").split(",");
 	}
+	public static String getPCOSUrl() {
+		return prop.getProperty("pcosUrl");   	
+	}
+
 	
 }
 

@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-18T07:52:49 GMT-05:00" name="Default suite" finished-at="2023-12-18T07:54:01 GMT-05:00" duration-ms="72287">
+  <suite started-at="2023-12-18T11:47:40 GMT-05:00" name="Default suite" finished-at="2023-12-18T11:52:04 GMT-05:00" duration-ms="264124">
     <groups>
     </groups>
-    <test started-at="2023-12-18T07:52:49 GMT-05:00" name="Default test" finished-at="2023-12-18T07:54:01 GMT-05:00" duration-ms="72287">
+    <test started-at="2023-12-18T11:47:40 GMT-05:00" name="Default test" finished-at="2023-12-18T11:52:04 GMT-05:00" duration-ms="264124">
       <class name="com.TarlaDalal.allRecipes.SearchAlpha">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@74235045]" started-at="2023-12-18T07:52:49 GMT-05:00" name="setUp" finished-at="2023-12-18T07:52:52 GMT-05:00" duration-ms="3143" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@618b19ad]" started-at="2023-12-18T11:47:40 GMT-05:00" name="setUp" finished-at="2023-12-18T11:47:43 GMT-05:00" duration-ms="3685" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@74235045]" started-at="2023-12-18T07:52:52 GMT-05:00" name="setUpBeforeClass" finished-at="2023-12-18T07:52:52 GMT-05:00" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@618b19ad]" started-at="2023-12-18T11:47:43 GMT-05:00" name="setUpBeforeClass" finished-at="2023-12-18T11:47:43 GMT-05:00" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="testA9()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@74235045]" started-at="2023-12-18T07:52:52 GMT-05:00" name="testA9" finished-at="2023-12-18T07:53:57 GMT-05:00" duration-ms="64552" status="PASS">
+        <test-method signature="testA1()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@618b19ad]" started-at="2023-12-18T11:47:43 GMT-05:00" name="testA1" finished-at="2023-12-18T11:50:04 GMT-05:00" duration-ms="140418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testA1 -->
+        <test-method signature="testA9()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@618b19ad]" started-at="2023-12-18T11:50:04 GMT-05:00" name="testA9" finished-at="2023-12-18T11:51:58 GMT-05:00" duration-ms="114683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testA9 -->
-        <test-method signature="testC9999()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@74235045]" started-at="2023-12-18T07:53:57 GMT-05:00" name="testC9999" finished-at="2023-12-18T07:54:01 GMT-05:00" duration-ms="4474" status="PASS">
+        <test-method signature="testC9999()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@618b19ad]" started-at="2023-12-18T11:51:58 GMT-05:00" name="testC9999" finished-at="2023-12-18T11:52:04 GMT-05:00" duration-ms="5274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testC9999 -->
-        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@74235045]" started-at="2023-12-18T07:54:01 GMT-05:00" name="tearDownAfterClass" finished-at="2023-12-18T07:54:01 GMT-05:00" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@618b19ad]" started-at="2023-12-18T11:52:04 GMT-05:00" name="tearDownAfterClass" finished-at="2023-12-18T11:52:04 GMT-05:00" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@74235045]" started-at="2023-12-18T07:54:01 GMT-05:00" name="tearDown" finished-at="2023-12-18T07:54:01 GMT-05:00" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@618b19ad]" started-at="2023-12-18T11:52:04 GMT-05:00" name="tearDown" finished-at="2023-12-18T11:52:04 GMT-05:00" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -1,6 +1,7 @@
 package com.TarlaDalal.pages;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -50,6 +51,7 @@ public class HomePage extends AllActions{
 					ClickElement(CallDriverWait(driver, locator), driver);
 					
 				    System.out.println("Processing Recipe : " + recipe[0] +"-"+recipe[1]);	
+	
 					recipeDetails = PageFactory.initElements(driver,RecipeDetailsPage.class);
 					recipeDetails.GetRecipeDetails(recipe,driver.getCurrentUrl());
 

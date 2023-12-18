@@ -34,6 +34,9 @@ public class RecipeDetailsPage extends AllActions{
 	@FindBy(css="[itemprop=recipeCategory] span")
 	List<WebElement> categories;
 	
+	//@FindBy(xpath="//div[@id='rcpinglist']")
+    //WebElement ingd;
+			
 	@FindBy(css="[itemprop=prepTime]")
 	WebElement prepTime;
 	
@@ -60,8 +63,9 @@ public class RecipeDetailsPage extends AllActions{
 	}
 	public void GetIngredients(String[] recipe) {		
 		  String[] ingredients_links = GetPageText(ingredients);
-
-		    for(String ingeText : ingredients_links) {
+		 String indg = driver.findElement(By.xpath("//div[@id='rcpinglist']")).getText().replace("\n", " ").toLowerCase().replace("(", " ").replace(")", " ");
+		 //System.out.println("indg Ana: "+ indg); 
+		 for(String ingeText : ingredients_links) {
 		        if(recipe[4]!=null)	
 		    	recipe[4] = recipe[4]+" ,\n "+ingeText;
 		       else 

@@ -43,7 +43,8 @@ public class PCOSPage extends AllActions{
 	    PCOSrecipes.click();
 	
 	     int pageCount=driver.findElements(By.xpath("//div[@id='pagination']/a")).size();
-	System.out.println("Page count:"+pageCount);
+	      System.out.println("Page count:"+pageCount);
+	   //   page
 	size= driver.findElements(By.xpath("//span[@class='rcc_recipename']")).size();
 	System.out.println("recipe size"+size);
 	

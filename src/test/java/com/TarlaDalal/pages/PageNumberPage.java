@@ -52,6 +52,42 @@ public class PageNumberPage extends AllActions{
 			driver.get(ConfigReader.getDiabetesUrl()); 
 	    }
 	}	
+	public void GetPCOSPage(WebDriver driver) throws InterruptedException, IOException {
+		System.out.println("inPCOS");
+	    WebElement recipies = driver.findElement(By.xpath("//div[contains(text(),'RECIPES')]"));
+	    recipies.click();
+	    WebElement PCOSrecipes = driver.findElement(By.xpath("//a[@id='ctl00_cntleftpanel_ttlhealthtree_tvTtlHealtht335']"));
+	    PCOSrecipes.click();
+	
+	    List<WebElement> pages = driver.findElements(By.xpath("//div[@id='pagination']/a"));
+	    // int pageCount=driver.findElements(By.xpath("//div[@id='pagination']/a")).size();
+	      System.out.println("Page count:"+pages.size());
+		  String[] pageArr = GetPageText(pages);		  
+		  count=0;
+			for(String pageNo: pageArr) {
+				System.out.println("Processing Page: "+pageNo);
+				if(count<2) {
+				if(Integer.valueOf(pageNo)>1) {
+					locator = By.xpath("//*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')"
+							+ "and text()='"+pageNo+"']");
+					ClickElement(CallDriverWait(driver, locator), driver);
+				}				
+				homePage = PageFactory.initElements(driver,HomePage.class);
+				homePage.GetRecipe(driver.getCurrentUrl());
+				count++;
+				}
+				else break;
+				driver.get(ConfigReader.getDiabetesUrl()); 
+		    }
+		
+	/*size= driver.findElements(By.xpath("//span[@class='rcc_recipename']")).size();
+	System.out.println("recipe size"+size);
+	*/
+//	targetmorbidcondition= driver.findElement(By.xpath("//span[@id='ctl00_cntleftpanel_lblSearchTerm']//span//h1")).getText();
+	//System.out.println("Target Morbid Condition :"+targetmorbidcondition);
+
+}
+
 		public void GetAllRecipePage() throws InterruptedException, IOException {
 			int page = 1;
 			boolean pageExists = true;
@@ -71,6 +107,5 @@ public class PageNumberPage extends AllActions{
 				page++;
 			}	
 		}
-  
+}		
 	
-}

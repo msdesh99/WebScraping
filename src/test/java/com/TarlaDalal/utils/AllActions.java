@@ -61,13 +61,14 @@ public class AllActions {
     }	
  		public String[][] GetHyperText(List<WebElement> recipeList) {
 	    	String[][]  list = new String[recipeList.size()][ConfigReader.getcellNames().length];
-            String rawId="";
+	        String rawId="";
 			int count=0;
 			   for(WebElement menu: recipeList) {			   
 				    rawId = menu.getAttribute("href").toString();
 					list[count][0] = menu.getText();
 					list[count][1] = rawId.substring(rawId.lastIndexOf('-')+1,rawId.length()-1);
-
+					
+	
 					count++;
 			   }
 			    return list;
@@ -181,6 +182,7 @@ public class AllActions {
 	}
 	public  static void CheckPCOSEliminate(String[] ingredientsText, Recipes recipe) throws IOException {
 		//List<String> eliminateArr = Arrays.asList(ConfigReader.geteliminatePCOS());
+		//for(String elemi: eliminateArr) System.out.println("ele: "+ elemi);
 		List<String> eliminateArr = Elimination_Recipe_Details.checkElimination();
          //System.out.println("elimi: "+eliminateArr.size());
         // for(String testPC: eliminateArr) System.out.println("elmarr: "+ testPC);
