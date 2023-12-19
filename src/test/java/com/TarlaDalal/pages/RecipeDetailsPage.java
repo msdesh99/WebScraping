@@ -15,6 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.TarlaDalal.model.Recipes;
 import com.TarlaDalal.utils.AllActions;
 import com.TarlaDalal.utils.ConfigReader;
+import com.TarlaDalal.utils.LoggerLoad;
 import com.TarlaDalal.utils.XLUtility;
 
 public class RecipeDetailsPage extends AllActions {
@@ -48,9 +49,6 @@ public class RecipeDetailsPage extends AllActions {
 
 	@FindBy(css = "[itemprop=recipeCategory] span")
 	List<WebElement> categories;
-
-	// @FindBy(xpath="//div[@id='rcpinglist']")
-	// WebElement ingd;
 
 	@FindBy(css = "[itemprop=prepTime]")
 	WebElement prepTime;
@@ -93,12 +91,10 @@ public class RecipeDetailsPage extends AllActions {
 			flag.remove(0);
 			flag.add(flagTxt);
 			WriteRecipeIntoFile("All", flag.get(0));
-
 		}
-
 	}
 
-	private void Checkallergies() throws IOException {
+	public void Checkallergies() throws IOException {
 		eliminateArr = Arrays.asList(ConfigReader.getallergies());
 		flagStatus = SetFlag(ingredientsText, eliminateArr);
 		if (flagStatus > 0) {
@@ -107,11 +103,11 @@ public class RecipeDetailsPage extends AllActions {
 			flagTxt = (flagTxt == null) ? flagText + "\n" : flagTxt + "," + flagText + "\n";
 			WriteRecipeIntoFile(flagText, targetedMorbid);
 		}
-
 	}
 
-	private void CheckPCOSMorbid() throws IOException {
-		eliminateArr = Arrays.asList(ConfigReader.geteliminatePCOS());
+	public void CheckPCOSMorbid() throws IOException {
+		//eliminateArr = Arrays.asList(ConfigReader.geteliminatePCOS());
+		  eliminateArr = Arrays.asList(checkPCOSElimination());
 		flagStatus = SetFlag(ingredientsText, eliminateArr);
 		if (flagStatus == 0) {
 			flagText = "Eliminated";
@@ -121,7 +117,7 @@ public class RecipeDetailsPage extends AllActions {
 			eliminateArr = Arrays.asList(ConfigReader.getAddPCOS());
 			flagStatus = SetFlag(ingredientsText, eliminateArr);
 			if (flagStatus > 0) {
-				flagText = "OnlyAdd";
+				flagText = "Eliminated-Add";
 				targetedMorbid = "PCOS";
 				WriteRecipeIntoFile(flagText, targetedMorbid);
 			}
@@ -140,12 +136,11 @@ public class RecipeDetailsPage extends AllActions {
 			eliminateArr = Arrays.asList(ConfigReader.getAddHypertension());
 			flagStatus = SetFlag(ingredientsText, eliminateArr);
 			if (flagStatus > 0) {
-				flagText = "OnlyAdd";
+				flagText = "Eliminated-Add";
 				targetedMorbid = "HyperTension";
 				WriteRecipeIntoFile(flagText, targetedMorbid);
 			}
 		}
-
 	}
 
 	public void CheckHypothyroidismMorbid() throws IOException {
@@ -159,7 +154,7 @@ public class RecipeDetailsPage extends AllActions {
 			eliminateArr = Arrays.asList(ConfigReader.getAddHypothyroidism());
 			flagStatus = SetFlag(ingredientsText, eliminateArr);
 			if (flagStatus > 0) {
-				flagText = "OnlyAdd";
+				flagText = "Eliminated-Add";
 				targetedMorbid = "Hypothyroidism";
 				WriteRecipeIntoFile(flagText, targetedMorbid);
 			}
@@ -178,12 +173,11 @@ public class RecipeDetailsPage extends AllActions {
 			eliminateArr = Arrays.asList(ConfigReader.getAddDiabetes());
 			flagStatus = SetFlag(ingredientsText, eliminateArr);
 			if (flagStatus > 0) {
-				flagText = "OnlyAdd";
+				flagText = "Eliminated-Add";
 				targetedMorbid = "Diabetes";
 				WriteRecipeIntoFile(flagText, targetedMorbid);
 			}
 		}
-
 	}
 
 	public void GetNutrientValues() {
@@ -191,7 +185,6 @@ public class RecipeDetailsPage extends AllActions {
 		for (WebElement nutriText : nutrient)
 			nutri = (nutri == null) ? nutriText.getText() + "\n" : nutri + nutriText.getText() + "\n";
 		recipes.setNutrient(nutri);
-
 	}
 
 	public void GetCategory() {
@@ -203,7 +196,6 @@ public class RecipeDetailsPage extends AllActions {
 		String recipeText = null;
 		matchCategory = category.stream().filter(s -> categoryArr.stream().anyMatch(s1 -> s.contains(s1)))
 				.collect(Collectors.toList());
-
 		if (matchCategory.size() == 0) {
 			recipes.setRecipeCategory("Snack/Lunch");
 		} else {
@@ -249,6 +241,8 @@ public class RecipeDetailsPage extends AllActions {
 
 	public void WriteRecipeIntoFile(String sheet, String morbid) throws IOException {
 		System.out.println("In Writing recipe for :" + morbid.replace("\n", " "));
+	    LoggerLoad.info("<===In Writing recipe for : "+ morbid.replace("\n", " ") +" ===> ");	
+
 
 		path = System.getProperty("user.dir") + "/src/test/resources/Lists/ListOfRecipes.xlsx";
 		xlUtility = new XLUtility(path, sheet);
@@ -268,7 +262,27 @@ public class RecipeDetailsPage extends AllActions {
 		xlUtility.CreateNewCell(sheet, rowCount, recipes.getUrl());
 		xlUtility.CreateNewCell(sheet, rowCount, flag.get(0));
 		xlUtility.CreateNewCell(sheet, rowCount, "CloseFile");
-
 	}
 
+	public String[] checkPCOSElimination() throws IOException
+	{	
+		String pcosText=null;
+        String[] pcosArr = new String[1];
+		String  projectpath = System.getProperty("user.dir"); 
+		String xlpath=projectpath+"/src/test/resources/DataToEliminate/PCOS_Eliminate_Ingredient_List.xlsx";
+		String sheetName= "PCOS_Eliminate_Ingredients";
+		
+		XLUtility reader = new XLUtility(xlpath, sheetName);
+		
+		int rowCount= reader.getRowCount("PCOS_Eliminate_Ingredients"); 
+		
+		int colNum=0;
+		for(int rowNum=1; rowNum<rowCount; rowNum++){
+			pcosText = (pcosText==null)? reader.getCellData("PCOS_Eliminate_Ingredients",rowNum, colNum):
+				pcosText+","+ reader.getCellData("PCOS_Eliminate_Ingredients",rowNum, colNum);
+		}
+		pcosArr[0] = pcosText;
+		return pcosArr;
+
+	}		
 }

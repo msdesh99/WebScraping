@@ -1,7 +1,6 @@
 package com.TarlaDalal.pages;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -10,16 +9,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.TarlaDalal.model.Recipes;
 import com.TarlaDalal.utils.AllActions;
 import com.TarlaDalal.utils.ConfigReader;
+import com.TarlaDalal.utils.LoggerLoad;
 
 
 public class RecipeCategoryPage extends AllActions{
 	WebDriver driver;
     HomePage homePage; 
     int count=0;
-    String foodCategory;
 
     public RecipeCategoryPage(WebDriver driver) {
 		super();
@@ -27,7 +25,6 @@ public class RecipeCategoryPage extends AllActions{
 		PageFactory.initElements(driver, this);
 	}
 
-	//*[@id="search"]/input[@class="txtsearch"]  //xpath	
 	@FindBy(css="#search input[class='txtsearch']") //category search	  
     WebElement searchCategory;
 
@@ -42,10 +39,14 @@ public class RecipeCategoryPage extends AllActions{
 		  String[] recipe = GetHyperLink(foodList);		  
            
 			System.out.println("In "+category);
+		    LoggerLoad.info("<=== In "+category +" ===> ");	
+
 
 			for(String link: recipe) {
 				if(count<2) {
 				System.out.println("Processing Recipe : "+ link);
+			    LoggerLoad.info("<=== Processing Recipe : "+ link +" ===> ");	
+
 				driver.get(link);				
 				homePage = PageFactory.initElements(driver,HomePage.class);
 				homePage.GetRecipe(driver.getCurrentUrl());

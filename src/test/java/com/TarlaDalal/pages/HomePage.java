@@ -9,15 +9,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.TarlaDalal.model.Recipes;
+//import com.TarlaDalal.model.Recipes;
 import com.TarlaDalal.utils.AllActions;
+import com.TarlaDalal.utils.LoggerLoad;
 
 public class HomePage extends AllActions {
 	WebDriver driver;
 	By locator;
 	RecipeDetailsPage recipeDetails;
 	byte count;
-	Recipes recipes;
+	//Recipes recipes;
 
 	public HomePage(WebDriver driver) {
 		super();
@@ -38,21 +39,24 @@ public class HomePage extends AllActions {
 		String[][] list = GetHyperText(recipeList);
 		count = 0;
 		for (String[] recipe : list) {
-			//if (count < 15) {
+			if (count < 5) {
 				ScreenScrollDown(driver);
 				locator = By
 						.xpath("//*[@class='rcc_rcpcore']//*/a[@itemprop='url' " + "and text()='" + recipe[0] + "']");
 				ClickElement(CallDriverWait(driver, locator), driver);
 
 				System.out.println("Processing Recipe : " + recipe[0] + "-" + recipe[1]);
+			    LoggerLoad.info("<=== Processing Recipe : " + recipe[0] + "-" + recipe[1] + " ===> ");	
+
+				
 				recipeDetails = PageFactory.initElements(driver, RecipeDetailsPage.class);
 				recipeDetails.GetRecipeDetails(recipe[1], recipe[0], driver.getCurrentUrl());
 
 				driver.get(url);
 				ScreenScrollDown(driver);
 				count++;
-			//} else
-				//break;
+			} else
+				break;
 
 		}
 		driver.get(url);
@@ -66,6 +70,8 @@ public class HomePage extends AllActions {
 		for (int i = 0; i < list.length; i++) {
 			if (count <= 2) {
 				System.out.println("Processing Recipe : " + list[i][0] + "-" + list[i][1]);
+			    LoggerLoad.info("<=== Processing Recipe : " + list[i][0] + "-" + list[i][1] + " ===> ");	
+
 				WebElement hrefElement = allRecipeList.get(i);
 				ScreenScrollDown(driver);
 				hrefElement.click();

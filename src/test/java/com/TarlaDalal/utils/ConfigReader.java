@@ -58,18 +58,12 @@ public class ConfigReader {
 	public static String[] getAddHypertension() {
 		return prop.getProperty("addHypertension").split(",");
 	}
-	public static String[] geteliminatePCOS() {
-		return prop.getProperty("eliminatePCOS").split(",");
-	}
 	public static String[] getAddPCOS() {
 		return prop.getProperty("addPCOS").split(",");
 	}
 	public static String[] getallergies() {
 		return prop.getProperty("allergies").split(",");
 	}
-/*	public static String[] getSheetNames() {
-		return prop.getProperty("sheets").split(",");
-	}*/
 	public static String[] getAllSheets() {
 		return prop.getProperty("allsheets").split(",");
 	}

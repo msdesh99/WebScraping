@@ -1,4 +1,4 @@
-package com.TarlaDalal.allRecipes;
+package com.TarlaDalal.Runner;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -20,7 +20,7 @@ import com.TarlaDalal.utils.AllActions;
 import com.TarlaDalal.utils.ConfigReader;
 import com.TarlaDalal.utils.XLUtility;
 
-public class SearchAlpha extends AllActions {
+public class SearchRecipe extends AllActions {
 	WebDriver driver;
 	Properties prop;
 	ConfigReader configReader;
@@ -35,6 +35,7 @@ public class SearchAlpha extends AllActions {
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
+
 	}
 
 	@BeforeTest
@@ -51,75 +52,71 @@ public class SearchAlpha extends AllActions {
 
 	@AfterTest
 	public void tearDown() throws Exception {
+		Quit_Driver(driver);      
 	}
 
 	@Test
-	public void testA1Diabetes() throws InterruptedException, IOException {
+	public void testAADiabetes() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getDiabetesUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);
 		pageNumberPage.GetDiabetesPage();
 	} 
-/*
+
 	@Test
-	public void testA2Breakfast() throws InterruptedException, IOException {
+	public void testAABreakfast() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getBaseUrl());
 		recipeCategoryPage = PageFactory.initElements(driver, RecipeCategoryPage.class);
 		recipeCategoryPage.GetCategory("Breakfast");
 	}
-	@Test
-	public void testA3Lunch() throws InterruptedException, IOException {
+  @Test
+	public void testAALunch() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getBaseUrl());
 		recipeCategoryPage = PageFactory.initElements(driver, RecipeCategoryPage.class);
 		recipeCategoryPage.GetCategory("Lunch");
 	} 
 	@Test
-	public void testA4Snacks() throws InterruptedException, IOException {
+	public void testAASnacks() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getBaseUrl());
 		recipeCategoryPage = PageFactory.initElements(driver, RecipeCategoryPage.class);
 		recipeCategoryPage.GetCategory("snack");
 	} 
 	@Test
-	public void testA5Dinner() throws InterruptedException, IOException {
+	public void testAADinner() throws InterruptedException, IOException {
 		  driver.get(ConfigReader.getDinnerUrl());
 	      homePage = PageFactory.initElements(driver,HomePage.class);
 	      homePage.GetRecipe(driver.getCurrentUrl());
 	} 
 	@Test
-	public void testA6EggRecipes() throws InterruptedException, IOException {
+	public void testAAEggRecipes() throws InterruptedException, IOException {
 		  driver.get(ConfigReader.geteggUrl());
 	      homePage = PageFactory.initElements(driver,HomePage.class);
 	      homePage.GetRecipe(driver.getCurrentUrl());
 	} 
 	
 	@Test
-	public void testA8AZRecipes() throws InterruptedException, IOException {	
+	public void testAAZRecipes() throws InterruptedException, IOException {	
 		driver.get(ConfigReader.getAllRecipeUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetAZRecipePage();
 	}
-	*/
+	
 	@Test
-	public void testA9PCOS() throws InterruptedException, IOException {	
+	public void testAAPCOS() throws InterruptedException, IOException {	
 		driver.get(ConfigReader.getBaseUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetPCOSPage(driver);
 	}		
 	@Test
-	public void testA10HypoThyroidism() throws InterruptedException, IOException {	
+	public void testAAHypoThyroidism() throws InterruptedException, IOException {	
 		driver.get(ConfigReader.getBaseUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetHypoThyroidismPage(driver);	
 	}		
 	@Test
-	public void testA10Hypertension() throws InterruptedException, IOException {	
+	public void testAAHypertension() throws InterruptedException, IOException {	
 		driver.get(ConfigReader.getBaseUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetHypertensionPage(driver);	
 	}		
 	
-	@Test
-	public void testZA9999() throws InterruptedException, IOException {
-		Quit_Driver(driver);      
-	}
-
 }

@@ -1,7 +1,6 @@
 package com.TarlaDalal.pages;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,9 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.TarlaDalal.model.Recipes;
 import com.TarlaDalal.utils.AllActions;
 import com.TarlaDalal.utils.ConfigReader;
+import com.TarlaDalal.utils.LoggerLoad;
 
 
 public class PageNumberPage extends AllActions{
@@ -21,13 +20,11 @@ public class PageNumberPage extends AllActions{
     By locator;
     HomePage homePage; 
     byte count;
-    Recipes recipes;
     
 	public PageNumberPage(WebDriver driver) {
 		super();
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		//scrapedRecipeList = new ArrayList<Recipes>();
 	}
 
 	@FindBy(xpath="//*[@id='cardholder']//*[@class='respglink' or @class='rescurrpg']") //diebetic	  
@@ -35,11 +32,15 @@ public class PageNumberPage extends AllActions{
 
 	public void GetDiabetesPage() throws InterruptedException, IOException {
 		System.out.println("In Diabetes");
+	    LoggerLoad.info("<=== In Diabetes ===> ");	
+
 		  String[] pageArr = GetPageText(pages);		  
 		  count=0;
 		for(String pageNo: pageArr) {
 			//if((count<6)||(count<Integer.parseInt(pageNo))) {
 				System.out.println("Processing Page: "+pageNo);
+			    LoggerLoad.info("<=== Processing Page: "+pageNo +" ===> ");	
+
 			if(Integer.valueOf(pageNo)>1) {
 				locator = By.xpath("//*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')"
 						+ "and text()='"+pageNo+"']");
@@ -55,20 +56,21 @@ public class PageNumberPage extends AllActions{
 	}	
 	public void GetPCOSPage(WebDriver driver) throws InterruptedException, IOException {
 		System.out.println("In PCOS");
+	      LoggerLoad.info("<=======  In PCOS ========> ");	
+
 	    WebElement recipies = driver.findElement(By.xpath("//div[contains(text(),'RECIPES')]"));
 	    recipies.click();
 	    WebElement PCOSrecipes = driver.findElement(By.xpath("//a[@id='ctl00_cntleftpanel_ttlhealthtree_tvTtlHealtht335']"));
 	    PCOSrecipes.click();
 	
 	    List<WebElement> pages = driver.findElements(By.xpath("//div[@id='pagination']/a"));
-	    // int pageCount=driver.findElements(By.xpath("//div[@id='pagination']/a")).size();
-	      System.out.println("Page count:"+pages.size());
 		  String[] pageArr = GetPageText(pages);		  
 		  count=0;
 			for(String pageNo: pageArr) {
 				//if((count<6)&&(count<Integer.valueOf(pageNo))) {
-			 if(count<6) {
+			 if(count<5) {
 					System.out.println("Processing Page: "+pageNo);
+				    LoggerLoad.info("<=== Processing Page: "+pageNo +" ===> ");	
 
 				if(Integer.valueOf(pageNo)>1) {
 					locator = By.xpath("//*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')"
@@ -80,11 +82,13 @@ public class PageNumberPage extends AllActions{
 				count++;
 				}
 				else break;
-				//driver.get(ConfigReader.getDiabetesUrl()); 
+				driver.get(ConfigReader.getDiabetesUrl()); 
 		    }		
 }
 	public void GetHypertensionPage(WebDriver driver) throws InterruptedException, IOException {
 		System.out.println("In Hypertension");
+	    LoggerLoad.info("<=== In Hypertension ===> ");	
+
 	    WebElement recipies = driver.findElement(By.xpath("//div[contains(text(),'RECIPES')]"));
 	    recipies.click();
 	    WebElement hypertensionRecipes = driver.findElement(By.xpath("//a[@id='ctl00_cntleftpanel_ttlhealthtree_tvTtlHealtht152']"));
@@ -95,6 +99,8 @@ public class PageNumberPage extends AllActions{
 		  count=0;
 			for(String pageNo: pageArr) {
 				System.out.println("Processing Page: "+pageNo);
+			    LoggerLoad.info("<=== Processing Page: "+pageNo +" ===> ");	
+
 			//	if(count<2) {
 				if(Integer.valueOf(pageNo)>1) {
 					locator = By.xpath("//*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')"
@@ -111,6 +117,8 @@ public class PageNumberPage extends AllActions{
 }
 	public void GetHypoThyroidismPage(WebDriver driver) throws InterruptedException, IOException {
 		System.out.println("In HypoThyroidism");
+	    LoggerLoad.info("<=== In HypoThyroidism ===> ");	
+
 	    WebElement recipies = driver.findElement(By.xpath("//div[contains(text(),'RECIPES')]"));
 	    recipies.click();
 	    WebElement hypoThyroidismRecipes = driver.findElement(By.xpath("//*[@id='ctl00_cntleftpanel_ttlhealthtree_tvTtlHealtht207']"));
@@ -121,6 +129,8 @@ public class PageNumberPage extends AllActions{
 		  count=0;
 			for(String pageNo: pageArr) {
 				System.out.println("Processing Page: "+pageNo);
+			    LoggerLoad.info("<=== Processing Recipe : "+ pageNo +" ===> ");	
+
 			//	if(count<2) {
 				if(Integer.valueOf(pageNo)>1) {
 					locator = By.xpath("//*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')"
@@ -142,6 +152,8 @@ public class PageNumberPage extends AllActions{
 			while (pageExists){
 			 // while(page<=2) {	
 				System.out.println("Processing page : " + page);
+			    LoggerLoad.info("<=== Processing Recipe : "+ page +" ===> ");	
+
 				locator = By.xpath("(//div//a[(@class='respglink' or @class='rescurrpg') and text()='" + page + "'])");
 				try {
 					ClickElement(CallDriverWait(driver, locator), driver);			

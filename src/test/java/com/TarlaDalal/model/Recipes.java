@@ -12,7 +12,10 @@ public class Recipes {
 	String nutrient;
 	String morbid;
 	String url;
-	//String Flag;
+
+	public Recipes() {
+		super();
+	}
 
 	public String getRecipeID() {
 		return recipeID;
@@ -20,10 +23,6 @@ public class Recipes {
 
 	public void setRecipeID(String recipeID) {
 		this.recipeID = recipeID;
-	}
-
-	public Recipes() {
-		super();
 	}
 
 	public String getRecipeName() {
@@ -105,16 +104,5 @@ public class Recipes {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-
-	/*public String getFlag() {
-		return Flag;
-	}
-
-	public void setFlag(String flag) {
-		Flag = flag;
-	} */
-
-
-
 
 }
