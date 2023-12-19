@@ -51,9 +51,12 @@ public class HomePage extends AllActions{
 					ClickElement(CallDriverWait(driver, locator), driver);
 					
 				    System.out.println("Processing Recipe : " + recipe[0] +"-"+recipe[1]);	
-	
+	          //      List<String> recipeList = new ArrayList<String>();
+	            //    recipeList.add(recipe[0]);
+	             //   recipeList.add(recipe[1]);
 					recipeDetails = PageFactory.initElements(driver,RecipeDetailsPage.class);
-					recipeDetails.GetRecipeDetails(recipe,driver.getCurrentUrl());
+					//recipeDetails.GetRecipeDetails(recipe,driver.getCurrentUrl());
+					recipeDetails.GetRecipeDetails(recipe[1],recipe[0],driver.getCurrentUrl());
 
 				     driver.get(url);
 					ScreenScrollDown(driver);
@@ -77,7 +80,7 @@ public class HomePage extends AllActions{
 			ScreenScrollDown(driver);
 			hrefElement.click();
 			recipeDetails = PageFactory.initElements(driver, RecipeDetailsPage.class);
-			recipeDetails.GetRecipeDetails(recipe, driver.getCurrentUrl());
+			recipeDetails.GetRecipeDetails(list[i][1],list[i][0], driver.getCurrentUrl());
 
 			driver.get(url);
 			ScreenScrollDown(driver);

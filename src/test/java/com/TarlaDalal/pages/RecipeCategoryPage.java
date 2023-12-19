@@ -40,13 +40,13 @@ public class RecipeCategoryPage extends AllActions{
 		 
 	
 		  List<WebElement> foodList = driver.findElements(By.xpath("//li[@class='rcpsrch_suggest']/a[contains(text(),'Vegan') or contains(text(),'Veg') or contains(text(),'Jain')]"));
-		  System.out.println("Bre List: "+ foodList.size());
+		 // System.out.println("Bre List: "+ foodList.size());
 		  String[] recipe = GetHyperLink(foodList);		  
-		  System.out.println("count List: "+ recipe.length);
+		 // System.out.println("count List: "+ recipe.length);
            
 			for(String link: recipe) {
-				System.out.println("link: "+ link);
-				System.out.println("count: "+count);
+				//System.out.println("link: "+ link);
+				//System.out.println("count: "+count);
 
 				if(count<2) {
 				//System.out.println("link: "+ link);

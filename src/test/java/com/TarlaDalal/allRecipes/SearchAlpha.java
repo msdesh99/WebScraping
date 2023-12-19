@@ -19,6 +19,7 @@ import com.TarlaDalal.pages.PageNumberPage;
 import com.TarlaDalal.pages.RecipeCategoryPage;
 import com.TarlaDalal.utils.AllActions;
 import com.TarlaDalal.utils.ConfigReader;
+import com.TarlaDalal.utils.XLUtility;
 
 public class SearchAlpha extends AllActions {
 	WebDriver driver;
@@ -29,7 +30,7 @@ public class SearchAlpha extends AllActions {
 	RecipeCategoryPage recipeCategoryPage;
     AllRecipes allRecipes;
     PCOSPage pcosPage;
-    
+    XLUtility xlUtility;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 
@@ -46,6 +47,10 @@ public class SearchAlpha extends AllActions {
 		prop = configReader.initializeProperties();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 		driver.manage().window().maximize();
+	    String path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
+	    xlUtility = new XLUtility(path, "All");
+	    xlUtility.WriteAllSheetsHeading(); 
+
 	}
 
 	@AfterTest
@@ -59,13 +64,13 @@ public class SearchAlpha extends AllActions {
 		pageNumberPage.GetPage();
 	} 
 
-/*	@Test
+	@Test
 	public void testA2() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getBaseUrl());
 		recipeCategoryPage = PageFactory.initElements(driver, RecipeCategoryPage.class);
 		recipeCategoryPage.GetCategory("Breakfast");
 	}
-	@Test
+/*	@Test
 	public void testA3() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getBaseUrl());
 		recipeCategoryPage = PageFactory.initElements(driver, RecipeCategoryPage.class);
@@ -88,6 +93,7 @@ public class SearchAlpha extends AllActions {
 		  driver.get(ConfigReader.geteggUrl());
 	      homePage = PageFactory.initElements(driver,HomePage.class);
 	      homePage.GetRecipe(driver.getCurrentUrl());
+
 	} 
 	
 	@Test
@@ -97,20 +103,20 @@ public class SearchAlpha extends AllActions {
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetAllRecipePage();
 	}
-	*/
+	
 	@Test
 	public void testA9() throws InterruptedException, IOException {	
 		driver.get(ConfigReader.getBaseUrl());
 		//driver.get(ConfigReader.getPCOSUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetPCOSPage(driver);
-	;
+	
 	//	pcosPage = PageFactory.initElements(driver, PCOSPage.class);		
 		//pcosPage.GetPCOSPage(driver);
 		
-	}		
-	/*
-	@Test
+	}		*/
+	
+/*	@Test
 	public void testA7() throws InterruptedException, IOException {
 		  //driver.get(ConfigReader.geteggUrl());
 		  allRecipes = new AllRecipes();
@@ -122,7 +128,7 @@ public class SearchAlpha extends AllActions {
 
 	@Test
 	public void testC9999() throws InterruptedException, IOException {
-		AddInRecipesXLS();
+		//AddInRecipesXLS();
 		//Quit_Driver(driver);
       
 	}

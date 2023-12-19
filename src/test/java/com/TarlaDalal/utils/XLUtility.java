@@ -47,15 +47,17 @@ public class XLUtility {
 			 this.dataFile = new File(this.path);
 			 this.sheet1 = sheet;
 		}
+	
 	 public int getRowCount(String sheetName) throws IOException
 	 {
 	  fi = new FileInputStream(path);
 	  wkb = new XSSFWorkbook(fi);
 	  sh = wkb.getSheet(sheetName);
 	  int rowcount=sh.getLastRowNum();
+	  Row r1 = sh.createRow(rowcount+1);
 	  wkb.close();
 	  fi.close();
-	  return rowcount;
+	  return rowcount+1;
 	 }
 	  public String getCellData(String sheetName,int rownum,int colnum) throws IOException
 	   {
@@ -78,266 +80,74 @@ public class XLUtility {
 	    fi.close();
 	    return data;
 	   }
-	/*
-public void WriteIntoFile(ArrayList<Recipes> detailArr) throws IOException{
-	//System.out.println("data: "+this.dataFile);
-	// List<Recipes> filteredArr = null;
-	 wkb = new XSSFWorkbook();
-	 sh = wkb.createSheet(this.sheet1);
-	 
-	 CellStyle cs = wkb.createCellStyle();
-	 cs.setWrapText(true);
-	 cs.setVerticalAlignment(VerticalAlignment.CENTER);
+	  public void WriteAllSheetsHeading() throws IOException{
+			 wkb = new XSSFWorkbook();
+			 CellStyle cs = wkb.createCellStyle();
+			 cs.setWrapText(true);
+			 cs.setVerticalAlignment(VerticalAlignment.TOP);
+			 Row r1;
+			 int rowCount =0;
 
+			 String[] allSheets = ConfigReader.getAllSheets();
 
-	 Row r1;
-	 int rowCount =0;
-	 String[] cellName = ConfigReader.getcellNames();
-	 r1 = sh.createRow(rowCount);
-	 rowCount++;
-	 for(int i=0;i<cellName.length;i++) {
-		  Cell cell = r1.createCell(i);
-		 // cell.setCellStyle(cs);
-		  cell.setCellValue(cellName[i]);
-		 //r1.createCell(i).setCellValue(cellName[i])
-	 }
-	for(Recipes recipe1: detailArr) {
-		 int cellCount=0;
-     	//System.out.println("name: "+recipe1.getRecipeName());
-     	//System.out.println("id: "+recipe1.getRecipeID());  
-		  r1 = sh.createRow(rowCount);
-		  rowCount++;
-		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeID());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeName());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategory());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategory());
-		  cellCount++;
-		  
-		  Cell cell =r1.createCell(cellCount);
-		  cell.setCellValue(recipe1.getIngredients());
-		 // cell.setCellStyle(cs);
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getPrepTime());
-		  cellCount++;
+			for(String sheet1: allSheets) {
+			  sh = wkb.createSheet(sheet1);
+			 rowCount =0;
+			 String[] cellName = ConfigReader.getcellNames();
+			 r1 = sh.createRow(rowCount);
+			 rowCount++;
+			 for(int i=0;i<cellName.length;i++) {
+				  Cell cell = r1.createCell(i);
+				 // cell.setCellStyle(cs);
+				  cell.setCellValue(cellName[i]);
+			 }
+			}
+					try {
+					 fout = new FileOutputStream(this.dataFile);
+				     wkb.write(fout);	
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
+				finally {
+					wkb.close();
+					fout.close();
+				}
+			
+		
+	  }			
+	  public void CreateNewCell(String sheetName, int rowNumber, String cellValue) throws IOException{
+			try {
+				if(cellValue.contentEquals("CloseFile")){
+				     wkb.close();
+					fout.close();
+					fi.close();
+				}
+				else {
+				fi = new FileInputStream(this.dataFile);
+				wkb = new XSSFWorkbook(fi);	
+				sh = wkb.getSheet(sheetName);
+				if(sh.getRow(rowNumber)==null)
+				     row = sh.createRow(rowNumber);
+				row = sh.getRow(rowNumber);
+				int lastCell = row.getLastCellNum();
+				   if (lastCell<0) lastCell=0;
+				Cell cell = row.createCell(lastCell);
+				cell.setCellValue(cellValue);    
+				
+				fout = new FileOutputStream(this.dataFile);
+				wkb.write(fout);
+				}
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			finally {
+				//wkb.close();
+				//fout.close();
+				//fi.close();
+			}
 
-		  r1.createCell(cellCount).setCellValue(recipe1.getCookTime());
-		  cellCount++;
-
-		  Cell cellMethod = r1.createCell(cellCount);
-          cellMethod.setCellValue(recipe1.getMethod());
-		  //cellMethod.setCellStyle(cs);
-
-		  cellCount++;
-		  
-		  Cell cellNutrient = r1.createCell(cellCount);
-		  cellNutrient.setCellValue(recipe1.getNutrient());
-		 // cellNutrient.setCellStyle(cs);
-
-		  cellCount++;
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getMorbid());
-		  cellCount++;
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getUrl());
-		  cellCount++;
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategoryBySearch());
-		  cellCount++;
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategoryBySearch());
-		  cellCount++;
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getFlag());
-		  cellCount++;
-
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getDiabetes_Eliminated());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getDiabetes_Add());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getHypothyroidism_Eliminated());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getHypothyroidism_Add());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getHypertension_Eliminated());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getHypertension_Add());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getPCOS_Eliminated());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getPCOS_Add());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getAllergies());
-	     }
-	 
-		try {
-			 fout = new FileOutputStream(this.dataFile);
-		     wkb.write(fout);	
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		finally {
-			wkb.close();
-			fout.close();
-		} 
-	
-		//need to override method to write data. in CreateTestData file
-}    */
-	
-public void WriteAllSheetsIntoFile(List<Recipes> detailArr) throws IOException{
-	 List<Recipes> filteredArr = null;
-	 wkb = new XSSFWorkbook();
-	 CellStyle cs = wkb.createCellStyle();
-	 cs.setWrapText(true);
-	 cs.setVerticalAlignment(VerticalAlignment.TOP);
-	 Row r1;
-	 int rowCount =0;
-
-	// String[] allSheets = ConfigReader.getSheetNames();
-	 String[] allSheets = ConfigReader.getAllSheets();
-
-	for(String sheet1: allSheets) {
-	  sh = wkb.createSheet(sheet1);
-	 rowCount =0;
-	 String[] cellName = ConfigReader.getcellNames();
-	 r1 = sh.createRow(rowCount);
-	 rowCount++;
-	 for(int i=0;i<cellName.length;i++) {
-		  Cell cell = r1.createCell(i);
-		 // cell.setCellStyle(cs);
-		  cell.setCellValue(cellName[i]);
-	 }
-
-	 if(sheet1.contentEquals("OnlyAdd")) {
-		 filteredArr = detailArr.stream()
-				  .filter(a -> a.getFlag()== "Add")
-				  .collect(Collectors.toList());
-	 }
-	 if(sheet1.contentEquals("Allergies")) {
-		 filteredArr = detailArr.stream()
-				  .filter(a -> a.getFlag()== "Allergies")
-				  .collect(Collectors.toList());
-	 }
-	 if(sheet1.contentEquals("Eliminated")) {
-		 filteredArr = detailArr.stream()
-			       .filter(a -> a.getDiabetes_Eliminated()== "Yes"
-			                 || a.getHypertension_Eliminated()== "Yes"
-			                 || a.getHypothyroidism_Eliminated() == "Yes")
-				  .collect(Collectors.toList());
-	 }
-	 if(sheet1.contentEquals("All")) {
-		 filteredArr = detailArr.stream()
-				  .collect(Collectors.toList());
-	 }
-if(filteredArr!= null) {
-	// for(Recipes recipe1: detailArr) {   
-     for(Recipes recipe1: filteredArr) {        	 
-		  int cellCount=0;
-		  r1 = sh.createRow(rowCount);
-		  rowCount++;
-		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeID());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeName());
-		  cellCount++;
-	
-		  r1.createCell(cellCount).setCellValue(recipe1.getRecipeCategory());
-		  cellCount++;
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getFoodCategory() );
-		  cellCount++;
-		  
-		  Cell cell =r1.createCell(cellCount);
-		  cell.setCellValue(recipe1.getIngredients());
-		 // cell.setCellStyle(cs);
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getPrepTime());
-		  cellCount++;
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getCookTime());
-		  cellCount++;
-
-		  Cell cellMethod = r1.createCell(cellCount);
-          cellMethod.setCellValue(recipe1.getMethod());
-		  //cellMethod.setCellStyle(cs);
-
-		  cellCount++;
-		  
-		  Cell cellNutrient = r1.createCell(cellCount);
-		  cellNutrient.setCellValue(recipe1.getNutrient());
-		 // cellNutrient.setCellStyle(cs);
-
-		  cellCount++;
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getMorbid());
-		  cellCount++;
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getUrl());
-		  cellCount++;
-		 
-	
-		  r1.createCell(cellCount).setCellValue(recipe1.getFlag());
-		  cellCount++;
-
-
-		  r1.createCell(cellCount).setCellValue(recipe1.getDiabetes_Eliminated());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getDiabetes_Add());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getHypothyroidism_Eliminated());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getHypothyroidism_Add());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getHypertension_Eliminated());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getHypertension_Add());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getPCOS_Eliminated());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getPCOS_Add());
-		  cellCount++;
-		  
-		  r1.createCell(cellCount).setCellValue(recipe1.getAllergies());
-
-	 }
-}
-	}
-		try {
-			 fout = new FileOutputStream(this.dataFile);
-		     wkb.write(fout);	
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		finally {
-			wkb.close();
-			fout.close();
-		} 
-	
-}   
-
+		}		
     public static void main(String[] args) throws IOException {
 		String path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
 		//String path = "/src/test/resources/Lists/ListOfRecipes.xlsx";
