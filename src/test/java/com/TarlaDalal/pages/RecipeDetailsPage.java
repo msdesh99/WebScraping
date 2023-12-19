@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.TarlaDalal.model.Recipes;
 import com.TarlaDalal.utils.AllActions;
 import com.TarlaDalal.utils.ConfigReader;
 import com.TarlaDalal.utils.XLUtility;
@@ -27,7 +28,7 @@ public class RecipeDetailsPage extends AllActions{
 	 String[] ingredientsText;
      String flagTxt;
    // List<String> recipe = new ArrayList<String>();
-    List<String>id = new ArrayList<String>();
+  /*  List<String>id = new ArrayList<String>();
     List<String>name = new ArrayList<String>();
     List<String>recipeCategory = new ArrayList<String>();
     List<String>foodCategory = new ArrayList<String>();
@@ -37,10 +38,12 @@ public class RecipeDetailsPage extends AllActions{
     List<String>method = new ArrayList<String>();
     List<String>nutrientList = new ArrayList<String>();
     List<String>morbid = new ArrayList<String>();
-    List<String>recipeUrl = new ArrayList<String>();
+    List<String>recipeUrl = new ArrayList<String>();*/
     List<String>flag = new ArrayList<String>();
     
     List<String> eliminateArr;
+    
+    Recipes recipes;
     
 	public RecipeDetailsPage(WebDriver driver) {
 		super();
@@ -72,9 +75,13 @@ public class RecipeDetailsPage extends AllActions{
 	//public void GetRecipeDetails(String[] recipe, String url) throws InterruptedException, IOException {
 	public void GetRecipeDetails(String recipeId,String recipeName, String url) throws InterruptedException, IOException {
 	
-		id.add(recipeId);
-		name.add(recipeName);
-		recipeUrl.add(url);
+		 recipes = new Recipes();
+		recipes.setRecipeID(recipeId);
+		recipes.setRecipeName(recipeName);
+		recipes.setUrl(url);
+		//id.add(recipeId);
+		//name.add(recipeName);
+		//recipeUrl.add(url);
 		
 	    GetMethod();
 	    GetTime();
@@ -87,9 +94,11 @@ public class RecipeDetailsPage extends AllActions{
 		 // String[] ingredients_links = GetPageText(ingredients);
 		 String indgOri = driver.findElement(By.xpath("//div[@id='rcpinglist']")).getText();				 
 		 String indg = indgOri.replace("\n", " ").toLowerCase().replace("(", " ").replace(")", " ");
-		 ingred.add(indgOri); 
-
-		// System.out.println("ingr:"+ indgOri);
+		
+		// ingred.add(indgOri); 
+         recipes.setIngredients(indgOri);
+		
+         // System.out.println("ingr:"+ indgOri);
 		 if(indg!=null) {
 	           
 	   	    	flag.add("NA");
@@ -217,7 +226,8 @@ public class RecipeDetailsPage extends AllActions{
 		String nutri = "";
 		for(WebElement nutriText: nutrient) 
 			nutri = (nutri==null)? nutriText.getText()+"\n":nutri+nutriText.getText()+"\n"; 
-        nutrientList.add(nutri) ;	    	
+       // nutrientList.add(nutri) ;	
+        recipes.setNutrient(nutri);
 	    	//System.out.println("nutrientRec[8]: "+ recipe[8]);
 	
 }
@@ -234,27 +244,34 @@ public class RecipeDetailsPage extends AllActions{
 	    	                   s -> categoryArr.stream().anyMatch(s1 -> s.contains(s1))
 	    	                   ).collect(Collectors.toList());
 
-		  if(matchCategory.size()==0)
-              recipeCategory.add("Snack/Lunch");
+		  if(matchCategory.size()==0) {
+       //       recipeCategory.add("Snack/Lunch");
+		      recipes.setRecipeCategory("Snack/Lunch");
+		  }
 		  else {
 		   for (String result : matchCategory) {
 	    	       //System.out.println(category+" : "+ result); 
-                   recipeCategory.add(result);
+            //       recipeCategory.add(result);
+     		      recipes.setRecipeCategory(result);
+
           	   }
+
 		  }
 		    	  matchCategory = category.stream().filter(
 		    			s -> foodArr.stream().anyMatch(s1 -> s.contains(s1))
 		    			).collect(Collectors.toList());  	
 		        if(matchCategory.size()==0)
 		        	recipeText = "Veg";
-		        else
+		        else {
 		    	  for (String result : matchCategory) {
 		    	     //  System.out.println(category+" : "+ result); 
 		    		  recipeText = (recipeText==null)? result:recipeText+result;
 		    	  }
+		        }
 		    	  if (recipeText.equalsIgnoreCase("egg") || recipeText.equalsIgnoreCase("Egg") ) 
 		    		   recipeText ="Eggitarian";
-		          foodCategory.add(recipeText);
+		     //     foodCategory.add(recipeText);
+		          recipes.setFoodCategory(recipeText);
 		    //System.out.println("recipeCategory[2]: "+recipe[2]);
 		    //System.out.println("foodCategory[2]: "+recipe[3]);
 
@@ -265,15 +282,19 @@ public class RecipeDetailsPage extends AllActions{
 
 	public void GetTime() {	  	
 		try {
-		    prepTimeList.add(prepTime.getText());
+		 //   prepTimeList.add(prepTime.getText());
+		    recipes.setPrepTime(prepTime.getText());
 		}  catch(Exception e) {
-	        prepTimeList.add("NA");
+	     //   prepTimeList.add("NA");
+	        recipes.setPrepTime("NA");
 		}    
 	    try {   
-		  	 cookTimeList.add(cookTime.getText());
+		  //	 cookTimeList.add(cookTime.getText());
+		  	 recipes.setCookTime(cookTime.getText());
 
 		}catch(Exception e) {
-	  	    cookTimeList.add("NA");
+	  	  //  cookTimeList.add("NA");
+	  	    recipes.setCookTime("NA");
 		}    
 		    //System.out.println("cook time: "+recipe[6]+" pre "+recipe[5]);		
 	}
@@ -285,12 +306,12 @@ public class RecipeDetailsPage extends AllActions{
 		for(WebElement methodText: methodList) 
 			methodTxt = (methodTxt==null)? methodText.getText()+"\n":methodTxt+methodText.getText()+"\n"; 
 
-            method.add(methodTxt) ;	    	
-		
+           // method.add(methodTxt) ;	    	
+		    recipes.setMethod(methodTxt); 
 	
 	    	//System.out.println("ingr[7]: "+ recipe[7]);
 	}
-
+        
 	
 	public void WriteRecipeIntoFile(String sheet, String morbid) throws IOException{
          System.out.println("In Writing recipe for :"+ morbid.replace("\n"," "));
@@ -303,7 +324,7 @@ public class RecipeDetailsPage extends AllActions{
 	   // System.out.println("row: "+rowCount);
        //  System.out.println(id.get(0));
 	   
-	    xlUtility.CreateNewCell(sheet, rowCount, id.get(0));
+	/*    xlUtility.CreateNewCell(sheet, rowCount, id.get(0));
 	    xlUtility.CreateNewCell(sheet, rowCount, name.get(0));
 	    xlUtility.CreateNewCell(sheet, rowCount, recipeCategory.get(0));
 	    xlUtility.CreateNewCell(sheet, rowCount, foodCategory.get(0));
@@ -314,6 +335,23 @@ public class RecipeDetailsPage extends AllActions{
 	    xlUtility.CreateNewCell(sheet, rowCount, nutrientList.get(0));
 	    xlUtility.CreateNewCell(sheet, rowCount, morbid);
 	    xlUtility.CreateNewCell(sheet, rowCount, recipeUrl.get(0));
+	    xlUtility.CreateNewCell(sheet, rowCount, flag.get(0));
+	    xlUtility.CreateNewCell(sheet, rowCount, "CloseFile"); */
+
+	    xlUtility.CreateNewCell(sheet, rowCount, recipes.getRecipeID());
+	    xlUtility.CreateNewCell(sheet, rowCount, recipes.getRecipeName());
+	  //  xlUtility.CreateNewCell(sheet, rowCount, recipeCategory.get(0));
+	   // xlUtility.CreateNewCell(sheet, rowCount, foodCategory.get(0));
+
+	    xlUtility.CreateNewCell(sheet, rowCount, recipes.getRecipeCategory());
+	    xlUtility.CreateNewCell(sheet, rowCount, recipes.getFoodCategory());
+	    xlUtility.CreateNewCell(sheet, rowCount, recipes.getIngredients());
+	    xlUtility.CreateNewCell(sheet, rowCount, recipes.getPrepTime());
+	    xlUtility.CreateNewCell(sheet, rowCount, recipes.getCookTime());
+	    xlUtility.CreateNewCell(sheet, rowCount, recipes.getMethod());
+	    xlUtility.CreateNewCell(sheet, rowCount, recipes.getNutrient());
+	    xlUtility.CreateNewCell(sheet, rowCount, morbid);
+	    xlUtility.CreateNewCell(sheet, rowCount, recipes.getUrl());
 	    xlUtility.CreateNewCell(sheet, rowCount, flag.get(0));
 	    xlUtility.CreateNewCell(sheet, rowCount, "CloseFile");
 
