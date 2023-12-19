@@ -1,40 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-18T20:35:30 GMT-05:00" name="Default suite" finished-at="2023-12-18T20:38:23 GMT-05:00" duration-ms="172940">
+  <suite started-at="2023-12-18T22:37:25 GMT-05:00" name="Default suite" finished-at="2023-12-19T00:41:05 GMT-05:00" duration-ms="7419717">
     <groups>
     </groups>
-    <test started-at="2023-12-18T20:35:30 GMT-05:00" name="Default test" finished-at="2023-12-18T20:38:23 GMT-05:00" duration-ms="172940">
+    <test started-at="2023-12-18T22:37:25 GMT-05:00" name="Default test" finished-at="2023-12-19T00:41:05 GMT-05:00" duration-ms="7419717">
       <class name="com.TarlaDalal.allRecipes.SearchAlpha">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@3e694b3f]" started-at="2023-12-18T20:35:30 GMT-05:00" name="setUp" finished-at="2023-12-18T20:35:36 GMT-05:00" duration-ms="5642" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@78691363]" started-at="2023-12-18T22:37:25 GMT-05:00" name="setUp" finished-at="2023-12-18T22:37:31 GMT-05:00" duration-ms="5291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@3e694b3f]" started-at="2023-12-18T20:35:36 GMT-05:00" name="setUpBeforeClass" finished-at="2023-12-18T20:35:36 GMT-05:00" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@78691363]" started-at="2023-12-18T22:37:31 GMT-05:00" name="setUpBeforeClass" finished-at="2023-12-18T22:37:31 GMT-05:00" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="testA1()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@3e694b3f]" started-at="2023-12-18T20:35:36 GMT-05:00" name="testA1" finished-at="2023-12-18T20:37:02 GMT-05:00" duration-ms="85792" status="PASS">
+        <test-method signature="testA10Hypertension()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@78691363]" started-at="2023-12-18T22:37:31 GMT-05:00" name="testA10Hypertension" finished-at="2023-12-18T23:15:29 GMT-05:00" duration-ms="2278290" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testA1 -->
-        <test-method signature="testA2()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@3e694b3f]" started-at="2023-12-18T20:37:02 GMT-05:00" name="testA2" finished-at="2023-12-18T20:38:23 GMT-05:00" duration-ms="81396" status="PASS">
+        </test-method> <!-- testA10Hypertension -->
+        <test-method signature="testA10HypoThyroidism()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@78691363]" started-at="2023-12-18T23:15:29 GMT-05:00" name="testA10HypoThyroidism" finished-at="2023-12-18T23:42:09 GMT-05:00" duration-ms="1599711" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testA2 -->
-        <test-method signature="testC9999()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@3e694b3f]" started-at="2023-12-18T20:38:23 GMT-05:00" name="testC9999" finished-at="2023-12-18T20:38:23 GMT-05:00" duration-ms="15" status="PASS">
+        </test-method> <!-- testA10HypoThyroidism -->
+        <test-method signature="testA1Diabetes()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@78691363]" started-at="2023-12-18T23:42:09 GMT-05:00" name="testA1Diabetes" finished-at="2023-12-19T00:30:27 GMT-05:00" duration-ms="2898808" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testC9999 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@3e694b3f]" started-at="2023-12-18T20:38:23 GMT-05:00" name="tearDown" finished-at="2023-12-18T20:38:23 GMT-05:00" duration-ms="0" status="PASS">
+        </test-method> <!-- testA1Diabetes -->
+        <test-method signature="testA9PCOS()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@78691363]" started-at="2023-12-19T00:30:28 GMT-05:00" name="testA9PCOS" finished-at="2023-12-19T00:41:04 GMT-05:00" duration-ms="636043" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')and text()='2'] (tried for 6 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\mdesh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64515}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64515/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 84bec5dff2acdc28d3f3567975e22d72]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')and text()='2'] (tried for 6 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.109, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\mdesh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64515}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64515/devtoo..., se:cdpVersion: 120.0.6099.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 84bec5dff2acdc28d3f3567975e22d72
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at com.TarlaDalal.utils.AllActions.CallDriverWait(AllActions.java:57)
+at com.TarlaDalal.pages.PageNumberPage.GetPCOSPage(PageNumberPage.java:76)
+at com.TarlaDalal.allRecipes.SearchAlpha.testA9PCOS(SearchAlpha.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@3e694b3f]" started-at="2023-12-18T20:38:23 GMT-05:00" name="tearDownAfterClass" finished-at="2023-12-18T20:38:23 GMT-05:00" duration-ms="0" status="PASS">
+        </test-method> <!-- testA9PCOS -->
+        <test-method signature="testZA9999()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@78691363]" started-at="2023-12-19T00:41:04 GMT-05:00" name="testZA9999" finished-at="2023-12-19T00:41:05 GMT-05:00" duration-ms="1304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZA9999 -->
+        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@78691363]" started-at="2023-12-19T00:41:05 GMT-05:00" name="tearDownAfterClass" finished-at="2023-12-19T00:41:05 GMT-05:00" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterClass -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TarlaDalal.allRecipes.SearchAlpha@78691363]" started-at="2023-12-19T00:41:05 GMT-05:00" name="tearDown" finished-at="2023-12-19T00:41:05 GMT-05:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.TarlaDalal.allRecipes.SearchAlpha -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

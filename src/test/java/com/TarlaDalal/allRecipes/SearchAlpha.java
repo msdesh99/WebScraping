@@ -14,7 +14,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.TarlaDalal.pages.HomePage;
-import com.TarlaDalal.pages.PCOSPage;
 import com.TarlaDalal.pages.PageNumberPage;
 import com.TarlaDalal.pages.RecipeCategoryPage;
 import com.TarlaDalal.utils.AllActions;
@@ -28,8 +27,6 @@ public class SearchAlpha extends AllActions {
 	HomePage homePage;
 	PageNumberPage pageNumberPage;
 	RecipeCategoryPage recipeCategoryPage;
-    AllRecipes allRecipes;
-    PCOSPage pcosPage;
     XLUtility xlUtility;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -50,7 +47,6 @@ public class SearchAlpha extends AllActions {
 	    String path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
 	    xlUtility = new XLUtility(path, "All");
 	    xlUtility.WriteAllSheetsHeading(); 
-
 	}
 
 	@AfterTest
@@ -58,79 +54,72 @@ public class SearchAlpha extends AllActions {
 	}
 
 	@Test
-	public void testA1() throws InterruptedException, IOException {
+	public void testA1Diabetes() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getDiabetesUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);
-		pageNumberPage.GetPage();
+		pageNumberPage.GetDiabetesPage();
 	} 
-
+/*
 	@Test
-	public void testA2() throws InterruptedException, IOException {
+	public void testA2Breakfast() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getBaseUrl());
 		recipeCategoryPage = PageFactory.initElements(driver, RecipeCategoryPage.class);
 		recipeCategoryPage.GetCategory("Breakfast");
 	}
-/*	@Test
-	public void testA3() throws InterruptedException, IOException {
+	@Test
+	public void testA3Lunch() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getBaseUrl());
 		recipeCategoryPage = PageFactory.initElements(driver, RecipeCategoryPage.class);
 		recipeCategoryPage.GetCategory("Lunch");
 	} 
 	@Test
-	public void testA4() throws InterruptedException, IOException {
+	public void testA4Snacks() throws InterruptedException, IOException {
 		driver.get(ConfigReader.getBaseUrl());
 		recipeCategoryPage = PageFactory.initElements(driver, RecipeCategoryPage.class);
 		recipeCategoryPage.GetCategory("snack");
 	} 
 	@Test
-	public void testA5() throws InterruptedException, IOException {
+	public void testA5Dinner() throws InterruptedException, IOException {
 		  driver.get(ConfigReader.getDinnerUrl());
 	      homePage = PageFactory.initElements(driver,HomePage.class);
 	      homePage.GetRecipe(driver.getCurrentUrl());
 	} 
 	@Test
-	public void testA6() throws InterruptedException, IOException {
+	public void testA6EggRecipes() throws InterruptedException, IOException {
 		  driver.get(ConfigReader.geteggUrl());
 	      homePage = PageFactory.initElements(driver,HomePage.class);
 	      homePage.GetRecipe(driver.getCurrentUrl());
-
 	} 
 	
 	@Test
-//	public void testHypoThyroidism() throws InterruptedException, IOException {
-	public void testA8() throws InterruptedException, IOException {	
+	public void testA8AZRecipes() throws InterruptedException, IOException {	
 		driver.get(ConfigReader.getAllRecipeUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
-		pageNumberPage.GetAllRecipePage();
+		pageNumberPage.GetAZRecipePage();
 	}
-	
+	*/
 	@Test
-	public void testA9() throws InterruptedException, IOException {	
+	public void testA9PCOS() throws InterruptedException, IOException {	
 		driver.get(ConfigReader.getBaseUrl());
-		//driver.get(ConfigReader.getPCOSUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetPCOSPage(driver);
-	
-	//	pcosPage = PageFactory.initElements(driver, PCOSPage.class);		
-		//pcosPage.GetPCOSPage(driver);
-		
-	}		*/
-	
-/*	@Test
-	public void testA7() throws InterruptedException, IOException {
-		  //driver.get(ConfigReader.geteggUrl());
-		  allRecipes = new AllRecipes();
-		  allRecipes.getAZRecipe(driver);
-	     // homePage = PageFactory.initElements(driver,HomePage.class);
-	      //homePage.GetRecipe(driver.getCurrentUrl(),"snack","Egg");
-	}  */
-	
-
+	}		
 	@Test
-	public void testC9999() throws InterruptedException, IOException {
-		//AddInRecipesXLS();
-		//Quit_Driver(driver);
-      
+	public void testA10HypoThyroidism() throws InterruptedException, IOException {	
+		driver.get(ConfigReader.getBaseUrl());
+		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
+		pageNumberPage.GetHypoThyroidismPage(driver);	
+	}		
+	@Test
+	public void testA10Hypertension() throws InterruptedException, IOException {	
+		driver.get(ConfigReader.getBaseUrl());
+		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
+		pageNumberPage.GetHypertensionPage(driver);	
+	}		
+	
+	@Test
+	public void testZA9999() throws InterruptedException, IOException {
+		Quit_Driver(driver);      
 	}
 
 }

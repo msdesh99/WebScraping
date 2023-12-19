@@ -36,8 +36,7 @@ public class ConfigReader {
     }
     public static String geteggUrl() {
 		return prop.getProperty("eggUrl");   	
-    }
-    
+    }   
     public static String[] getcellNames() {
     	return prop.getProperty("cellNames").split(",");		
 	}
@@ -68,9 +67,9 @@ public class ConfigReader {
 	public static String[] getallergies() {
 		return prop.getProperty("allergies").split(",");
 	}
-	public static String[] getSheetNames() {
+/*	public static String[] getSheetNames() {
 		return prop.getProperty("sheets").split(",");
-	}
+	}*/
 	public static String[] getAllSheets() {
 		return prop.getProperty("allsheets").split(",");
 	}

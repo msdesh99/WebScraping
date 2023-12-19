@@ -1,7 +1,6 @@
 package com.TarlaDalal.model;
 
 public class Recipes {
-
 	String recipeID;
 	String recipeName;
 	String recipeCategory;
@@ -13,7 +12,7 @@ public class Recipes {
 	String nutrient;
 	String morbid;
 	String url;
-	String Flag;
+	//String Flag;
 
 	public String getRecipeID() {
 		return recipeID;
@@ -107,13 +106,13 @@ public class Recipes {
 		this.url = url;
 	}
 
-	public String getFlag() {
+	/*public String getFlag() {
 		return Flag;
 	}
 
 	public void setFlag(String flag) {
 		Flag = flag;
-	}
+	} */
 
 
 

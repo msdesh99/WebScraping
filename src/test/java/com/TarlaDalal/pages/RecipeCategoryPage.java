@@ -37,19 +37,15 @@ public class RecipeCategoryPage extends AllActions{
 	public void GetCategory(String category) throws InterruptedException, IOException {
 		  searchCategory.sendKeys(category);
 		  search.click();
-		 
-	
-		  List<WebElement> foodList = driver.findElements(By.xpath("//li[@class='rcpsrch_suggest']/a[contains(text(),'Vegan') or contains(text(),'Veg') or contains(text(),'Jain')]"));
-		 // System.out.println("Bre List: "+ foodList.size());
-		  String[] recipe = GetHyperLink(foodList);		  
-		 // System.out.println("count List: "+ recipe.length);
-           
-			for(String link: recipe) {
-				//System.out.println("link: "+ link);
-				//System.out.println("count: "+count);
 
+		  List<WebElement> foodList = driver.findElements(By.xpath("//li[@class='rcpsrch_suggest']/a[contains(text(),'Vegan') or contains(text(),'Veg') or contains(text(),'Jain')]"));
+		  String[] recipe = GetHyperLink(foodList);		  
+           
+			System.out.println("In "+category);
+
+			for(String link: recipe) {
 				if(count<2) {
-				//System.out.println("link: "+ link);
+				System.out.println("Processing Recipe : "+ link);
 				driver.get(link);				
 				homePage = PageFactory.initElements(driver,HomePage.class);
 				homePage.GetRecipe(driver.getCurrentUrl());

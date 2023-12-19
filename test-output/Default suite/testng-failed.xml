@@ -7,9 +7,9 @@
         <methods>
           <include name="tearDown"/>
           <include name="tearDownAfterClass"/>
+          <include name="testA9PCOS"/>
           <include name="setUpBeforeClass"/>
           <include name="setUp"/>
-          <include name="testA2"/>
         </methods>
       </class> <!-- com.TarlaDalal.allRecipes.SearchAlpha -->
     </classes>
