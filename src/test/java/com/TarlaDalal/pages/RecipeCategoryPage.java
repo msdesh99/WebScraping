@@ -43,7 +43,7 @@ public class RecipeCategoryPage extends AllActions{
 
 
 			for(String link: recipe) {
-				if(count<2) {
+				if(count<5) {
 				System.out.println("Processing Recipe : "+ link);
 			    LoggerLoad.info("<=== Processing Recipe : "+ link +" ===> ");	
 

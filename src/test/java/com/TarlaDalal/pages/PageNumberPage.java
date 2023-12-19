@@ -37,7 +37,7 @@ public class PageNumberPage extends AllActions{
 		  String[] pageArr = GetPageText(pages);		  
 		  count=0;
 		for(String pageNo: pageArr) {
-			//if((count<6)||(count<Integer.parseInt(pageNo))) {
+			if((count<5)) {
 				System.out.println("Processing Page: "+pageNo);
 			    LoggerLoad.info("<=== Processing Page: "+pageNo +" ===> ");	
 
@@ -49,8 +49,8 @@ public class PageNumberPage extends AllActions{
 			homePage = PageFactory.initElements(driver,HomePage.class);
 			homePage.GetRecipe(driver.getCurrentUrl());
 			count++;
-			//}
-			//else break;
+			}
+			else break;
 			driver.get(ConfigReader.getDiabetesUrl()); 
 	    }
 	}	
@@ -67,7 +67,6 @@ public class PageNumberPage extends AllActions{
 		  String[] pageArr = GetPageText(pages);		  
 		  count=0;
 			for(String pageNo: pageArr) {
-				//if((count<6)&&(count<Integer.valueOf(pageNo))) {
 			 if(count<5) {
 					System.out.println("Processing Page: "+pageNo);
 				    LoggerLoad.info("<=== Processing Page: "+pageNo +" ===> ");	
@@ -101,7 +100,7 @@ public class PageNumberPage extends AllActions{
 				System.out.println("Processing Page: "+pageNo);
 			    LoggerLoad.info("<=== Processing Page: "+pageNo +" ===> ");	
 
-			//	if(count<2) {
+				if(count<5) {
 				if(Integer.valueOf(pageNo)>1) {
 					locator = By.xpath("//*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')"
 							+ "and text()='"+pageNo+"']");
@@ -110,8 +109,8 @@ public class PageNumberPage extends AllActions{
 				homePage = PageFactory.initElements(driver,HomePage.class);
 				homePage.GetRecipe(driver.getCurrentUrl());
 				count++;
-				//}
-				//else break;
+				}
+				else break;
 				driver.get(ConfigReader.getDiabetesUrl()); 
 		    }		
 }
@@ -131,7 +130,7 @@ public class PageNumberPage extends AllActions{
 				System.out.println("Processing Page: "+pageNo);
 			    LoggerLoad.info("<=== Processing Recipe : "+ pageNo +" ===> ");	
 
-			//	if(count<2) {
+				if(count<5) {
 				if(Integer.valueOf(pageNo)>1) {
 					locator = By.xpath("//*[@id='cardholder']//*[(@class='respglink' or @class='rescurrpg')"
 							+ "and text()='"+pageNo+"']");
@@ -140,8 +139,8 @@ public class PageNumberPage extends AllActions{
 				homePage = PageFactory.initElements(driver,HomePage.class);
 				homePage.GetRecipe(driver.getCurrentUrl());
 				count++;
-				//}
-				//else break;
+				}
+				else break;
 				driver.get(ConfigReader.getDiabetesUrl()); 
 		    }		
 }
@@ -149,8 +148,8 @@ public class PageNumberPage extends AllActions{
 		public void GetAZRecipePage() throws InterruptedException, IOException {
 			int page = 1;
 			boolean pageExists = true;
-			while (pageExists){
-			 // while(page<=2) {	
+			//while (pageExists){
+			  while(page<5) {	
 				System.out.println("Processing page : " + page);
 			    LoggerLoad.info("<=== Processing Recipe : "+ page +" ===> ");	
 

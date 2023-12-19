@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-//import com.TarlaDalal.model.Recipes;
 import com.TarlaDalal.utils.AllActions;
 import com.TarlaDalal.utils.LoggerLoad;
 
@@ -18,7 +17,6 @@ public class HomePage extends AllActions {
 	By locator;
 	RecipeDetailsPage recipeDetails;
 	byte count;
-	//Recipes recipes;
 
 	public HomePage(WebDriver driver) {
 		super();
@@ -39,7 +37,7 @@ public class HomePage extends AllActions {
 		String[][] list = GetHyperText(recipeList);
 		count = 0;
 		for (String[] recipe : list) {
-			if (count < 5) {
+			//if (count < 5) {
 				ScreenScrollDown(driver);
 				locator = By
 						.xpath("//*[@class='rcc_rcpcore']//*/a[@itemprop='url' " + "and text()='" + recipe[0] + "']");
@@ -55,8 +53,8 @@ public class HomePage extends AllActions {
 				driver.get(url);
 				ScreenScrollDown(driver);
 				count++;
-			} else
-				break;
+			//} else
+				//break;
 
 		}
 		driver.get(url);
@@ -68,7 +66,7 @@ public class HomePage extends AllActions {
 		count = 0;
 
 		for (int i = 0; i < list.length; i++) {
-			if (count <= 2) {
+			if (count < 3) {
 				System.out.println("Processing Recipe : " + list[i][0] + "-" + list[i][1]);
 			    LoggerLoad.info("<=== Processing Recipe : " + list[i][0] + "-" + list[i][1] + " ===> ");	
 

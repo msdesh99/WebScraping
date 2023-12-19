@@ -5,10 +5,10 @@
     <classes>
       <class name="com.TarlaDalal.Runner.SearchRecipe">
         <methods>
+          <include name="testAAHypoThyroidism"/>
           <include name="setUpBeforeClass"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testAAPCOS"/>
           <include name="tearDownAfterClass"/>
         </methods>
       </class> <!-- com.TarlaDalal.Runner.SearchRecipe -->
