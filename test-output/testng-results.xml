@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-19T15:20:55 GMT-05:00" name="Default suite" finished-at="2023-12-19T17:08:26 GMT-05:00" duration-ms="6451142">
+  <suite started-at="2024-02-23T10:40:34 GMT-05:00" name="Default suite" finished-at="2024-02-23T10:51:03 GMT-05:00" duration-ms="628632">
     <groups>
     </groups>
-    <test started-at="2023-12-19T15:20:55 GMT-05:00" name="Default test" finished-at="2023-12-19T17:08:26 GMT-05:00" duration-ms="6451142">
+    <test started-at="2024-02-23T10:40:34 GMT-05:00" name="Default test" finished-at="2024-02-23T10:51:03 GMT-05:00" duration-ms="628632">
       <class name="com.TarlaDalal.Runner.SearchRecipe">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@1bb5a082]" started-at="2023-12-19T15:20:55 GMT-05:00" name="setUp" finished-at="2023-12-19T15:20:59 GMT-05:00" duration-ms="4481" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@5fe94a96]" started-at="2024-02-23T10:40:34 GMT-05:00" name="setUp" finished-at="2024-02-23T10:40:40 GMT-05:00" duration-ms="5696" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@1bb5a082]" started-at="2023-12-19T15:20:59 GMT-05:00" name="setUpBeforeClass" finished-at="2023-12-19T15:20:59 GMT-05:00" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUpBeforeClass()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@5fe94a96]" started-at="2024-02-23T10:40:40 GMT-05:00" name="setUpBeforeClass" finished-at="2024-02-23T10:40:40 GMT-05:00" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method signature="testAADiabetes()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@1bb5a082]" started-at="2023-12-19T15:20:59 GMT-05:00" name="testAADiabetes" finished-at="2023-12-19T15:44:29 GMT-05:00" duration-ms="1409875" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAADiabetes -->
-        <test-method signature="testAAHypertension()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@1bb5a082]" started-at="2023-12-19T15:44:29 GMT-05:00" name="testAAHypertension" finished-at="2023-12-19T16:18:39 GMT-05:00" duration-ms="2050369" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAAHypertension -->
-        <test-method signature="testAAHypoThyroidism()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@1bb5a082]" started-at="2023-12-19T16:18:39 GMT-05:00" name="testAAHypoThyroidism" finished-at="2023-12-19T16:24:56 GMT-05:00" duration-ms="376849" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="testAADiabetes()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@5fe94a96]" started-at="2024-02-23T10:40:40 GMT-05:00" name="testAADiabetes" finished-at="2024-02-23T10:51:02 GMT-05:00" duration-ms="622575" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[@class='rcc_rcpcore']//*/a[@itemprop='url' and text()='Cabbage Capsicum Sabzi, Healthy Simla Mirch Gobi Sabzi'] (tried for 6 second(s) with 500 milliseconds interval)
+              <![CDATA[disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome-headless-shell=121.0.6167.185)
 Build info: version: '4.14.0', revision: 'e5a96349ce'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\mdesh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59278}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59278/devtoo..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1651a76bd6e0681e01b61b10e750818f]]>
+Command: [eac9b2fea3177fa201f6d4429dac69e7, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\mdesh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55026}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55026/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eac9b2fea3177fa201f6d4429dac69e7]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@class='rcc_rcpcore']//*/a[@itemprop='url' and text()='Cabbage Capsicum Sabzi, Healthy Simla Mirch Gobi Sabzi'] (tried for 6 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome-headless-shell=121.0.6167.185)
 Build info: version: '4.14.0', revision: 'e5a96349ce'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\mdesh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59278}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59278/devtoo..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1651a76bd6e0681e01b61b10e750818f
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at com.TarlaDalal.utils.AllActions.CallDriverWait(AllActions.java:42)
-at com.TarlaDalal.pages.HomePage.GetRecipe(HomePage.java:44)
-at com.TarlaDalal.pages.PageNumberPage.GetHypoThyroidismPage(PageNumberPage.java:141)
-at com.TarlaDalal.Runner.SearchRecipe.testAAHypoThyroidism(SearchRecipe.java:113)
+Command: [eac9b2fea3177fa201f6d4429dac69e7, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\mdesh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55026}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55026/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eac9b2fea3177fa201f6d4429dac69e7
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
+at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:316)
+at com.TarlaDalal.pages.HomePage.GetRecipe(HomePage.java:55)
+at com.TarlaDalal.pages.PageNumberPage.GetDiabetesPage(PageNumberPage.java:50)
+at com.TarlaDalal.Runner.SearchRecipe.testAADiabetes(SearchRecipe.java:73)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -74,19 +82,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAAHypoThyroidism -->
-        <test-method signature="testAAPCOS()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@1bb5a082]" started-at="2023-12-19T16:24:56 GMT-05:00" name="testAAPCOS" finished-at="2023-12-19T17:08:24 GMT-05:00" duration-ms="2607795" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAAPCOS -->
-        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@1bb5a082]" started-at="2023-12-19T17:08:24 GMT-05:00" name="tearDownAfterClass" finished-at="2023-12-19T17:08:24 GMT-05:00" duration-ms="6" status="PASS">
+        </test-method> <!-- testAADiabetes -->
+        <test-method is-config="true" signature="tearDownAfterClass()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@5fe94a96]" started-at="2024-02-23T10:51:02 GMT-05:00" name="tearDownAfterClass" finished-at="2024-02-23T10:51:02 GMT-05:00" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownAfterClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@1bb5a082]" started-at="2023-12-19T17:08:24 GMT-05:00" name="tearDown" finished-at="2023-12-19T17:08:26 GMT-05:00" duration-ms="1580" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.TarlaDalal.Runner.SearchRecipe@5fe94a96]" started-at="2024-02-23T10:51:02 GMT-05:00" name="tearDown" finished-at="2024-02-23T10:51:03 GMT-05:00" duration-ms="317" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

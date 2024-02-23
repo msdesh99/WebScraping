@@ -5262,3 +5262,845 @@
 [INFO ]2023-12-1917:08:02.932[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
 [INFO ]2023-12-1917:08:05.590[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
 [INFO ]2023-12-1917:08:08.223[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2116:59:16.246[main]com.TarlaDalal.utils.LoggerLoad1)-<=== In Diabetes ===> 
+[INFO ]2023-12-2116:59:16.363[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 1 ===> 
+[INFO ]2023-12-2116:59:20.887[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias-3554 ===> 
+[INFO ]2023-12-2116:59:22.603[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2116:59:23.127[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2116:59:23.505[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2116:59:24.224[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2116:59:24.464[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2116:59:31.302[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias, How To Make Muthia At Home-33147 ===> 
+[INFO ]2023-12-2116:59:31.740[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2116:59:32.104[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2116:59:32.399[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2116:59:32.813[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2116:59:33.006[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2116:59:39.405[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar, Bajra Spring Onion Roti-2979 ===> 
+[INFO ]2023-12-2116:59:41.022[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2116:59:41.275[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2116:59:41.460[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2116:59:41.833[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2116:59:42.180[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2116:59:48.570[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Indian Oats Pancake with Jowar-5529 ===> 
+[INFO ]2023-12-2116:59:50.146[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2116:59:50.343[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2116:59:50.518[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2116:59:50.745[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2116:59:51.000[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2116:59:51.465[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2116:59:51.654[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2116:59:58.558[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Baked Jowar Onion Puri for Weight Loss-22297 ===> 
+[INFO ]2023-12-2117:00:00.210[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:00:00.396[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:00:00.583[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:00:00.915[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:00:01.116[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:00:01.342[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:00:09.009[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cauliflower Methi Roti, Healthy Gobi Methi Jowar Paratha-5285 ===> 
+[INFO ]2023-12-2117:00:09.470[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:00:09.692[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:00:10.011[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:00:10.183[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:00:17.166[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar and Tomato Uttapam, Healthy Snack-22349 ===> 
+[INFO ]2023-12-2117:00:18.697[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:00:18.877[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:00:19.061[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:00:19.254[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:00:19.573[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:00:19.805[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:00:27.725[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Aur Pudina ki Roti-1983 ===> 
+[INFO ]2023-12-2117:00:29.063[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:00:29.250[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:00:29.435[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:00:29.750[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:00:29.928[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:00:37.170[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar and Bajra Vegetable Roti ( Baby and Toddler)-3079 ===> 
+[INFO ]2023-12-2117:00:37.528[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:00:37.784[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:00:38.045[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:00:38.413[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:00:38.603[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:00:45.775[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Mooli Jowar ki Roti-4778 ===> 
+[INFO ]2023-12-2117:00:47.378[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:00:47.742[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:00:47.994[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:00:48.291[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:00:48.689[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:00:48.915[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:00:56.731[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Healthy Methi Jowar Muthia, Gluten Free Muthia-22356 ===> 
+[INFO ]2023-12-2117:00:58.038[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:00:58.291[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:00:58.504[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:00:58.881[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:00:59.104[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:01:06.944[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Nutritious Jowar and Tomato Chilla-4652 ===> 
+[INFO ]2023-12-2117:01:08.228[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:01:08.468[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:01:08.668[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:01:08.858[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:01:09.054[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:01:09.512[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:01:09.708[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:01:16.983[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Banana Sheera for Babies-3065 ===> 
+[INFO ]2023-12-2117:01:18.372[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:01:18.592[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:01:18.943[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:01:19.147[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:01:23.825[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Bajra Besan Thalipeeth-35085 ===> 
+[INFO ]2023-12-2117:01:25.308[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:01:25.507[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:01:25.713[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:01:26.051[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:01:26.293[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:01:33.924[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Golpapdi for Kids-3078 ===> 
+[INFO ]2023-12-2117:01:35.150[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:01:35.364[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:01:35.689[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:01:35.932[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:01:41.341[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Pyaz Ki Roti ( Healthy Breakfast)-4660 ===> 
+[INFO ]2023-12-2117:01:42.618[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:01:42.864[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:01:43.085[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:01:43.429[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:01:43.651[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:01:49.544[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Sesame Bread Sticks ( Baby and Toddler Recipe)-3074 ===> 
+[INFO ]2023-12-2117:01:51.010[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:01:51.223[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:01:51.572[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:01:51.789[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:01:52.022[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:01:58.440[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Methi Roti, Healthy Jowar Methi Paratha-5695 ===> 
+[INFO ]2023-12-2117:01:59.712[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:01:59.933[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:02:00.162[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:00.509[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:02:00.785[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:02:01.028[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:02:08.492[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Veggie Wrap-22353 ===> 
+[INFO ]2023-12-2117:02:09.843[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:02:10.097[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:10.328[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:10.680[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:02:10.914[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:02:11.149[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:02:17.623[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Microwave Jowar Khichu, Gujarati Khichu Microwave Version-4889 ===> 
+[INFO ]2023-12-2117:02:19.019[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:02:19.277[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:19.632[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:02:19.884[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:02:26.513[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Til Jowar Puri, Sesame Seeds and White Millets Cracker-32575 ===> 
+[INFO ]2023-12-2117:02:27.757[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:02:28.000[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:02:28.259[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:28.528[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:28.911[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:02:29.206[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:02:29.464[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:02:36.948[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Uttapam-22447 ===> 
+[INFO ]2023-12-2117:02:38.262[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:02:38.526[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:02:38.775[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:39.037[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:39.436[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:02:39.683[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:02:46.807[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Khichu, Indian Jowar Flour Khichu-33307 ===> 
+[INFO ]2023-12-2117:02:48.186[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:02:48.469[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:49.053[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:02:49.329[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:02:56.021[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Pita Pockets ( Folic Acid and Zinc Rich Recipe )-35083 ===> 
+[INFO ]2023-12-2117:02:57.430[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:02:57.706[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:57.973[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:02:58.369[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:02:58.635[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:02:58.919[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:03:07.743[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 2 ===> 
+[INFO ]2023-12-2117:03:12.612[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Pyaz ki Roti, Low Acidity Recipe-22358 ===> 
+[INFO ]2023-12-2117:03:13.949[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:03:14.212[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:03:14.510[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:03:14.923[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:03:15.187[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:03:24.265[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar and Moong Dal Khichdi-42672 ===> 
+[INFO ]2023-12-2117:03:25.593[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:03:25.895[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:03:26.242[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:03:26.648[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:03:26.942[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:03:31.595[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Mini Jowar Apple and Walnut Pancake-41008 ===> 
+[INFO ]2023-12-2117:03:32.988[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:03:33.284[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:03:33.575[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:03:33.973[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:03:34.264[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:03:34.548[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:03:41.898[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Paratha ( Gluten Free Recipe)-38606 ===> 
+[INFO ]2023-12-2117:03:43.209[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:03:43.507[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:03:43.844[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:03:44.265[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:03:44.635[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:03:51.456[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Gluten Free Jowar Chocolate Sponge Cake-38054 ===> 
+[INFO ]2023-12-2117:03:51.784[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:03:52.248[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:03:52.608[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:03:52.911[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:03:58.465[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Roti-41569 ===> 
+[INFO ]2023-12-2117:03:59.836[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:04:00.157[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:04:00.481[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:04:00.909[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:04:01.222[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:04:08.197[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Banana Sheera ( Gluten Free Recipe)-38641 ===> 
+[INFO ]2023-12-2117:04:09.619[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:04:09.961[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:04:10.421[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:04:10.745[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:04:11.072[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:04:15.574[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Upma-39749 ===> 
+[INFO ]2023-12-2117:04:16.874[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:04:17.247[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:04:17.595[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:04:18.016[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:04:18.346[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:04:26.210[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Palak Appe-42675 ===> 
+[INFO ]2023-12-2117:04:27.486[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:04:27.804[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:04:28.138[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:04:28.602[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:04:28.955[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:04:35.848[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Mini Jowar Pancakes-38996 ===> 
+[INFO ]2023-12-2117:04:37.182[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:04:37.631[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:04:37.950[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:04:43.735[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar, Rajgira, Banana and Chia Seeds Bread-42585 ===> 
+[INFO ]2023-12-2117:04:45.006[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:04:45.366[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:04:45.847[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:04:46.199[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:04:52.507[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Date and Cashewnut Cookie ( Gluten Free Recipe)-38650 ===> 
+[INFO ]2023-12-2117:04:53.762[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:04:54.259[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:04:54.636[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:04:54.995[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:05:02.058[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Vegetable Paratha, Healthy Jowar Thepla-40361 ===> 
+[INFO ]2023-12-2117:05:03.330[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:05:03.660[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:05:04.046[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:05:04.501[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:05:04.868[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:05:10.963[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Bajra Garlic Roti-38880 ===> 
+[INFO ]2023-12-2117:05:12.268[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:05:12.625[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:05:13.064[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:05:13.467[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:05:14.096[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:05:14.506[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:05:14.887[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:05:23.228[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Kale Palak Veg Antioxidant Healthy Office Salad-42308 ===> 
+[INFO ]2023-12-2117:05:24.768[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:05:25.126[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:05:25.512[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:05:25.883[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:05:26.348[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:05:26.723[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:05:34.532[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Vegetable Khichdi, Healthy Millets Khichdi-38495 ===> 
+[INFO ]2023-12-2117:05:34.916[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:05:35.302[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:05:35.767[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:05:36.178[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:05:36.559[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:05:42.198[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Baked Palak Jowar Murukku, Jowar Murukku with Spinach-42722 ===> 
+[INFO ]2023-12-2117:05:43.440[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:05:43.846[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:05:44.379[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:05:44.997[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:05:50.983[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Matki and Jowar Paratha-41005 ===> 
+[INFO ]2023-12-2117:05:52.388[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:05:52.762[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:05:53.194[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:05:53.592[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:05:54.078[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:05:54.470[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:06:01.644[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar and Pear Appam Healthy South Indian Snack-41964 ===> 
+[INFO ]2023-12-2117:06:02.915[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:06:03.289[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:06:03.794[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:06:04.208[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:06:12.490[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Ragi and Date Porridge for Babies-38841 ===> 
+[INFO ]2023-12-2117:06:13.707[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:06:14.107[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:06:14.519[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:06:15.060[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:06:15.567[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:06:22.542[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Bhakri, Healthy Jowar Bhakri-40619 ===> 
+[INFO ]2023-12-2117:06:23.858[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:06:24.263[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:06:24.661[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:06:25.183[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:06:25.585[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:06:33.040[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Apple Sheera, Healthy Indian Sweet-41967 ===> 
+[INFO ]2023-12-2117:06:34.321[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:06:34.749[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:06:35.169[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:06:35.743[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:06:36.153[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:06:36.568[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:06:43.431[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Mooli Jowar ki Roti ( Gluten Free Recipe )-38597 ===> 
+[INFO ]2023-12-2117:06:44.795[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:06:45.271[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:06:45.964[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:06:46.484[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:06:47.029[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:06:47.452[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:06:52.740[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Herbed Jowar Strips with Spicy Orange Salsa-38820 ===> 
+[INFO ]2023-12-2117:06:54.027[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:06:54.452[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:06:54.879[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:06:55.308[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:06:55.892[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:06:56.322[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:07:04.471[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 3 ===> 
+[INFO ]2023-12-2117:07:11.764[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Khakhra-39153 ===> 
+[INFO ]2023-12-2117:07:13.292[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:07:13.763[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:07:14.282[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:07:14.783[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:07:15.410[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:07:15.872[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:07:16.414[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:07:23.075[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Mini Baked Moong Dal and Jowar Puri-40445 ===> 
+[INFO ]2023-12-2117:07:24.330[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:07:24.755[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:07:25.188[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:07:25.763[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:07:26.216[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:07:32.088[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Porridge for Babies-38840 ===> 
+[INFO ]2023-12-2117:07:33.393[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:07:33.850[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:07:34.294[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:07:34.893[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:07:35.358[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:07:42.499[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Palak Til Jowar Nimki, Non Fried Bengali Nimki-37779 ===> 
+[INFO ]2023-12-2117:07:43.885[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:07:44.332[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:07:44.817[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:07:45.397[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:07:45.843[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:07:46.295[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:07:52.757[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Til Nimki, How To Make Jowar Til Nimki-39284 ===> 
+[INFO ]2023-12-2117:07:54.034[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:07:54.491[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:07:54.960[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:07:55.549[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:07:56.055[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:07:56.495[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:08:04.829[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Palak Khichdi-43054 ===> 
+[INFO ]2023-12-2117:08:06.330[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:08:06.844[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:07.452[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:08.140[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:08:08.619[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:08:14.686[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Club Sandwich-22284 ===> 
+[INFO ]2023-12-2117:08:16.124[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:08:16.611[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:08:17.143[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:17.917[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:18.529[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:08:19.040[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:08:25.409[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Baked Palak Methi Puris-5663 ===> 
+[INFO ]2023-12-2117:08:26.757[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:08:27.289[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:27.836[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:28.479[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:08:29.004[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:08:36.062[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Thalipeeth, Quick Maharashtrian Thalipeeth-1716 ===> 
+[INFO ]2023-12-2117:08:37.437[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:08:37.936[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:38.434[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:39.044[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:08:39.551[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:08:45.119[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Green Thepla, High Fibre Palak Paratha-35076 ===> 
+[INFO ]2023-12-2117:08:46.673[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:47.266[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:48.094[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:08:48.608[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:08:49.106[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:08:55.825[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Methi Na Dhebra ( Gujarati Recipe)-565 ===> 
+[INFO ]2023-12-2117:08:57.341[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:08:57.847[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:58.370[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:08:59.002[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:08:59.501[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:09:06.378[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Garlic Roti, Lehsun Roti-33033 ===> 
+[INFO ]2023-12-2117:09:07.688[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:09:08.208[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:09:08.722[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:09:09.266[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:09:09.839[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:09:10.513[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:09:11.038[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:09:18.408[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : 5 Grain Pizza Base-1810 ===> 
+[INFO ]2023-12-2117:09:19.860[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:09:20.411[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:09:21.046[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:09:21.572[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:09:28.740[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Damni Dhokla ( Non- Fried Snacks )-33276 ===> 
+[INFO ]2023-12-2117:09:30.094[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:09:30.651[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:09:31.321[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:09:31.842[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:09:40.962[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Green Peas Paratha-22362 ===> 
+[INFO ]2023-12-2117:09:42.271[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:09:42.775[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:09:43.291[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:09:43.950[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:09:44.452[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:09:51.221[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Multigrain Garlic Roti, Lehsun Roti-2983 ===> 
+[INFO ]2023-12-2117:09:52.462[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:09:52.977[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:09:53.542[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:09:54.134[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:09:54.787[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:09:55.369[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:10:02.260[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Mooli Muthia, Gujarati Radish Muthia Snack Recipe-33320 ===> 
+[INFO ]2023-12-2117:10:03.607[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:10:04.136[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:10:04.718[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:05.298[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:05.915[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:10:06.472[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:10:07.086[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:10:13.064[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Garlic Rotis, Green Garlic Multigrain Roti-22316 ===> 
+[INFO ]2023-12-2117:10:14.478[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:10:15.116[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:10:15.720[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:16.276[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:16.940[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:10:17.482[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:10:23.924[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Saatdhan Parathas-3588 ===> 
+[INFO ]2023-12-2117:10:25.171[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:10:25.732[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:26.315[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:27.013[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:10:27.875[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:10:34.519[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Multigrain Palak Paneer Roti for Toddlers and Kids-3093 ===> 
+[INFO ]2023-12-2117:10:35.920[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:36.470[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:37.140[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:10:37.714[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:10:44.859[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Thalipeeth, Maharashtrian Thalipeeth-2945 ===> 
+[INFO ]2023-12-2117:10:46.204[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:10:46.786[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:47.380[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:48.059[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:10:48.649[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:10:49.218[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:10:56.454[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Nutritious Thalipeeth-7457 ===> 
+[INFO ]2023-12-2117:10:57.855[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:10:58.507[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:59.124[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:10:59.857[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:11:00.445[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:11:07.537[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Mini Soya Paneer Pancakes ( Healthy Starter Recipe )-34729 ===> 
+[INFO ]2023-12-2117:11:08.894[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:11:09.503[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:11:10.211[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:11:10.801[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:11:11.359[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:11:16.537[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Healthy Crunchies-7583 ===> 
+[INFO ]2023-12-2117:11:17.804[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:11:18.475[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:11:19.067[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:11:19.676[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:11:28.075[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 4 ===> 
+[INFO ]2023-12-2117:11:32.549[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Saatdhan Paratha-5699 ===> 
+[INFO ]2023-12-2117:11:33.768[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:11:34.344[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:11:34.956[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:11:35.663[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:11:36.255[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:11:41.696[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Soya Tur Dal Roti-22217 ===> 
+[INFO ]2023-12-2117:11:43.020[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:11:43.601[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:11:44.223[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:11:44.816[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:11:45.551[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:11:46.191[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:11:46.794[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:11:54.076[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Nutritious Chilla-22351 ===> 
+[INFO ]2023-12-2117:11:54.441[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:11:55.083[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:11:55.699[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:11:56.296[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:11:57.014[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:11:57.601[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:12:05.453[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Karela Muthia, Bitter Gourd Steamed Dumpling-3511 ===> 
+[INFO ]2023-12-2117:12:06.828[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:12:07.418[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:12:08.037[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:12:08.694[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:12:09.277[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:12:09.975[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:12:10.626[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:12:18.685[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Ragi Chakli, Nachni Chakli, Murukku-7582 ===> 
+[INFO ]2023-12-2117:12:20.029[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:12:20.698[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:12:21.423[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:12:22.089[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:12:22.717[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:12:28.995[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Soya Toovar Dal Roti ( Weight Loss After Pregnancy )-33034 ===> 
+[INFO ]2023-12-2117:12:30.291[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:12:30.918[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:12:31.581[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:12:32.278[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:12:33.008[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:12:33.618[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:12:34.239[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:12:39.380[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Grain Squares ( Recipe for Toddlers)-36853 ===> 
+[INFO ]2023-12-2117:12:43.662[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:12:44.308[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:12:45.038[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:12:45.676[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:12:51.734[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Nutritious Cabbage and Methi Roti-22357 ===> 
+[INFO ]2023-12-2117:12:53.030[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:12:53.698[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:12:54.364[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:12:55.116[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:12:55.766[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:13:02.589[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Multigrain Roti, Healthy Multigrain Chapati-38746 ===> 
+[INFO ]2023-12-2117:13:03.915[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:13:04.587[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:13:05.285[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:13:05.924[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:13:06.766[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:13:07.408[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:13:13.458[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Bhakhri Pizza ( Gluten Free Recipe)-38089 ===> 
+[INFO ]2023-12-2117:13:14.850[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:13:15.567[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:13:16.375[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:13:17.103[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:13:22.371[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Multigrain Bread, Homemade Multigrain Bread-40829 ===> 
+[INFO ]2023-12-2117:13:23.799[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:13:24.586[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:13:25.258[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:13:25.999[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:13:34.077[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Methi Makai Dhebra, Tea Time Snack-42183 ===> 
+[INFO ]2023-12-2117:13:34.388[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:13:35.125[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:13:35.857[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:13:36.673[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:13:37.373[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:13:38.066[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:13:45.789[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Methi Thalipeeth, Maharashtrian Breakfast-42086 ===> 
+[INFO ]2023-12-2117:13:47.184[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:13:47.857[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:13:48.560[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:13:49.413[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:13:50.102[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:13:55.565[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Bejar Roti-38881 ===> 
+[INFO ]2023-12-2117:13:56.943[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:13:57.620[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:13:58.322[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:13:59.119[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:13:59.797[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:14:07.111[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Mooli Roti-38858 ===> 
+[INFO ]2023-12-2117:14:07.371[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:14:08.079[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:14:08.799[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:14:09.656[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:14:10.354[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:14:17.340[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Golpapdi ( Gluten Free)-38090 ===> 
+[INFO ]2023-12-2117:14:18.601[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:14:19.284[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:14:20.119[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:14:20.842[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:14:21.516[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:14:28.030[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Low Salt High Fiber Multigrain Bread-42020 ===> 
+[INFO ]2023-12-2117:14:29.281[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:14:30.111[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:14:30.855[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:14:31.581[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:14:39.267[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Three Grain Paratha, Gluten Free Paratha-38602 ===> 
+[INFO ]2023-12-2117:14:40.586[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:14:41.316[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:14:42.030[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:14:42.849[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:14:43.568[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:14:44.247[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:14:50.346[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Baked Multi Flour Chakli, Non Fried Chakli-41963 ===> 
+[INFO ]2023-12-2117:14:51.728[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:14:52.467[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:14:53.217[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:14:54.120[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:14:54.895[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:14:55.613[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:15:04.345[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Seedai, Baked South Indian Jar Snack-42004 ===> 
+[INFO ]2023-12-2117:15:05.612[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:15:06.379[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:15:07.240[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:15:07.960[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:15:08.704[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:15:16.117[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Multigrain Methi Thepla, Breakfast Recipe-42287 ===> 
+[INFO ]2023-12-2117:15:17.379[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:15:18.124[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:15:18.880[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:15:19.751[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:15:20.511[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:15:21.259[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:15:28.629[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : 4 Flour Dosa, Mixed Flour Dosa-40159 ===> 
+[INFO ]2023-12-2117:15:30.056[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:15:30.804[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:15:31.545[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:15:32.375[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:15:33.129[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:15:41.127[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Multi Flour Idli, Healthy Multi Grain Idli-40994 ===> 
+[INFO ]2023-12-2117:15:42.414[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:15:43.142[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:15:43.932[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:15:44.761[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:15:45.520[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:15:52.507[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Horlicks Oats and Vegetable Pancakes-40637 ===> 
+[INFO ]2023-12-2117:15:53.828[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:15:54.584[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:15:55.363[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:15:56.260[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:15:57.235[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:15:58.033[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:16:06.442[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 5 ===> 
+[INFO ]2023-12-2117:16:12.265[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Multigrain Dhebra ( Gluten Free Recipe)-38636 ===> 
+[INFO ]2023-12-2117:16:13.586[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:16:14.359[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:16:15.229[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:16:16.127[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:16:16.992[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:16:23.706[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Multigrain Healthy Cracker, Lactose Free-42338 ===> 
+[INFO ]2023-12-2117:16:24.955[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:16:25.752[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:16:26.594[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:16:27.485[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:16:28.307[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:16:33.311[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Lactose Free Chocolate Cookie-42337 ===> 
+[INFO ]2023-12-2117:16:34.601[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:16:35.428[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:16:36.373[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:16:37.155[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:16:45.007[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Multigrain Methi Thepla Dough-42288 ===> 
+[INFO ]2023-12-2117:16:46.150[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:16:46.915[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:16:47.822[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:16:48.605[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:16:49.420[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:16:55.176[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Thattai Recipe, Baked Thattai, Jar Snack-41996 ===> 
+[INFO ]2023-12-2117:16:56.600[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:16:57.416[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:16:58.240[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:16:59.131[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:16:59.938[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:17:07.424[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Matarsutir Kochuri, Healthy Bengali Snack-42003 ===> 
+[INFO ]2023-12-2117:17:08.776[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:17:09.771[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:17:10.589[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ,PCOS  ===> 
+[INFO ]2023-12-2117:17:15.626[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Golpapdi ( Healthy Snacks For Kids)-39170 ===> 
+[INFO ]2023-12-2117:17:16.866[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:17:17.697[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:17:18.614[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:17:19.429[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2023-12-2117:17:20.241[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2023-12-2117:17:27.927[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Suva Buckwheat Roti-41746 ===> 
+[INFO ]2023-12-2117:17:29.187[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2023-12-2117:17:30.083[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2023-12-2117:17:30.972[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2023-12-2117:17:31.914[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2023-12-2117:17:32.774[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2308:51:38.306[main]com.TarlaDalal.utils.LoggerLoad1)-<=== In Diabetes ===> 
+[INFO ]2024-02-2308:51:38.459[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 1 ===> 
+[INFO ]2024-02-2308:51:56.573[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias-3554 ===> 
+[INFO ]2024-02-2308:51:57.146[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2308:51:58.228[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2308:51:58.937[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2308:52:00.313[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2308:52:00.883[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2308:53:11.736[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias, How To Make Muthia At Home-33147 ===> 
+[INFO ]2024-02-2308:56:10.748[main]com.TarlaDalal.utils.LoggerLoad1)-<=== In Diabetes ===> 
+[INFO ]2024-02-2308:56:10.945[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 1 ===> 
+[INFO ]2024-02-2308:56:50.321[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias-3554 ===> 
+[INFO ]2024-02-2308:57:28.741[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2308:57:32.028[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2308:57:34.412[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2308:57:36.382[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2308:57:36.991[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2308:59:39.091[main]com.TarlaDalal.utils.LoggerLoad1)-<=== In Diabetes ===> 
+[INFO ]2024-02-2308:59:39.204[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 1 ===> 
+[INFO ]2024-02-2308:59:55.801[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias-3554 ===> 
+[INFO ]2024-02-2309:58:31.126[main]com.TarlaDalal.utils.LoggerLoad1)-<=== In Diabetes ===> 
+[INFO ]2024-02-2309:58:31.812[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 1 ===> 
+[INFO ]2024-02-2309:58:43.234[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias-3554 ===> 
+[INFO ]2024-02-2309:58:43.752[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2309:58:44.474[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2309:58:44.868[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2309:58:45.559[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2309:58:45.835[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:16:44.483[main]com.TarlaDalal.utils.LoggerLoad1)-<=== In Diabetes ===> 
+[INFO ]2024-02-2310:16:44.592[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 1 ===> 
+[INFO ]2024-02-2310:16:59.210[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias-3554 ===> 
+[INFO ]2024-02-2310:17:34.081[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:17:34.649[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:17:35.193[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,PCOS  ===> 
+[INFO ]2024-02-2310:18:06.945[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias, How To Make Muthia At Home-33147 ===> 
+[INFO ]2024-02-2310:18:40.894[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:18:41.408[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:18:41.652[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,PCOS  ===> 
+[INFO ]2024-02-2310:19:56.477[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar, Bajra Spring Onion Roti-2979 ===> 
+[INFO ]2024-02-2310:20:08.677[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:20:09.228[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:20:09.557[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:20:09.962[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:20:10.956[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:21:08.457[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Indian Oats Pancake with Jowar-5529 ===> 
+[INFO ]2024-02-2310:21:55.411[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:21:55.910[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:21:56.299[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:21:56.625[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:21:57.448[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:21:58.231[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:21:58.932[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:22:46.809[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Baked Jowar Onion Puri for Weight Loss-22297 ===> 
+[INFO ]2024-02-2310:23:14.204[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:23:14.474[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:23:14.745[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:23:14.977[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:23:15.215[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2024-02-2310:23:15.485[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2024-02-2310:24:08.777[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cauliflower Methi Roti, Healthy Gobi Methi Jowar Paratha-5285 ===> 
+[INFO ]2024-02-2310:24:48.534[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:24:48.728[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:24:48.946[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,PCOS  ===> 
+[INFO ]2024-02-2310:26:04.814[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar and Tomato Uttapam, Healthy Snack-22349 ===> 
+[INFO ]2024-02-2310:26:41.144[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:26:41.412[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:26:41.678[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:26:41.990[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:26:42.251[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:26:42.461[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:28:05.054[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Aur Pudina ki Roti-1983 ===> 
+[INFO ]2024-02-2310:28:05.483[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:28:05.702[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:28:05.943[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:28:06.109[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:28:06.264[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:30:08.400[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar and Bajra Vegetable Roti ( Baby and Toddler)-3079 ===> 
+[INFO ]2024-02-2310:30:41.422[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:30:41.656[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:30:41.880[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:30:42.142[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:30:42.364[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:32:07.294[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Mooli Jowar ki Roti-4778 ===> 
+[INFO ]2024-02-2310:32:47.484[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:32:47.733[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:32:48.011[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:32:48.203[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:32:48.427[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:32:48.650[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:34:06.499[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Healthy Methi Jowar Muthia, Gluten Free Muthia-22356 ===> 
+[INFO ]2024-02-2310:34:43.232[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:34:43.533[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:34:43.720[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:34:43.921[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:34:44.166[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:35:42.091[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Nutritious Jowar and Tomato Chilla-4652 ===> 
+[INFO ]2024-02-2310:36:10.207[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:36:10.466[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:36:10.658[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:36:10.872[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:36:11.123[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:36:11.383[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:36:11.589[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:37:19.922[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Banana Sheera for Babies-3065 ===> 
+[INFO ]2024-02-2310:37:41.499[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:37:41.851[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:37:42.148[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:37:42.513[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:38:59.085[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Bajra Besan Thalipeeth-35085 ===> 
+[INFO ]2024-02-2310:41:15.583[main]com.TarlaDalal.utils.LoggerLoad1)-<=== In Diabetes ===> 
+[INFO ]2024-02-2310:41:15.706[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Page: 1 ===> 
+[INFO ]2024-02-2310:41:25.282[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias-3554 ===> 
+[INFO ]2024-02-2310:41:25.753[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:41:26.102[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:41:26.356[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,PCOS  ===> 
+[INFO ]2024-02-2310:42:06.101[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cabbage Jowar Muthias, How To Make Muthia At Home-33147 ===> 
+[INFO ]2024-02-2310:42:06.551[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:42:06.818[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:42:07.082[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,PCOS  ===> 
+[INFO ]2024-02-2310:43:09.617[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar, Bajra Spring Onion Roti-2979 ===> 
+[INFO ]2024-02-2310:43:10.025[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:43:10.239[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:43:10.448[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:43:10.663[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:43:10.913[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:43:54.643[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Indian Oats Pancake with Jowar-5529 ===> 
+[INFO ]2024-02-2310:43:54.989[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:43:55.194[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:43:55.403[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:43:55.596[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:43:55.813[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:43:55.997[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:44:34.080[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Baked Jowar Onion Puri for Weight Loss-22297 ===> 
+[INFO ]2024-02-2310:44:34.435[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:44:34.605[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:44:34.778[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:44:34.985[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:44:35.151[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : NA ===> 
+[INFO ]2024-02-2310:44:35.345[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS ,Allergies  ===> 
+[INFO ]2024-02-2310:45:07.826[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Cauliflower Methi Roti, Healthy Gobi Methi Jowar Paratha-5285 ===> 
+[INFO ]2024-02-2310:45:08.146[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:45:08.330[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:45:08.512[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,PCOS  ===> 
+[INFO ]2024-02-2310:45:47.018[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar and Tomato Uttapam, Healthy Snack-22349 ===> 
+[INFO ]2024-02-2310:45:47.372[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:45:47.569[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:45:47.774[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:45:48.004[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:45:48.180[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:46:26.916[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Aur Pudina ki Roti-1983 ===> 
+[INFO ]2024-02-2310:46:27.220[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:46:27.374[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:46:27.560[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:46:27.718[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:46:27.888[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:46:55.585[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar and Bajra Vegetable Roti ( Baby and Toddler)-3079 ===> 
+[INFO ]2024-02-2310:46:55.848[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:46:56.011[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:46:56.188[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:46:56.355[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:46:56.532[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:47:38.787[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Mooli Jowar ki Roti-4778 ===> 
+[INFO ]2024-02-2310:47:41.469[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:47:41.661[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:47:41.842[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:47:42.028[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:47:42.226[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:48:02.804[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Healthy Methi Jowar Muthia, Gluten Free Muthia-22356 ===> 
+[INFO ]2024-02-2310:48:03.097[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:48:03.290[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:48:03.468[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:48:03.646[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:48:50.294[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Nutritious Jowar and Tomato Chilla-4652 ===> 
+[INFO ]2024-02-2310:48:50.766[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:48:50.941[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:48:51.119[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:48:51.313[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:48:51.580[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:48:51.767[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:49:47.576[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Banana Sheera for Babies-3065 ===> 
+[INFO ]2024-02-2310:49:47.930[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ===> 
+[INFO ]2024-02-2310:49:48.159[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : HyperTension ===> 
+[INFO ]2024-02-2310:49:48.340[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:49:48.611[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Hypothyroidism ,HyperTension ,PCOS  ===> 
+[INFO ]2024-02-2310:50:35.770[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Bajra Besan Thalipeeth-35085 ===> 
+[INFO ]2024-02-2310:50:36.058[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ===> 
+[INFO ]2024-02-2310:50:36.269[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : PCOS ===> 
+[INFO ]2024-02-2310:50:36.465[main]com.TarlaDalal.utils.LoggerLoad1)-<===In Writing recipe for : Diabetes ,PCOS  ===> 
+[INFO ]2024-02-2310:51:02.861[main]com.TarlaDalal.utils.LoggerLoad1)-<=== Processing Recipe : Jowar Golpapdi for Kids-3078 ===> 

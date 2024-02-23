@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\mdesh\AppData\Local\Temp\testng-eclipse--1197045960\testng-customsuite.xml</span>
+                    <span>C:\Users\mdesh\AppData\Local\Temp\testng-eclipse-930020510\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,34 +103,10 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.TarlaDalal.Runner.SearchRecipe" class="method navigator-link" hash-for-method="testAAHypoThyroidism">testAAHypoThyroidism</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Default_suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.TarlaDalal.Runner.SearchRecipe" class="method navigator-link" hash-for-method="testAADiabetes">testAADiabetes</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.TarlaDalal.Runner.SearchRecipe" class="method navigator-link" hash-for-method="testAAHypertension">testAAHypertension</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.TarlaDalal.Runner.SearchRecipe" class="method navigator-link" hash-for-method="testAAPCOS">testAAPCOS</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -150,21 +126,34 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAAHypoThyroidism">
-                  </a> <!-- testAAHypoThyroidism -->
-                  <span class="method-name">testAAHypoThyroidism</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@class=&apos;rcc_rcpcore&apos;]//*/a[@itemprop=&apos;url&apos; and text()=&apos;Cabbage Capsicum Sabzi, Healthy Simla Mirch Gobi Sabzi&apos;] (tried for 6 second(s) with 500 milliseconds interval)
+                  <a name="testAADiabetes">
+                  </a> <!-- testAADiabetes -->
+                  <span class="method-name">testAADiabetes</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome-headless-shell=121.0.6167.185)
 Build info: version: &apos;4.14.0&apos;, revision: &apos;e5a96349ce&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\mdesh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59278}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59278/devtoo..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1651a76bd6e0681e01b61b10e750818f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at com.TarlaDalal.utils.AllActions.CallDriverWait(AllActions.java:42)
-	at com.TarlaDalal.pages.HomePage.GetRecipe(HomePage.java:44)
-	at com.TarlaDalal.pages.PageNumberPage.GetHypoThyroidismPage(PageNumberPage.java:141)
-	at com.TarlaDalal.Runner.SearchRecipe.testAAHypoThyroidism(SearchRecipe.java:113)
+Command: [eac9b2fea3177fa201f6d4429dac69e7, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.185, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\mdesh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55026}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55026/devtoo..., se:cdpVersion: 121.0.6167.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eac9b2fea3177fa201f6d4429dac69e7
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:316)
+	at com.TarlaDalal.pages.HomePage.GetRecipe(HomePage.java:55)
+	at com.TarlaDalal.pages.PageNumberPage.GetDiabetesPage(PageNumberPage.java:50)
+	at com.TarlaDalal.Runner.SearchRecipe.testAADiabetes(SearchRecipe.java:73)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -197,39 +186,10 @@ Session ID: 1651a76bd6e0681e01b61b10e750818f
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.TarlaDalal.Runner.SearchRecipe</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAADiabetes">
-                  </a> <!-- testAADiabetes -->
-                  <span class="method-name">testAADiabetes</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAAHypertension">
-                  </a> <!-- testAAHypertension -->
-                  <span class="method-name">testAAHypertension</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAAPCOS">
-                  </a> <!-- testAAPCOS -->
-                  <span class="method-name">testAAPCOS</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\mdesh\AppData\Local\Temp\testng-eclipse--1197045960\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\mdesh\AppData\Local\Temp\testng-eclipse-930020510\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -278,28 +238,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testAAPCOS')
+data.setCell(0, 1, 'testAADiabetes')
 data.setCell(0, 2, 'com.TarlaDalal.Runner.SearchRecipe')
-data.setCell(0, 3, 2607795);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testAAHypertension')
-data.setCell(1, 2, 'com.TarlaDalal.Runner.SearchRecipe')
-data.setCell(1, 3, 2050369);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testAADiabetes')
-data.setCell(2, 2, 'com.TarlaDalal.Runner.SearchRecipe')
-data.setCell(2, 3, 1409875);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testAAHypoThyroidism')
-data.setCell(3, 2, 'com.TarlaDalal.Runner.SearchRecipe')
-data.setCell(3, 3, 376849);
+data.setCell(0, 3, 622575);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 hours</span>
+              <span class="suite-total-time">Total running time: 10 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -332,33 +280,21 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpBeforeClass</span>
-                <span class="method-start">4494 ms</span>
+                <span class="method-start">5706 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">testAADiabetes</span>
-                <span class="method-start">4503 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testAAHypertension</span>
-                <span class="method-start">1414385 ms</span>
-              </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testAAHypoThyroidism</span>
-                <span class="method-start">3464783 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testAAPCOS</span>
-                <span class="method-start">3841644 ms</span>
+                <span class="method-name">testAADiabetes</span>
+                <span class="method-start">5714 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownAfterClass</span>
-                <span class="method-start">6449522 ms</span>
+                <span class="method-start">628302 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">6449546 ms</span>
+                <span class="method-start">628305 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

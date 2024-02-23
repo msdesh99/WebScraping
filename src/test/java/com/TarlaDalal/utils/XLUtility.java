@@ -86,9 +86,7 @@ public class XLUtility {
 		cs.setVerticalAlignment(VerticalAlignment.TOP);
 		Row r1;
 		int rowCount = 0;
-
 		String[] allSheets = ConfigReader.getAllSheets();
-
 		for (String sheet1 : allSheets) {
 			sh = wkb.createSheet(sheet1);
 			rowCount = 0;

@@ -49,10 +49,13 @@ public class SearchRecipe extends AllActions {
 		chromeOptions.addArguments("--blink-settings-imageEnabled=false");
 	
 		driver = new ChromeDriver(chromeOptions);
+		//driver = new ChromeDriver();
+
 		configReader = new ConfigReader();
 		prop = configReader.initializeProperties();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
 		driver.manage().window().maximize();
+		setAllEliminatedListArr();
 	    String path = System.getProperty("user.dir")+"/src/test/resources/Lists/ListOfRecipes.xlsx";
 	    xlUtility = new XLUtility(path, "All");
 	    xlUtility.WriteAllSheetsHeading(); 
@@ -69,13 +72,13 @@ public class SearchRecipe extends AllActions {
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);
 		pageNumberPage.GetDiabetesPage();
 	} 
-	@Test
+	/*@Test
 	public void testAAZRecipes() throws InterruptedException, IOException {	
 		driver.get(ConfigReader.getAllRecipeUrl());
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
 		pageNumberPage.GetAZRecipePage();
 	}
-	
+	*/
 /*	@Test
 	public void testAAPCOS() throws InterruptedException, IOException {	
 		driver.get(ConfigReader.getBaseUrl());

@@ -2,10 +2,13 @@ package com.TarlaDalal.pages;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.manager.SeleniumManagerOutput.Result;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -33,9 +36,10 @@ public class HomePage extends AllActions {
 	@FindBy(xpath = "//*[@class='rcc_rcpcore']//a[@itemprop='url']")
 	List<WebElement> hypertensionList;
 
-	public void GetRecipe(String url) throws InterruptedException, IOException {
+		public void GetRecipe(String url) throws InterruptedException, IOException {
 		String[][] list = GetHyperText(recipeList);
 		count = 0;
+		
 		for (String[] recipe : list) {
 			//if (count < 5) {
 				ScreenScrollDown(driver);

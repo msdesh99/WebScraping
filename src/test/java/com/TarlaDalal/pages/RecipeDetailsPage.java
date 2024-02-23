@@ -83,11 +83,14 @@ public class RecipeDetailsPage extends AllActions {
 		if (indg != null) {
 			flag.add("NA");
 			ingredientsText = indg.split(",");
+		
 			CheckDiabetesMorbid();
 			CheckHypothyroidismMorbid();
 			CheckHypertensionMorbid();
 			CheckPCOSMorbid();
+			
 			Checkallergies();
+			
 			flag.remove(0);
 			flag.add(flagTxt);
 			WriteRecipeIntoFile("All", flag.get(0));
@@ -95,7 +98,9 @@ public class RecipeDetailsPage extends AllActions {
 	}
 
 	public void Checkallergies() throws IOException {
-		eliminateArr = Arrays.asList(ConfigReader.getallergies());
+		//eliminateArr = Arrays.asList(ConfigReader.getallergies());
+		eliminateArr = getEliminateAllergiesArr();
+
 		flagStatus = SetFlag(ingredientsText, eliminateArr);
 		if (flagStatus > 0) {
 			flagText = "Allergies";
@@ -107,14 +112,19 @@ public class RecipeDetailsPage extends AllActions {
 
 	public void CheckPCOSMorbid() throws IOException {
 		//eliminateArr = Arrays.asList(ConfigReader.geteliminatePCOS());
-		  eliminateArr = Arrays.asList(checkPCOSElimination());
+		 // eliminateArr = Arrays.asList(checkPCOSElimination());
+		  eliminateArr = getEliminatePCOSArr();
+
 		flagStatus = SetFlag(ingredientsText, eliminateArr);
 		if (flagStatus == 0) {
 			flagText = "Eliminated";
 			targetedMorbid = "PCOS";
 			flagTxt = (flagTxt == null) ? targetedMorbid + "\n" : flagTxt + "," + targetedMorbid + "\n";
 			WriteRecipeIntoFile(flagText, targetedMorbid);
-			eliminateArr = Arrays.asList(ConfigReader.getAddPCOS());
+			
+			//eliminateArr = Arrays.asList(ConfigReader.getAddPCOS());
+			  eliminateArr = getAddPCOSArr();
+
 			flagStatus = SetFlag(ingredientsText, eliminateArr);
 			if (flagStatus > 0) {
 				flagText = "Eliminated-Add";
@@ -126,14 +136,19 @@ public class RecipeDetailsPage extends AllActions {
 	}
 
 	public void CheckHypertensionMorbid() throws IOException {
-		eliminateArr = Arrays.asList(ConfigReader.geteliminateHypertension());
+		//eliminateArr = Arrays.asList(ConfigReader.geteliminateHypertension());
+		eliminateArr = getEliminateHypertensionArr();
+
 		flagStatus = SetFlag(ingredientsText, eliminateArr);
 		if (flagStatus == 0) {
 			flagText = "Eliminated";
 			targetedMorbid = "HyperTension";
 			flagTxt = (flagTxt == null) ? targetedMorbid + "\n" : flagTxt + "," + targetedMorbid + "\n";
 			WriteRecipeIntoFile(flagText, targetedMorbid);
-			eliminateArr = Arrays.asList(ConfigReader.getAddHypertension());
+			
+			//eliminateArr = Arrays.asList(ConfigReader.getAddHypertension());
+			eliminateArr = getAddHypertensionArr();
+
 			flagStatus = SetFlag(ingredientsText, eliminateArr);
 			if (flagStatus > 0) {
 				flagText = "Eliminated-Add";
@@ -144,14 +159,19 @@ public class RecipeDetailsPage extends AllActions {
 	}
 
 	public void CheckHypothyroidismMorbid() throws IOException {
-		eliminateArr = Arrays.asList(ConfigReader.geteliminateHypothyroidism());
+		//eliminateArr = Arrays.asList(ConfigReader.geteliminateHypothyroidism());
+		eliminateArr = getEliminatedHypothroidArr();
+
 		flagStatus = SetFlag(ingredientsText, eliminateArr);
 		if (flagStatus == 0) {
 			flagText = "Eliminated";
 			targetedMorbid = "Hypothyroidism";
 			flagTxt = (flagTxt == null) ? targetedMorbid + "\n" : flagTxt + "," + targetedMorbid + "\n";
 			WriteRecipeIntoFile(flagText, targetedMorbid);
-			eliminateArr = Arrays.asList(ConfigReader.getAddHypothyroidism());
+			
+			//eliminateArr = Arrays.asList(ConfigReader.getAddHypothyroidism());
+			eliminateArr = getAddHypothroidArr();
+
 			flagStatus = SetFlag(ingredientsText, eliminateArr);
 			if (flagStatus > 0) {
 				flagText = "Eliminated-Add";
@@ -163,14 +183,20 @@ public class RecipeDetailsPage extends AllActions {
 	}
 
 	public void CheckDiabetesMorbid() throws IOException {
-		eliminateArr = Arrays.asList(ConfigReader.geteliminateDiebetes());
+		//eliminateArr = Arrays.asList(ConfigReader.geteliminateDiebetes());
+		eliminateArr = getEliminatedDiebetesListArr();
+		
 		flagStatus = SetFlag(ingredientsText, eliminateArr);
+		
 		if (flagStatus == 0) {
 			flagText = "Eliminated";
 			targetedMorbid = "Diabetes";
 			flagTxt = (flagTxt == null) ? targetedMorbid + "\n" : flagTxt + "," + targetedMorbid + "\n";
 			WriteRecipeIntoFile(flagText, targetedMorbid);
-			eliminateArr = Arrays.asList(ConfigReader.getAddDiabetes());
+		
+			//eliminateArr = Arrays.asList(ConfigReader.getAddDiabetes());
+			eliminateArr = getAddDiebetesListArr();
+
 			flagStatus = SetFlag(ingredientsText, eliminateArr);
 			if (flagStatus > 0) {
 				flagText = "Eliminated-Add";
@@ -190,9 +216,13 @@ public class RecipeDetailsPage extends AllActions {
 	public void GetCategory() {
 		String[] categoryName = GetCategoryText(categories);
 		List<String> category = Arrays.asList(categoryName);
+		
 		List<String> categoryArr = Arrays.asList(ConfigReader.getRecipeCategory());
+		
 		List<String> foodArr = Arrays.asList(ConfigReader.getFoodCategory());
+		
 		List<String> matchCategory = Arrays.asList();
+		
 		String recipeText = null;
 		matchCategory = category.stream().filter(s -> categoryArr.stream().anyMatch(s1 -> s.contains(s1)))
 				.collect(Collectors.toList());
@@ -264,7 +294,7 @@ public class RecipeDetailsPage extends AllActions {
 		xlUtility.CreateNewCell(sheet, rowCount, "CloseFile");
 	}
 
-	public String[] checkPCOSElimination() throws IOException
+/*	public String[] checkPCOSElimination() throws IOException
 	{	
 		String pcosText=null;
         String[] pcosArr = new String[1];
@@ -284,5 +314,5 @@ public class RecipeDetailsPage extends AllActions {
 		pcosArr[0] = pcosText;
 		return pcosArr;
 
-	}		
+	}	*/	
 }
