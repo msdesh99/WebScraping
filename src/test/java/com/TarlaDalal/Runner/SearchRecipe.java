@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
@@ -40,7 +41,14 @@ public class SearchRecipe extends AllActions {
 
 	@BeforeTest
 	public void setUp() throws Exception {
-		driver = new ChromeDriver();
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("--disable-popup-blocking");
+		chromeOptions.addArguments("--disable-notifications");
+		chromeOptions.addArguments("--disable-extensions");
+		chromeOptions.addArguments("--blink-settings-imageEnabled=false");
+	
+		driver = new ChromeDriver(chromeOptions);
 		configReader = new ConfigReader();
 		prop = configReader.initializeProperties();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
@@ -61,6 +69,32 @@ public class SearchRecipe extends AllActions {
 		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);
 		pageNumberPage.GetDiabetesPage();
 	} 
+	@Test
+	public void testAAZRecipes() throws InterruptedException, IOException {	
+		driver.get(ConfigReader.getAllRecipeUrl());
+		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
+		pageNumberPage.GetAZRecipePage();
+	}
+	
+/*	@Test
+	public void testAAPCOS() throws InterruptedException, IOException {	
+		driver.get(ConfigReader.getBaseUrl());
+		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
+		pageNumberPage.GetPCOSPage(driver);
+	}		
+	@Test
+	public void testAAHypoThyroidism() throws InterruptedException, IOException {	
+		driver.get(ConfigReader.getBaseUrl());
+		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
+		pageNumberPage.GetHypoThyroidismPage(driver);	
+	}		
+	@Test
+	public void testAAHypertension() throws InterruptedException, IOException {	
+		driver.get(ConfigReader.getBaseUrl());
+		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
+		pageNumberPage.GetHypertensionPage(driver);	
+	}		
+	
 
 	@Test
 	public void testAABreakfast() throws InterruptedException, IOException {
@@ -93,30 +127,5 @@ public class SearchRecipe extends AllActions {
 	      homePage.GetRecipe(driver.getCurrentUrl());
 	} 
 	
-	@Test
-	public void testAAZRecipes() throws InterruptedException, IOException {	
-		driver.get(ConfigReader.getAllRecipeUrl());
-		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
-		pageNumberPage.GetAZRecipePage();
-	}
-	
-	@Test
-	public void testAAPCOS() throws InterruptedException, IOException {	
-		driver.get(ConfigReader.getBaseUrl());
-		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
-		pageNumberPage.GetPCOSPage(driver);
-	}		
-	@Test
-	public void testAAHypoThyroidism() throws InterruptedException, IOException {	
-		driver.get(ConfigReader.getBaseUrl());
-		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
-		pageNumberPage.GetHypoThyroidismPage(driver);	
-	}		
-	@Test
-	public void testAAHypertension() throws InterruptedException, IOException {	
-		driver.get(ConfigReader.getBaseUrl());
-		pageNumberPage = PageFactory.initElements(driver, PageNumberPage.class);		
-		pageNumberPage.GetHypertensionPage(driver);	
-	}		
-	
+*/
 }
